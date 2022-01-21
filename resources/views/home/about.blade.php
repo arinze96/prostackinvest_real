@@ -19,7 +19,7 @@
 
         <section id="page-title" class="page-title bg-overlay bg-overlay-dark bg-parallax">
             <div class="bg-section">
-                <img src="{{ asset("assets/images/page-titles/9.jpg") }}" alt="Background" />
+                <img src="{{ asset('assets/images/page-titles/office.jpg') }}" alt="Background" />
             </div>
             <div class="container">
                 <div class="row">
@@ -42,8 +42,8 @@
             </div>
             <!-- .container end -->
         </section>
-     
-        <section id="about1" class="about about-1 bg-gray pt-110 pb-50">
+
+        {{-- <section id="about1" class="about about-1 bg-gray pt-110 pb-50">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-6">
@@ -63,7 +63,7 @@
                     <!-- .col-lg-6 end -->
                     <div class="col-sm-12 col-md-12 col-lg-6">
                         <div class="about--img">
-                            <img src="{{ asset("assets/images/about/1.jpg") }}" alt="img" class="img-fluid">
+                            <img src="{{ asset('assets/images/about/1.jpg') }}" alt="img" class="img-fluid">
                         </div>
                     </div>
                     <!-- .col-lg-6 end -->
@@ -110,7 +110,7 @@
             </div>
             <!-- .container end -->
         </section>
-       
+
         <section id="video2" class="video-2 bg-overlay bg-overlay-dark2 text-center pb-0">
             <div class="bg-section"><img src="assets/images/background/3.jpg" alt=""></div>
             <div class="container">
@@ -129,7 +129,7 @@
                     <div class="col-sm-12 col-md-12 col-lg-12">
                         <div class="video--content text-center">
                             <div class="bg-section">
-                                <img src="{{ asset("assets/images/video/1.jpg") }}" alt="Background" />
+                                <img src="{{ asset('assets/images/video/1.jpg') }}" alt="Background" />
                             </div>
                             <div class="video--button">
                                 <div class="video-overlay">
@@ -152,7 +152,7 @@
             <!-- .container end -->
             <div class="section-divider"></div>
         </section>
-        
+
         <section id="infoCards" class="info-cards pt-80 bg-gray">
             <div class="container">
                 <div class="row">
@@ -202,101 +202,28 @@
                 <!-- .row end -->
             </div>
             <!-- .container end -->
-        </section>
-       
+        </section> --}}
+
         <section id="team1" class="team team-1 pb-50">
             <div class="container">
                 <div class="row clearfix">
                     <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
                         <div class="heading  mb-50 text--center">
                             <p class="heading--subtitle">Our Experts</p>
-                            <h2 class="heading--title">Meet Our Team</h2>
-                            <p class="heading--desc mb-0">We love what we do and we do it with passion. We value the
-                                reformation of the message, and the smart incentives.</p>
+                            <h2 class="heading--title" style="color:black">About Us</h2>
+                            <p class="heading--desc mb-0">We are ProStack Invest, majorly focused on trading Crypto currency day in day out to make substantial profit.
+
+                                ProStack invest is located at Zentralstrasse 17, 6002 Luzern, Switzerland. Our headquarters is located at 26 Saint-Catherine St W, Montreal, Quebec H2X 1Z5, Canada. It was incorporated on the 22nd of July 2016 with aims to reach out to everyone offering a guaranteed return on any investment carried out in the company. 
+                                
+                                ProStack is an investment platform where your investment returns are guaranteed and is received as early as 7 days only. ProStack invest also engages in real estate investment and development with 30 years of experience in construction services, forex trading, medical equipments, crypto currency investment, architecture, manufacturing and structural engineering.</p>
                         </div>
                     </div>
                     <!-- .col-lg-6 end -->
                 </div>
-                <!-- .row end -->
-                <div class="row">
-                    <!-- Member #1 -->
-                    <div class="col-xs-12 col-sm-4 col-md-4">
-                        <div class="member">
-                            <div class="member-img">
-                                <img src="{{ asset(asset("assets/images/team/grid/1.jpg")) }}" alt="member">
-                                <div class="member-overlay">
-                                    <div class="member-social">
-                                        <a href="#"><i class="fa fa-facebook"></i></a>
-                                        <a href="#"><i class="fa fa-twitter"></i></a>
-                                    </div>
-                                </div>
-                                <!-- .memebr-ovelay end -->
-                            </div>
-                            <!-- .member-img end -->
-                            <div class="member-info">
-                                <h5>James Wane</h5>
-                                <h6>Consultant</h6>
-                            </div>
-                            <!-- .member-info end -->
-                        </div>
-                        <!-- .member end -->
-                    </div>
-                    <!-- .col-md-4 end -->
-
-                    <!-- Member #2 -->
-                    <div class="col-xs-12 col-sm-4 col-md-4">
-                        <div class="member">
-                            <div class="member-img">
-                                <img src="{{ asset("assets/images/team/grid/2.jpg") }}" alt="member">
-                                <div class="member-overlay">
-                                    <div class="member-social">
-                                        <a href="#"><i class="fa fa-facebook"></i></a>
-                                        <a href="#"><i class="fa fa-twitter"></i></a>
-                                    </div>
-                                </div>
-                                <!-- .memebr-ovelay end -->
-                            </div>
-                            <!-- .member-img end -->
-                            <div class="member-info">
-                                <h5>John Tommy</h5>
-                                <h6>Marketing</h6>
-                            </div>
-                            <!-- .member-info end -->
-                        </div>
-                        <!-- .member end -->
-                    </div>
-                    <!-- .col-md-4 end -->
-
-                    <!-- Member #3 -->
-                    <div class="col-xs-12 col-sm-4 col-md-4">
-                        <div class="member">
-                            <div class="member-img">
-                                <img src="{{ asset("assets/images/team/grid/3.jpg") }}" alt="member">
-                                <div class="member-overlay">
-                                    <div class="member-social">
-                                        <a href="#"><i class="fa fa-facebook"></i></a>
-                                        <a href="#"><i class="fa fa-twitter"></i></a>
-                                    </div>
-                                </div>
-                                <!-- .memebr-ovelay end -->
-                            </div>
-                            <!-- .member-img end -->
-                            <div class="member-info">
-                                <h5>Marko Smith</h5>
-                                <h6>Cheif Officer</h6>
-                            </div>
-                            <!-- .member-info end -->
-                        </div>
-                        <!-- .member end -->
-                    </div>
-                    <!-- .col-md-3 end -->
-
-                </div>
-                <!-- .row end -->
             </div>
             <!-- .container end -->
         </section>
-        
+
         <section id="featured3" class="featured featured-2 featured-3 featured-left bg-dark3 pt-0 pb-0">
             <div class="container-fluid pr-0 pl-0">
                 <div class="row">
@@ -346,7 +273,7 @@
                     <!-- .col-lg-6 end -->
                     <div class="col-sm-12 col-md-12 col-lg-6 pr-0">
                         <div class="banner--img">
-                            <img src="{{ asset("assets/images/banners/1.jpg") }}" alt="banner img">
+                            <img src="{{ asset('assets/images/banners/1.jpg') }}" alt="banner img">
                         </div>
                     </div>
                     <!-- .col-lg-6 end -->
@@ -375,140 +302,16 @@
             </div>
             <!-- .container -->
         </section>
-   
-        <section id="blog" class="blog blog-grid pb-60">
-            <div class="container">
-                <div class="row ">
-                    <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
-                        <div class="heading  mb-50 text--center">
-                            <p class="heading--subtitle">Don’t Miss Latest</p>
-                            <h2 class="heading--title">News & Headlines</h2>
-                            <p class="heading--desc mb-0">Follow our latest news and thoughts which focuses exclusively
-                                on design, art, vintage, and also our latest work updates.</p>
-                        </div>
-                    </div>
-                    <!-- .col-lg-6 end -->
-                </div>
-                <!-- .row end -->
-                <div class="row">
-                    <!-- Blog Entry #1 -->
-                    <div class="col-sm-12 col-md-4 col-lg-4">
-                        <div class="blog-entry">
-                            <div class="entry--img">
-                                <a href="#">
-                                    <img src="{{ asset("assets/images/blog/grid/1.jpg") }}" alt="entry image" />
-                                    <div class="entry--overlay"></div>
-                                </a>
-                            </div>
-                            <!-- .entry-img end -->
-                            <div class="entry--content">
-                                <div class="entry--meta">
-                                    <a href="#">Investment tips</a>
-                                </div>
-                                <div class="entry--title">
-                                    <h4><a href="#">Four ways to cheer yourself up on Blue Monday!</a></h4>
-                                </div>
-                                <div class="entry--date">
-                                    Apr 15, 2018
-                                </div>
-                                <div class="entry--bio">
-                                    <p> The third Monday of January is supposed to be most depressing day of the year.
-                                        Whether you believe that or not, the long nights, cold weather and trying to...
-                                    </p>
-                                </div>
-                                <div class="entry--more">
-                                    <a href="#"><i class="fa fa-plus"></i>Read More</a>
-                                </div>
-                            </div>
-                            <!-- .entry-content end -->
-                        </div>
-                        <!-- .blog-entry end -->
-                    </div>
-                    <!-- .col-md-4 end -->
-                    <!-- Blog Entry #2 -->
-                    <div class="col-sm-12 col-md-4 col-lg-4">
-                        <div class="blog-entry">
-                            <div class="entry--img">
-                                <a href="#">
-                                    <img src="{{ asset("assets/images/blog/grid/2.jpg") }}" alt="entry image" />
-                                    <div class="entry--overlay"></div>
-                                </a>
-                            </div>
-                            <!-- .entry-img end -->
-                            <div class="entry--content">
-                                <div class="entry--meta">
-                                    <a href="#">Consulting</a>
-                                </div>
-                                <div class="entry--title">
-                                    <h4><a href="#">In the news: this week’s top money stories</a></h4>
-                                </div>
-                                <div class="entry--date">
-                                    Apr 12, 2018
-                                </div>
-                                <div class="entry--bio">
-                                    <p>The weather has taken a turn for the worse and January pay day still seems far
-                                        away. But you don’t have to venture outdoors or spend any money today sit back,
-                                        relax... </p>
-                                </div>
-                                <div class="entry--more">
-                                    <a href="#"><i class="fa fa-plus"></i>Read More</a>
-                                </div>
-                            </div>
-                            <!-- .entry-content end -->
-                        </div>
-                        <!-- .blog-entry end -->
-                    </div>
-                    <!-- .col-md-4 end -->
-                    <!-- Blog Entry #3 -->
-                    <div class="col-sm-12 col-md-4 col-lg-4">
-                        <div class="blog-entry">
-                            <div class="entry--img">
-                                <a href="#">
-                                    <img src="{{ asset("assets/images/blog/grid/3.jpg") }}" alt="entry image" />
-                                    <div class="entry--overlay"></div>
-                                </a>
-                            </div>
-                            <!-- .entry-img end -->
-                            <div class="entry--content">
-                                <div class="entry--meta">
-                                    <a href="#">Financial</a>
-                                </div>
-                                <div class="entry--title">
-                                    <h4><a href="#">How does your household spend compare to the UK?</a></h4>
-                                </div>
-                                <div class="entry--date">
-                                    Apr 12, 2018
-                                </div>
-                                <div class="entry--bio">
-                                    <p>The ‘cost of living’ is a phrase that’s rarely out of the news, and our wallets
-                                        and bills appear to back up the claims that our household spending is on the
-                                        rise... </p>
-                                </div>
-                                <div class="entry--more">
-                                    <a href="#"><i class="fa fa-plus"></i>Read More</a>
-                                </div>
-                            </div>
-                            <!-- .entry-content end -->
-                        </div>
-                        <!-- .blog-entry end -->
-                    </div>
-                    <!-- .col-md-4 end -->
-                </div>
-                <!-- .row end -->
-            </div>
-            <!-- .container end -->
-        </section>
-     
+
+
         @include("includes.home_footer")
-        
-        
+
+
         <div id="back-to-top" class="backtop"><i class="fa fa-long-arrow-up"></i></div>
     </div><!-- #wrapper end -->
     @include("includes.home_script")
 
-   
-</body>
 
-<!-- Mirrored from www.websiteprofs.com/assets/images/html/Consultancy/consultivo-consulting-investments/MAIN_FILES/Consultivo/page-about.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Jan 2022 23:10:08 GMT -->
+</body>
 
 </html>

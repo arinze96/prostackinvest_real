@@ -2734,6 +2734,7 @@ table tbody tr td {
 .heading-2 .heading--title {
 	font-size: 32px;
 	margin-bottom: 14px;
+	color:black;
 }
 
 .heading .heading--desc.heading--light {

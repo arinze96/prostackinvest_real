@@ -419,13 +419,58 @@
 
         <!-- Featured #1
 ============================================= -->
+<section id="about1" class="about about-1 bg-gray pt-110 pb-50">
+    <div class="container">
+        <h1 style="text-align: center; color:#98cb2b">Company Milestone</h1>
+        <!-- .row end -->
+        <div class="counter counter-1">
+            <div class="row">
+                <!-- count #1 -->
+                <div class="col-6 col-sm-6 col-md-6 col-lg-3">
+                    <div class="count-box text-center">
+                        <div class="counting">1,538</div>
+                        <div class="count-title">No of Investors and counting</div>
+                    </div>
+                </div>
+                <!-- .col-md-3 end -->
+                <!-- count #2 -->
+                <div class="col-6 col-sm-6 col-md-6 col-lg-3">
+                    <div class="count-box text-center">
+                        <div class="counting">5,124</div>
+                        <div class="count-title">Deposit</div>
+                    </div>
+                </div>
+                <!-- .col-md-3 end -->
+                <!-- count #3 -->
+                <div class="col-6 col-sm-6 col-md-6 col-lg-3">
+                    <div class="count-box text-center">
+                        <div class="counting">13,128</div>
+                        <div class="count-title">Withdrawals</div>
+                    </div>
+                </div>
+                <!-- .col-md-3 end -->
+                <!-- count #4 -->
+                <div class="col-6 col-sm-6 col-md-6 col-lg-3">
+                    <div class="count-box text-center">
+                        <div class="counting">29,534</div>
+                        <div class="count-title">Working Hours</div>
+                    </div>
+                </div>
+                <!-- .col-md-3 end -->
+            </div>
+            <!-- .row end -->
+        </div>
+        <!-- .counter end -->
+    </div>
+    <!-- .container end -->
+</section>
         <section id="featured1" class="featured featured-1 text-center pt-110">
             <div class="container">
                 <div class="row ">
                     <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
                         <div class="heading  mb-50 text--center">
                             <p class="heading--subtitle">What We Do!</p>
-                            <h2 class="heading--title">Our Services</h2>
+                            <h2 class="heading--title" style="color:black">Our Services</h2>
                             <p class="heading--desc mb-0">When your people get up every day wanting to come to work,
                                 success happens, we help you to ensure everyone makes the right investments.</p>
                         </div>
@@ -539,7 +584,7 @@
                     <div class="col-sm-12 col-md-12 col-lg-6 offset-md-3">
                         <div class="heading heading-1 text--center mb-40">
                             <p class="heading--subtitle">Get Started Now</p>
-                            <h2 class="heading--title text-white">Our Pricing Plans</h2>
+                            <h2 class="heading--title text-white" style="color:black">Our Pricing Plans</h2>
                             <p class="heading--desc heading--light mb-0">Get started now with us to earn every day and
                                 forever in your business. We accept Investment from all over the world.</p>
                         </div>
@@ -605,51 +650,55 @@
             <div class="container pt-40">
                 <div class="row">
                     @if (!$Plans->isEmpty())
-                    @foreach ($Plans as $plan)
-                        <div class="col-sm-12 col-md-4 col-lg-4 price-table pricing-active">
-                            <div class="pricing-panel">
-                                <!--  Pricing heading  -->
-                                <div class="pricing--heading text--center">
-                                    <div class="pricing--icon">
-                                        <i class="icon-global"></i>
-                                    </div>
-                                    <h4>{{ ucwords($plan->name) }}</h4>
-                                    <div class="pricing--desc" style="margin-bottom:-1px">
-                                        Minimum Investment
-                                    </div>
-                                    <p style="font-size:50px"><span class="currency">$</span>{{ number_format($plan->min, 0, '.', ',') }}</p>
-                                    <div class="pricing--desc" style="margin-bottom:-1px">
-                                        Maximum Investment
-                                    </div>
-                                    <p style="font-size:50px"><span class="currency">$</span>{{ number_format($plan->max, 0, '.', ',') }}</p>
-                                    <div class="pricing--desc" style="margin-bottom:-1px">
-                                        Daily ROI: {{ $plan->roi }}%
-                                    </div>  
-                                    <div style="margin-bottom: 10px"></div>
-                                    <div class="pricing--desc" style="margin-bottom:-1px">
-                                        Duration: {{ $plan->duration }}%
-                                    </div>  
-                                    <div style="margin-bottom: 10px"></div>
-                                    <div class="pricing--desc" style="margin-bottom:-1px">
-                                        Referral Commision: {{ $plan->commission }}%
-                                    </div>                                    
-                                    <div style="margin-bottom: 10px"></div>
-                                    <div class="pricing--desc" style="margin-bottom:-1px">
-                                        Capital Return: YES
-                                    </div>
-                                    <div style="margin-bottom: 10px"></div>
-                                    <div class="pricing--desc" style="margin-bottom:0px">
-                                        Instant Withdrawal: YES
-                                    </div>
-                                    <div style="margin-bottom: 10px"></div>
-                                    <div class="pricing--desc" style="margin-bottom: 0px">
-                                        24/7 Live Support
-                                    </div>
-                                    {{-- <a class="btn btn--secondary btn--bordered btn--rounded"
+                        @foreach ($Plans as $plan)
+                            <div class="col-sm-12 col-md-4 col-lg-4 price-table pricing-active">
+                                <div class="pricing-panel">
+                                    <!--  Pricing heading  -->
+                                    <div class="pricing--heading text--center">
+                                        <div class="pricing--icon">
+                                            <i class="icon-global"></i>
+                                        </div>
+                                        <h4>{{ ucwords($plan->name) }}</h4>
+                                        <div class="pricing--desc" style="margin-bottom:-1px">
+                                            Minimum Investment
+                                        </div>
+                                        <p style="font-size:50px"><span
+                                                class="currency">$</span>{{ number_format($plan->min, 0, '.', ',') }}
+                                        </p>
+                                        <div class="pricing--desc" style="margin-bottom:-1px">
+                                            Maximum Investment
+                                        </div>
+                                        <p style="font-size:50px"><span
+                                                class="currency">$</span>{{ number_format($plan->max, 0, '.', ',') }}
+                                        </p>
+                                        <div class="pricing--desc" style="margin-bottom:-1px">
+                                            Daily ROI: {{ $plan->roi }}%
+                                        </div>
+                                        <div style="margin-bottom: 10px"></div>
+                                        <div class="pricing--desc" style="margin-bottom:-1px">
+                                            Duration: {{ $plan->duration }}%
+                                        </div>
+                                        <div style="margin-bottom: 10px"></div>
+                                        <div class="pricing--desc" style="margin-bottom:-1px">
+                                            Referral Commision: {{ $plan->commission }}%
+                                        </div>
+                                        <div style="margin-bottom: 10px"></div>
+                                        <div class="pricing--desc" style="margin-bottom:-1px">
+                                            Capital Return: YES
+                                        </div>
+                                        <div style="margin-bottom: 10px"></div>
+                                        <div class="pricing--desc" style="margin-bottom:0px">
+                                            Instant Withdrawal: YES
+                                        </div>
+                                        <div style="margin-bottom: 10px"></div>
+                                        <div class="pricing--desc" style="margin-bottom: 0px">
+                                            24/7 Live Support
+                                        </div>
+                                        {{-- <a class="btn btn--secondary btn--bordered btn--rounded"
                                         href="{{ route('user.pages.view', ['register']) }}">Get Started</a> --}}
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         @endforeach
                     @endif
 
@@ -791,7 +840,7 @@
                     <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
                         <div class="heading  mb-50 text--center">
                             <p class="heading--subtitle">Our Experts</p>
-                            <h2 class="heading--title">Meet Our Team</h2>
+                            <h2 class="heading--title" style="color:black">Meet Our Team</h2>
                             <p class="heading--desc mb-0">We love what we do and we do it with passion. We value the
                                 reformation of the message, and the smart incentives.</p>
                         </div>
@@ -884,23 +933,20 @@
                 <div class="row flipInX" data-wow-delay="100ms">
                     <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
                         <div class="heading heading-2 mb-30 text--center">
-                            <p class="heading--subtitle">Our Projects</p>
-                            <h2 class="heading--title">Case Studies</h2>
+                            <p class="heading--subtitle">Our Lattest Transactions</p>
+                            <h2 class="heading--title" style="color:black">DEPOSIT</h2>
                             <p class="heading--desc mb-0">We monitor the spectrum of available business investment and
                                 alert our users to market moving events as and when it happens.</p>
                         </div>
                     </div>
-                    <!-- .col-lg-6 end -->
                 </div>
-                <!-- .row end -->
-                <div class="row">
+                {{-- <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-12">
                         <div class="carousel owl-carousel carousel-dots" data-slide="1" data-slide-rs="1"
                             data-autoplay="true" data-nav="false" data-dots="true" data-space="0" data-loop="true"
                             data-speed="800">
                             <div class="case-carousel-grid">
                                 <div class="row">
-                                    <!-- Case #1 -->
                                     <div class="col-sm-12 col-md-6 col-lg-4 case-item filter-customer filter-tips">
                                         <div class="case-item-container">
                                             <div class="case--img">
@@ -909,11 +955,8 @@
                                                     <div class="case--action">
                                                         <a href="#" title="case Item"></a>
                                                     </div>
-                                                    <!-- .case-action end -->
                                                 </div>
-                                                <!-- .case-hover end -->
                                             </div>
-                                            <!-- .case-img end -->
                                             <div class="case--content">
                                                 <div class="case--cat">
                                                     <a href="#">Business Tips</a><a href="#">Consulting</a>
@@ -925,8 +968,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- . case-item end -->
-                                    <!-- Case #2 -->
                                     <div class="col-sm-12 col-md-6 col-lg-4 case-item filter-Investment">
                                         <div class="case-item-container">
                                             <div class="case--img">
@@ -935,11 +976,8 @@
                                                     <div class="case--action">
                                                         <a href="#" title="case Item"></a>
                                                     </div>
-                                                    <!-- .case-action end -->
                                                 </div>
-                                                <!-- .case-hover end -->
                                             </div>
-                                            <!-- .case-img end -->
                                             <div class="case--content">
                                                 <div class="case--cat">
                                                     <a href="#">Investment</a><a href="#">Tips</a>
@@ -951,8 +989,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- . case-item end -->
-                                    <!-- Case #3 -->
                                     <div class="col-sm-12 col-md-6 col-lg-4 case-item filter-tips filter-Consulting">
                                         <div class="case-item-container">
                                             <div class="case--img">
@@ -961,11 +997,8 @@
                                                     <div class="case--action">
                                                         <a href="#" title="case Item"></a>
                                                     </div>
-                                                    <!-- .case-action end -->
                                                 </div>
-                                                <!-- .case-hover end -->
                                             </div>
-                                            <!-- .case-img end -->
                                             <div class="case--content">
                                                 <div class="case--cat">
                                                     <a href="#">Customer Service</a><a href="#">Consulting</a>
@@ -977,8 +1010,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- . case-item end -->
-                                    <!-- Case #4 -->
                                     <div
                                         class="col-sm-12 col-md-6 col-lg-4 case-item filter-environment filter-Consulting">
                                         <div class="case-item-container">
@@ -989,11 +1020,8 @@
                                                     <div class="case--action">
                                                         <a href="#" title="case Item"></a>
                                                     </div>
-                                                    <!-- .case-action end -->
                                                 </div>
-                                                <!-- .case-hover end -->
                                             </div>
-                                            <!-- .case-img end -->
                                             <div class="case--content">
                                                 <div class="case--cat">
                                                     <a href="#">Environment </a>
@@ -1005,8 +1033,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- . case-item end -->
-                                    <!-- Case #5 -->
                                     <div class="col-sm-12 col-md-6 col-lg-4 case-item filter-tips">
                                         <div class="case-item-container">
                                             <div class="case--img">
@@ -1016,11 +1042,8 @@
                                                     <div class="case--action">
                                                         <a href="#" title="case Item"></a>
                                                     </div>
-                                                    <!-- .case-action end -->
                                                 </div>
-                                                <!-- .case-hover end -->
                                             </div>
-                                            <!-- .case-img end -->
                                             <div class="case--content">
                                                 <div class="case--cat">
                                                     <a href="#">Business Growth</a><a href="#">Investment</a>
@@ -1032,8 +1055,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- . case-item end -->
-                                    <!-- Case #6 -->
                                     <div class="col-sm-12 col-md-6 col-lg-4 case-item filter-consulting">
                                         <div class="case-item-container">
                                             <div class="case--img">
@@ -1043,11 +1064,8 @@
                                                     <div class="case--action">
                                                         <a href="#" title="case Item"></a>
                                                     </div>
-                                                    <!-- .case-action end -->
                                                 </div>
-                                                <!-- .case-hover end -->
                                             </div>
-                                            <!-- .case-img end -->
                                             <div class="case--content">
                                                 <div class="case--cat">
                                                     <a href="#">Financial Services</a>
@@ -1059,13 +1077,10 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- . case-item end -->
                                 </div>
                             </div>
-                            <!-- .case-carousel-grid -->
                             <div class="case-carousel-grid">
                                 <div class="row">
-                                    <!-- Case #1 -->
                                     <div class="col-sm-12 col-md-6 col-lg-4 case-item filter-customer filter-tips">
                                         <div class="case-item-container">
                                             <div class="case--img">
@@ -1075,11 +1090,8 @@
                                                     <div class="case--action">
                                                         <a href="#" title="case Item"></a>
                                                     </div>
-                                                    <!-- .case-action end -->
                                                 </div>
-                                                <!-- .case-hover end -->
                                             </div>
-                                            <!-- .case-img end -->
                                             <div class="case--content">
                                                 <div class="case--cat">
                                                     <a href="#">Business Tips</a><a href="#">Consulting</a>
@@ -1091,8 +1103,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- . case-item end -->
-                                    <!-- Case #2 -->
                                     <div class="col-sm-12 col-md-6 col-lg-4 case-item filter-Investment">
                                         <div class="case-item-container">
                                             <div class="case--img">
@@ -1102,11 +1112,8 @@
                                                     <div class="case--action">
                                                         <a href="#" title="case Item"></a>
                                                     </div>
-                                                    <!-- .case-action end -->
                                                 </div>
-                                                <!-- .case-hover end -->
                                             </div>
-                                            <!-- .case-img end -->
                                             <div class="case--content">
                                                 <div class="case--cat">
                                                     <a href="#">Investment</a><a href="#">Tips</a>
@@ -1118,8 +1125,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- . case-item end -->
-                                    <!-- Case #3 -->
                                     <div class="col-sm-12 col-md-6 col-lg-4 case-item filter-tips filter-Consulting">
                                         <div class="case-item-container">
                                             <div class="case--img">
@@ -1129,11 +1134,8 @@
                                                     <div class="case--action">
                                                         <a href="#" title="case Item"></a>
                                                     </div>
-                                                    <!-- .case-action end -->
                                                 </div>
-                                                <!-- .case-hover end -->
                                             </div>
-                                            <!-- .case-img end -->
                                             <div class="case--content">
                                                 <div class="case--cat">
                                                     <a href="#">Customer Service</a><a href="#">Consulting</a>
@@ -1145,8 +1147,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- . case-item end -->
-                                    <!-- Case #4 -->
                                     <div
                                         class="col-sm-12 col-md-6 col-lg-4 case-item filter-environment filter-Consulting">
                                         <div class="case-item-container">
@@ -1157,11 +1157,8 @@
                                                     <div class="case--action">
                                                         <a href="#" title="case Item"></a>
                                                     </div>
-                                                    <!-- .case-action end -->
                                                 </div>
-                                                <!-- .case-hover end -->
                                             </div>
-                                            <!-- .case-img end -->
                                             <div class="case--content">
                                                 <div class="case--cat">
                                                     <a href="#">Environment </a>
@@ -1173,8 +1170,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- . case-item end -->
-                                    <!-- Case #5 -->
                                     <div class="col-sm-12 col-md-6 col-lg-4 case-item filter-tips">
                                         <div class="case-item-container">
                                             <div class="case--img">
@@ -1184,11 +1179,8 @@
                                                     <div class="case--action">
                                                         <a href="#" title="case Item"></a>
                                                     </div>
-                                                    <!-- .case-action end -->
                                                 </div>
-                                                <!-- .case-hover end -->
                                             </div>
-                                            <!-- .case-img end -->
                                             <div class="case--content">
                                                 <div class="case--cat">
                                                     <a href="#">Business Growth</a><a href="#">Investment</a>
@@ -1200,8 +1192,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- . case-item end -->
-                                    <!-- Case #6 -->
                                     <div class="col-sm-12 col-md-6 col-lg-4 case-item filter-consulting">
                                         <div class="case-item-container">
                                             <div class="case--img">
@@ -1211,11 +1201,8 @@
                                                     <div class="case--action">
                                                         <a href="#" title="case Item"></a>
                                                     </div>
-                                                    <!-- .case-action end -->
                                                 </div>
-                                                <!-- .case-hover end -->
                                             </div>
-                                            <!-- .case-img end -->
                                             <div class="case--content">
                                                 <div class="case--cat">
                                                     <a href="#">Financial Services</a>
@@ -1227,17 +1214,343 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- . case-item end -->
                                 </div>
-                                <!-- .row end -->
                             </div>
-                            <!-- .case-carousel-grid -->
+                        </div>
+                    </div>
+                </div> --}}
+                {{-- <div class="payment-history-area bg-color fix area-padding-2">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="section-headline text-center">
+                                    <h3>Deposite and withdrawals history</h3>
+                                    <p>Help agencies to define their new business objectives and then create professional
+                                        software.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="deposite-content">
+                                    <div class="diposite-box">
+                                        <h3>Last deposite</h3>
+                                        <span><i class="flaticon-005-savings"></i></span>
+                                        <div class="deposite-table">
+                                            <table>
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>Date</th>
+                                                    <th>Amount</th>
+                                                    <th>Currency</th>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="{{ asset('assets/images/home/icon/m.png') }}" alt="">Admond
+                                                        sayhel</td>
+                                                    <td><?php echo date('d F, Y (l)'); ?></td>
+                                                    <td>$1000</td>
+                                                    <td>Bitcoin</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="{{ asset('assets/images/home/icon/m1.png') }}" alt="">Jonshon
+                                                    </td>
+                                                    <td><?php echo date('d F, Y (l)'); ?></td>
+                                                    <td>$5000</td>
+                                                    <td>USD</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="{{ asset('assets/images/home/icon/m2.png') }}" alt="">Hopper
+                                                    </td>
+                                                    <td><?php echo date('d F, Y (l)'); ?></td>
+                                                    <td>$4000</td>
+                                                    <td>Ripple</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="{{ asset('assets/images/home/icon/m3.png') }}" alt="">Admond
+                                                        sayhel</td>
+                                                    <td><?php echo date('d F, Y (l)'); ?></td>
+                                                    <td>$3000</td>
+                                                    <td>Bitcoin</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="{{ asset('assets/images/home/icon/m4.png') }}" alt="">Anjel
+                                                        july</td>
+                                                    <td><?php echo date('d F, Y (l)'); ?></td>
+                                                    <td>$500</td>
+                                                    <td>USD</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="{{ asset('assets/images/home/icon/m5.png') }}" alt="">Lagisha
+                                                    </td>
+                                                    <td><?php echo date('d F, Y (l)'); ?></td>
+                                                    <td>$5000</td>
+                                                    <td>Bitcoin</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="deposite-content">
+                                    <div class="diposite-box">
+                                        <h3>Last withdrawals</h3>
+                                        <span><i class="flaticon-042-wallet"></i></span>
+                                        <div class="deposite-table">
+                                            <table>
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>Date</th>
+                                                    <th>Amount</th>
+                                                    <th>Currency</th>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="{{ asset('assets/images/home/icon/m.png') }}" alt="">Arnold
+                                                    </td>
+                                                    <td><?php echo date('d F, Y (l)'); ?></td>
+                                                    <td>$1000</td>
+                                                    <td>USD</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="{{ asset('assets/images/home/icon/m1.png') }}" alt="">Jhon
+                                                        Abra</td>
+                                                    <td><?php echo date('d F, Y (l)'); ?></td>
+                                                    <td>$6000</td>
+                                                    <td>USD</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="{{ asset('assets/images/home/icon/m2.png') }}" alt="">Lanisha
+                                                    </td>
+                                                    <td><?php echo date('d F, Y (l)'); ?></td>
+                                                    <td>$5000</td>
+                                                    <td>USD</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="{{ asset('assets/images/home/icon/m3.png') }}" alt="">Gongales
+                                                    </td>
+                                                    <td><?php echo date('d F, Y (l)'); ?></td>
+                                                    <td>$2000</td>
+                                                    <td>USD</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="{{ asset('assets/images/home/icon/m4.png') }}" alt="">Admond
+                                                        sayhel</td>
+                                                    <td><?php echo date('d F, Y (l)'); ?></td>
+                                                    <td>$1000</td>
+                                                    <td>USD</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="{{ asset('assets/images/home/icon/m5.png') }}" alt="">Remond
+                                                    </td>
+                                                    <td><?php echo date('d F, Y (l)'); ?></td>
+                                                    <td>$3000</td>
+                                                    <td>USD</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> --}}
+                <h2 style="color:black">Last Deposits</h2>
+                <div class="table-wrapper">
+                    <table class="fl-table">
+                        <thead>
+                            <tr>
+                                <th>id</th>
+                                <th>Name</th>
+                                <th>Date</th>
+                                <th>Amout Deposited</th>
+                                <th>Currency</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Admond
+                                    sayhel</td>
+                                <td><?php echo date('d F, Y (l)'); ?></td>
+                                <td>$21000</td>
+                                <td>Bitcoin</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Jonshon idaho</td>
+                                <td><?php echo date('d F, Y (l)'); ?></td>
+                                <td>$5000</td>
+                                <td>USD</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Jerry Hopper
+                                </td>
+                                <td><?php echo date('d F, Y (l)'); ?></td>
+                                <td>$4000</td>
+                                <td>Ripple</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Anjel
+                                    july</td>
+                                <td><?php echo date('d F, Y (l)'); ?></td>
+                                <td>$500</td>
+                                <td>USD</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Lagisha Benson
+                                </td>
+                                <td><?php echo date('d F, Y (l)'); ?></td>
+                                <td>$5000</td>
+                                <td>Bitcoin</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Jovic Mavro
+                                </td>
+                                <td><?php echo date('d F, Y (l)'); ?></td>
+                                <td>$5600</td>
+                                <td>Bitcoin</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Carol Denica
+                                </td>
+                                <td><?php echo date('d F, Y (l)'); ?></td>
+                                <td>$7000</td>
+                                <td>Bitcoin</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Laqisha jones
+                                </td>
+                                <td><?php echo date('d F, Y (l)'); ?></td>
+                                <td>$5000</td>
+                                <td>Bitcoin</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>John Carrick
+                                </td>
+                                <td><?php echo date('d F, Y (l)'); ?></td>
+                                <td>$25000</td>
+                                <td>Bitcoin</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>Sermone White
+                                </td>
+                                <td><?php echo date('d F, Y (l)'); ?></td>
+                                <td>$7500</td>
+                                <td>USD</td>
+                            </tr>
+                        <tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <section id="case" class="case case-standard case-3col pt-110 bg-gray">
+            <div class="container">
+                <div class="row flipInX" data-wow-delay="100ms">
+                    <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
+                        <div class="heading heading-2 mb-30 text--center">
+                            <p class="heading--subtitle">Our Lattest Withdrawal Transactions</p>
+                            <h2 class="heading--title" style="color:black">Withdrawal</h2>
+                            <p class="heading--desc mb-0">We monitor the spectrum of available business investment and
+                                alert our users to market moving events as and when it happens.</p>
                         </div>
                     </div>
                 </div>
-                <!-- .row end -->
+                <h2 style="color:black">Last Withdrawal</h2>
+                <div class="table-wrapper">
+                    <table class="fl-table">
+                        <thead>
+                            <tr>
+                                <th>id</th>
+                                <th>Name</th>
+                                <th>Date</th>
+                                <th>Amout Withdrawn</th>
+                                <th>Currency</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Ahmed Saheed</td>
+                                <td><?php echo date('d F, Y (l)'); ?></td>
+                                <td>$500</td>
+                                <td>Bitcoin</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Jane Bannon</td>
+                                <td><?php echo date('d F, Y (l)'); ?></td>
+                                <td>$600</td>
+                                <td>USD</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Johnson Klint</td>
+                                <td><?php echo date('d F, Y (l)'); ?></td>
+                                <td>$450</td>
+                                <td>Bitcoin</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Angel Banahas</td>
+                                <td><?php echo date('d F, Y (l)'); ?></td>
+                                <td>$4500</td>
+                                <td>Bitcoin</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Lagisha Benson </td>
+                                <td><?php echo date('d F, Y (l)'); ?></td>
+                                <td>$4300</td>
+                                <td>Bitcoin</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Jovic Mavro</td>
+                                <td><?php echo date('d F, Y (l)'); ?></td>
+                                <td>$500</td>
+                                <td>Bitcoin</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Carol Denica</td>
+                                <td><?php echo date('d F, Y (l)'); ?></td>
+                                <td>$900</td>
+                                <td>Bitcoin</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Laqisha jones
+                                </td>
+                                <td><?php echo date('d F, Y (l)'); ?></td>
+                                <td>$5000</td>
+                                <td>Bitcoin</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>John Carrick
+                                </td>
+                                <td><?php echo date('d F, Y (l)'); ?></td>
+                                <td>$2000</td>
+                                <td>Bitcoin</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>Sermone White
+                                </td>
+                                <td><?php echo date('d F, Y (l)'); ?></td>
+                                <td>$700</td>
+                                <td>USD</td>
+                            </tr>
+                        <tbody>
+                    </table>
+                </div>
             </div>
-            <!-- .container end -->
         </section>
 
         <section id="featured3" class="featured featured-2 featured-3 featured-left bg-dark3 pt-0 pb-0">
@@ -1245,7 +1558,8 @@
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-6 col-content">
                         <div class="heading">
-                            <h2 class="heading--title color-white">We Are Here To Ease<br>The Financial Obstacles!</h2>
+                            <h2 class="heading--title color-white">We Are Here To Ease<br>The Investment Obstacles!
+                            </h2>
                             <p class="heading--desc color-white">The choice is in your hands: Where do you go to get an
                                 advice and where you purchase products?!!</p>
                         </div>
@@ -1256,8 +1570,8 @@
                             </div>
                             <div class="feature-card-content">
                                 <h3 class="feature-card-title">Innovative Solutions</h3>
-                                <p class="feature-card-desc">Innovative Solutions offers services, development services
-                                    and consulting to help you make the best technology.</p>
+                                <p class="feature-card-desc">Prostackinvest offers services, development services
+                                    and consulting to help you make the best investment decisions.</p>
                             </div>
                         </div>
                         <!-- feature-card end -->
@@ -1296,7 +1610,6 @@
                 </div>
                 <!-- .row end -->
             </div>
-            <!-- .container end -->
         </section>
         <!-- #featured3 end -->
 
@@ -1329,7 +1642,7 @@
                     <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
                         <div class="heading  mb-50 text--center">
                             <p class="heading--subtitle">Don’t Miss Latest</p>
-                            <h2 class="heading--title">News & Headlines</h2>
+                            <h2 class="heading--title" style="color:black">News & Headlines</h2>
                             <p class="heading--desc mb-0">Follow our latest news and thoughts which focuses exclusively
                                 on design, art, vintage, and also our latest work updates.</p>
                         </div>
