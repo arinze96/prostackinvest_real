@@ -17,14 +17,14 @@
 
         <section id="page-title" class="page-title bg-overlay bg-overlay-dark bg-parallax">
             <div class="bg-section">
-                <img src="{{ asset('assets/images/page-titles/5.jpg') }}" alt="Background" />
+                <img src="{{ asset('assets/images/page-titles/security.jpg') }}" alt="Background" />
             </div>
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-12">
                         <div class="title text-center">
                             <div class="title--heading">
-                                <h1>How to explain inquiry to clients!</h1>
+                                <h1>SECURITY</h1>
                             </div>
                             <div class="clearfix"></div>
                             <ol class="breadcrumb d-flex justify-content-center">
@@ -61,165 +61,39 @@
                             </div>
                         </div>
 
-                        <div class="widget widget-info">
-                            <div class="widget--content">
-                                <div class="info--title pull-left">
-                                    Download<br>Our Brochures
-                                </div>
-                                <div class="info--icon pull-right">
-                                    <img src="assets/images/icons/pdficon.jpg" alt="icon">
-                                </div>
-                            </div>
-                        </div> <!-- .widget-info end -->
+
                     </div><!-- .col-lg-3 end -->
                     <div class="col-sm-12 col-md-12 col-lg-9">
                         <div class="row">
                             <div class="col-sm-12 col-md-12 col-lg-12">
                                 <div class="case--study-text">
-                                    <h3>Overview</h3>
-                                    <p>We all need a little help from our friends from time to time. Although we offer
-                                        the one-stop convenience of an integrated range of legal, financial services
-                                        under one roof, there are occasions when our clients need specialist advice
-                                        beyond the scope of our own expertise. That’s why we’ve developed close working
-                                        relationships with a number of strategic partners who can bring additional
-                                        skills to the table to complement our own, carefully selected as leaders in
-                                        their respective fields whose outlook and approach to client care mirror our own
-                                        high standards.</p>
-                                    <p>It’s all part our commitment to provide Financial Expert clients with a complete
-                                        support service for every stage of life – in other words, if we can’t give you
-                                        the answers you’re looking for, then you can count on us to know someone who can
+                                    <h3>Privacy</h3>
+                                    <p>Respect for your personal data and information.</p>
+                                    <p>Prostackinvest, we place premium on the protection of our client's privacy and information. We are highly professional in dealing with our clients and as such, client's information cannot be shared with the public except by express permission from our clients.
                                     </p>
                                 </div>
                                 <!-- .case-study-text end -->
                             </div>
-                            <!-- .col-lg-12 end -->
-                            <div class="col-sm-12 col-md-12 col-lg-12 mb-45">
-                                <div class="video--content text-center">
-                                    <div class="bg-section">
-                                        <img src="{{ asset('assets/images/video/1.jpg') }}" alt="Background" />
-                                    </div>
-                                    <div class="video--button">
-                                        <div class="video-overlay">
-                                            <div class="pos-vertical-center">
-                                                <a class="popup-video"
-                                                    href="https://www.youtube.com/watch?v=nrJtHemSPW4">
-                                                    <span class="btn--animation"></span>
-                                                    <i class="fa fa-play"></i>
-                                                </a>
-                                            </div>
-                                            <!-- .video-player end -->
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- .video-content end -->
-                            </div>
-                            <!-- .col-lg-12 end -->
-                            <div class="col-sm-12 col-md-12 col-lg-12">
-                                <div class="row  mb-50">
-                                    <div class="col-sm-12 col-md-6 col-lg-6">
-                                        <div class="case--study-text">
-                                            <p>Experts offers the one-stop-shop convenience of integrated range of
-                                                financial and legal services under one roof. We are passionate about
-                                                what we do and how we do it. We understand that our clients are not just
-                                                the most important part of our business strategy and policy.</p>
-                                            <p>There are occasions when our clients need specialist advice beyond the
-                                                scope of our own expertise. That’s why we’ve developed close working
-                                                relationships and managment.</p>
-                                        </div>
-                                        <!-- .case-study-text end -->
-                                    </div>
-                                    <!-- .col-lg-6 end -->
-                                    <div class="col-sm-12 col-md-6 col-lg-6">
-                                        <div class="chart--img">
-                                            <img src="{{ asset('assets/images/charts/1.png') }}" alt="chart"
-                                                class="img-fluid">
-                                        </div>
-                                        <!-- .chart-img end -->
-                                    </div>
-                                    <!-- .col-lg-6 end -->
-                                </div>
-                                <!-- .row end -->
-                            </div>
-                            <!-- .col-lg-12 end -->
+
+
                             <div class="col-sm-12 col-md-12 col-lg-12">
                                 <div class="case--study-text">
-                                    <h3>Strategy</h3>
-                                    <p>We all need a little help from our friends from time to time. Although we offer
-                                        the one-stop convenience of an integrated range of legal, financial services
-                                        under one roof, there are occasions when our clients need specialist advice
-                                        beyond the scope of our own expertise. That’s why we’ve developed close working
-                                        relationships with a number of strategic partners who can bring additional
-                                        skills to the table to complement our own, carefully selected as leaders in
-                                        their respective fields whose outlook and approach to client care mirror our own
-                                        high standards.</p>
+                                    <h3>Fraud Protection</h3>
+                                    <p>Safeguards to protect against unauthorized activity.</p>
+                                    <p>Prostackinvest is committed to safeguarding and protecting your account from fraud and all other unauthorized activities. Report as soon as you notice an illegal activity in your account and our company will move in swiftly to ensure you recover whatever loss that may arise as a result of such illegal activity.</p>
                                 </div>
                                 <!-- .case-study-text end -->
                             </div>
-                            <!-- .col-lg-12 end -->
-                            <div class="col-sm-12 col-md-12 col-lg-12">
-                                <div class="accordion accordion-1 mb-50" id="accordion01">
-                                    <!-- Panel 01 -->
-                                    <div class="card">
-                                        <div class="card-heading">
-                                            <a class="card-link collapsed" data-toggle="collapse"
-                                                data-parent="#accordion01" href="#collapse01-1">Which Plan Is Right For
-                                                Me?</a>
-                                        </div>
-                                        <div id="collapse01-1" class="collapse" data-parent="#accordion01">
-                                            <div class="card-body">Trends, vision dominates a lot of our
-                                                subconscious interpretation of the world around us. On top it, pleasing
-                                                images create a better user experience. Rounding up a bunch of specific
-                                                designs.Trends, vision dominates a lot of our subconscious
-                                                interpretation of the world around us. </div>
-                                        </div>
-                                    </div>
-                                    <!-- Panel 02 -->
-                                    <div class="card">
-                                        <div class="card-heading">
-                                            <a class="card-link collapsed" data-toggle="collapse"
-                                                data-parent="#accordion01" href="#collapse01-2">Do I have to commit to a
-                                                contract? </a>
-                                        </div>
-                                        <div id="collapse01-2" class="collapse" data-parent="#accordion01">
-                                            <div class="card-body">Trends, vision dominates a lot of our
-                                                subconscious interpretation of the world around us. On top it, pleasing
-                                                images create a better user experience. Rounding up a bunch of specific
-                                                designs.Trends, vision dominates a lot of our subconscious
-                                                interpretation of the world around us. </div>
-                                        </div>
-                                    </div>
-                                    <!-- Panel 03 -->
-                                    <div class="card">
-                                        <div class="card-heading">
-                                            <a class="card-link" data-toggle="collapse" data-parent="#accordion01"
-                                                href="#collapse01-3">What Payment Methods Are Available? </a>
-                                        </div>
-                                        <div id="collapse01-3" class="collapse show" data-parent="#accordion01">
-                                            <div class="card-body">With any financial product that you buy, it is
-                                                important that you know you are getting the best advice from a reputable
-                                                company as often you will have to provide sensitive information online
-                                                or over the internet.</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End .Accordion-->
-                            </div>
-                            <!-- .col-lg-12 end -->
+
                             <div class="col-sm-12 col-md-12 col-lg-12">
                                 <div class="case--study-text">
-                                    <h3>Desired Results</h3>
-                                    <p>Experts offers the one-stop-shop convenience of integrated range of financial and
-                                        legal services under one roof. We understand that our clients are not just the
-                                        most important part of our business.</p>
+                                    <h3>Data Security</h3>
+                                    <p>Protection behind the scenes.</p>
+                                    <p>Our company uses the strongest browser encryption to protect our clients investments. We do this by ensuring that our data collection is saved on a secured server which is strong enough secure and store data.</p>
                                 </div>
                                 <!-- .case-study-text end -->
-                                <div class="chart--img">
-                                    <img src="{{ asset('assets/images/charts/2.png') }}" alt="chart"
-                                        class="img-fluid">
-                                </div>
-                                <!-- .chart-img end -->
                             </div>
-                            <!-- .col-lg-12 end -->
+
                         </div>
                     </div>
                     <!-- .col-md-9 end -->

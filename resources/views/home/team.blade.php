@@ -18,7 +18,7 @@
        
         <section id="page-title" class="page-title bg-overlay bg-overlay-dark bg-parallax">
             <div class="bg-section">
-                <img src="{{ asset('assets/images/page-titles/5.jpg') }}" alt="Background" />
+                <img src="{{ asset('assets/images/page-titles/office2.jpg') }}" alt="Background" />
             </div>
             <div class="container">
                 <div class="row">
@@ -45,7 +45,7 @@
                     <div class="col-xs-12 col-sm-4 col-md-4">
                         <div class="member">
                             <div class="member-img">
-                                <img src="{{ asset('assets/images/team/grid/1.jpg') }}" alt="member">
+                                <img src="{{ asset('assets/images/team/grid/person1.jpg') }}" alt="member">
                                 <div class="member-overlay">
                                     <div class="member-social">
                                         <a href="#"><i class="fa fa-facebook"></i></a>
@@ -54,7 +54,7 @@
                                 </div><!-- .memebr-ovelay end -->
                             </div><!-- .member-img end -->
                             <div class="member-info">
-                                <h5>James Wane</h5>
+                                <h5>Jessica Wane</h5>
                                 <h6>Consultant</h6>
                             </div><!-- .member-info end -->
                         </div><!-- .member end -->
@@ -64,7 +64,7 @@
                     <div class="col-xs-12 col-sm-4 col-md-4">
                         <div class="member">
                             <div class="member-img">
-                                <img src="{{ asset("assets/images/team/grid/2.jpg") }}" alt="member">
+                                <img src="{{ asset("assets/images/team/grid/person2.jpg") }}" alt="member">
                                 <div class="member-overlay">
                                     <div class="member-social">
                                         <a href="#"><i class="fa fa-facebook"></i></a>
@@ -83,7 +83,7 @@
                     <div class="col-xs-12 col-sm-4 col-md-4">
                         <div class="member">
                             <div class="member-img">
-                                <img src="{{ asset("assets/images/team/grid/3.jpg") }}" alt="member">
+                                <img src="{{ asset("assets/images/team/grid/person3.jpg") }}" alt="member">
                                 <div class="member-overlay">
                                     <div class="member-social">
                                         <a href="#"><i class="fa fa-facebook"></i></a>
@@ -98,62 +98,6 @@
                         </div><!-- .member end -->
                     </div><!-- .col-md-3 end -->
 
-                    <!-- Member #4 -->
-                    <div class="col-xs-12 col-sm-4 col-md-4">
-                        <div class="member">
-                            <div class="member-img">
-                                <img src="{{ asset("assets/images/team/grid/4.jpg") }}" alt="member">
-                                <div class="member-overlay">
-                                    <div class="member-social">
-                                        <a href="#"><i class="fa fa-facebook"></i></a>
-                                        <a href="#"><i class="fa fa-twitter"></i></a>
-                                    </div>
-                                </div><!-- .memebr-ovelay end -->
-                            </div><!-- .member-img end -->
-                            <div class="member-info">
-                                <h5>Martin Hope</h5>
-                                <h6>Planning</h6>
-                            </div><!-- .member-info end -->
-                        </div><!-- .member end -->
-                    </div><!-- .col-md-4 end -->
-
-                    <!-- Member #5 -->
-                    <div class="col-xs-12 col-sm-4 col-md-4">
-                        <div class="member">
-                            <div class="member-img">
-                                <img src="{{ asset("assets/images/team/grid/5.jpg") }}" alt="member">
-                                <div class="member-overlay">
-                                    <div class="member-social">
-                                        <a href="#"><i class="fa fa-facebook"></i></a>
-                                        <a href="#"><i class="fa fa-twitter"></i></a>
-                                    </div>
-                                </div><!-- .memebr-ovelay end -->
-                            </div><!-- .member-img end -->
-                            <div class="member-info">
-                                <h5>Jennifer Tom</h5>
-                                <h6>Managment</h6>
-                            </div><!-- .member-info end -->
-                        </div><!-- .member end -->
-                    </div><!-- .col-md-4 end -->
-
-                    <!-- Member #6 -->
-                    <div class="col-xs-12 col-sm-4 col-md-4">
-                        <div class="member">
-                            <div class="member-img">
-                                <img src="{{ asset("assets/images/team/grid/6.jpg") }}" alt="member">
-                                <div class="member-overlay">
-                                    <div class="member-social">
-                                        <a href="#"><i class="fa fa-facebook"></i></a>
-                                        <a href="#"><i class="fa fa-twitter"></i></a>
-                                    </div>
-                                </div><!-- .memebr-ovelay end -->
-                            </div><!-- .member-img end -->
-                            <div class="member-info">
-                                <h5>John Peter</h5>
-                                <h6>HR</h6>
-                            </div><!-- .member-info end -->
-                        </div><!-- .member end -->
-                    </div><!-- .col-md-4 end -->
                 </div><!-- .row end -->
             </div><!-- .container end -->
         </section><!-- #team1 end -->
@@ -165,7 +109,7 @@
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-6">
                         <div class="heading">
-                            <h2 class="heading--title color-white">We Are Here To Ease<br>The Financial Obstacles!</h2>
+                            <h2 class="heading--title color-white">We Are Here To Ease<br>The Investment Obstacles!</h2>
                             <p class="heading--desc color-white">The choice is in your hands: Where do you go to get an
                                 advice and where you purchase products?!!</p>
                         </div>
@@ -267,126 +211,6 @@
             <!-- .container end -->
         </section>
       
-        <section id="blog" class="blog blog-grid pb-60">
-            <div class="container">
-                <div class="row  wow flipInX" data-wow-delay="100ms">
-                    <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
-                        <div class="heading heading-2 mb-50 text--center">
-                            <p class="heading--subtitle">Don’t Miss Latest</p>
-                            <h2 class="heading--title">News & Headlines</h2>
-                            <p class="heading--desc mb-0">Follow our latest news and thoughts which focuses exclusively
-                                on investment strategy guide, blockchain tech, crypto-trading and mining.</p>
-                        </div>
-                    </div>
-                    <!-- .col-lg-6 end -->
-                </div>
-                <div class="row wow fadeIn" data-wow-delay="100ms">
-                    <!-- Blog Entry #1 -->
-                    <div class="col-sm-12 col-md-4 col-lg-4">
-                        <div class="blog-entry">
-                            <div class="entry--img">
-                                <a href="#">
-                                    <img src="{{ asset("assets/images/blog/grid/1.jpg") }}" alt="entry image" />
-                                    <div class="entry--overlay"></div>
-                                </a>
-                            </div><!-- .entry-img end -->
-                            <div class="entry--content">
-                                <div class="entry--meta">
-                                    <a href="#">Investment tips</a>
-                                </div>
-                                <div class="entry--title">
-                                    <h4><a href="#">Four ways to cheer yourself up on Blue Monday!</a></h4>
-                                </div>
-                                <div class="entry--date">
-                                    Apr 15, 2018
-                                </div>
-                                <div class="entry--bio">
-                                    <p> The third Monday of January is supposed to be most depressing day of the year.
-                                        Whether you believe that or not, the long nights, cold weather and trying to...
-                                    </p>
-                                </div>
-                                <div class="entry--more">
-                                    <a href="#"><i class="fa fa-plus"></i>Read More</a>
-                                </div>
-                            </div>
-                            <!-- .entry-content end -->
-                        </div>
-                        <!-- .blog-entry end -->
-                    </div>
-                    <!-- .col-md-4 end -->
-
-                    <!-- Blog Entry #2 -->
-                    <div class="col-sm-12 col-md-4 col-lg-4">
-                        <div class="blog-entry">
-                            <div class="entry--img">
-                                <a href="#">
-                                    <img src="{{ asset("assets/images/blog/grid/2.jpg") }}" alt="entry image" />
-                                    <div class="entry--overlay"></div>
-                                </a>
-                            </div><!-- .entry-img end -->
-                            <div class="entry--content">
-                                <div class="entry--meta">
-                                    <a href="#">Consulting</a>
-                                </div>
-                                <div class="entry--title">
-                                    <h4><a href="#">In the news: this week’s top money stories</a></h4>
-                                </div>
-                                <div class="entry--date">
-                                    Apr 12, 2018
-                                </div>
-                                <div class="entry--bio">
-                                    <p>The weather has taken a turn for the worse and January pay day still seems far
-                                        away. But you don’t have to venture outdoors or spend any money today sit back,
-                                        relax... </p>
-                                </div>
-                                <div class="entry--more">
-                                    <a href="#"><i class="fa fa-plus"></i>Read More</a>
-                                </div>
-                            </div>
-                            <!-- .entry-content end -->
-                        </div>
-                        <!-- .blog-entry end -->
-                    </div>
-                    <!-- .col-md-4 end -->
-
-                    <!-- Blog Entry #3 -->
-                    <div class="col-sm-12 col-md-4 col-lg-4">
-                        <div class="blog-entry">
-                            <div class="entry--img">
-                                <a href="#">
-                                    <img src="{{ asset("assets/images/blog/grid/3.jpg") }}" alt="entry image" />
-                                    <div class="entry--overlay"></div>
-                                </a>
-                            </div><!-- .entry-img end -->
-                            <div class="entry--content">
-                                <div class="entry--meta">
-                                    <a href="#">Financial</a>
-                                </div>
-                                <div class="entry--title">
-                                    <h4><a href="#">How does your household spend compare to the UK?</a></h4>
-                                </div>
-                                <div class="entry--date">
-                                    Apr 12, 2018
-                                </div>
-                                <div class="entry--bio">
-                                    <p>The ‘cost of living’ is a phrase that’s rarely out of the news, and our wallets
-                                        and bills appear to back up the claims that our household spending is on the
-                                        rise... </p>
-                                </div>
-                                <div class="entry--more">
-                                    <a href="#"><i class="fa fa-plus"></i>Read More</a>
-                                </div>
-                            </div>
-                            <!-- .entry-content end -->
-                        </div>
-                        <!-- .blog-entry end -->
-                    </div>
-                    <!-- .col-md-4 end -->
-                </div>
-                <!-- .row end -->
-            </div>
-            <!-- .container end -->
-        </section>
       
         <section id="cta1" class="cta cta-1 bg-theme">
             <div class="container">

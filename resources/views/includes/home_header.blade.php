@@ -20,7 +20,7 @@
                                         </div>
                                         <div class="contact-box-info">
                                             <p class="text-capitalize ">Visit Us:</p>
-                                            <p class="font-heading">22 Albahr St, Tanta, Egypt</p>
+                                            <p class="font-heading">26 Saint-Catherine St W, Montreal, Quebec H2X 1Z5, Canada.</p>
                                         </div>
                                     </div>
 
@@ -30,7 +30,7 @@
                                         </div>
                                         <div class="contact-box-info">
                                             <p class="text-capitalize ">email us</p>
-                                            <p class="font-heading">7oroof@7oroof.com</p>
+                                            <p class="font-heading">admin@prostackinvest.com</p>
                                         </div>
                                     </div>
 
@@ -40,16 +40,10 @@
                                         </div>
                                         <div class="contact-box-info">
                                             <p class="text-capitalize">call us</p>
-                                            <p class="text-capitalize font-heading">002 01065370701</p>
+                                            <p class="text-capitalize font-heading">01065370701</p>
                                         </div>
                                     </div>
 
-                                    <!-- Module Social -->
-                                    <div class="module module-social pull-left">
-                                        <a href="#"><i class="fa fa-facebook"></i></a>
-                                        <a href="#"><i class="fa fa-twitter"></i></a>
-                                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                                    </div><!-- .module-social end -->
                                 </div>
                             </div>
                             <!-- .col-md-6 end -->
@@ -71,7 +65,6 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="navbarContent">
                 <ul class="navbar-nav mr-auto">
                     <!-- Home Menu-->
@@ -101,9 +94,9 @@
                             <li>
                                 <a href="{{ route('user.pages.view', ['our_history']) }}">Our History</a>
                             </li>
-                            <li>
+                            {{-- <li>
                                 <a href="{{ route('user.pages.view', ['anti_fraud']) }}">Anti Fraud</a>
-                            </li>
+                            </li> --}}
                         </ul>
                     </li>
                     
@@ -130,8 +123,7 @@
                             </li> --}}
                         </ul>
                     </li>
-                    <!-- li end -->
-                    <!-- Studies Menu-->
+
                     <li class="has-dropdown">
                         <a href="{{ route('user.pages.view', ['pricing']) }}" class=" menu-item">Pricing</a>
                     </li>
@@ -148,6 +140,9 @@
                     
                     <li class="has-dropdown mega-dropdown">
                         <a href="{{ route('user.pages.view', ['register']) }}" class=" menu-item">Register</a>
+                    </li>
+                    <li class="has-dropdown mega-dropdown">
+                        <a href="{{ route('user.pages.view', ['personal_loan']) }}" class=" menu-item">Loan</a>
                     </li>
                 </ul>
                 <div class="module-container">

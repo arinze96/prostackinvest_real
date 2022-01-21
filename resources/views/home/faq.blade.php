@@ -44,49 +44,16 @@
         <section id="faqs" class="bg-white">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-12 col-md-12 col-lg-3">
-                        <!-- Categories
-============================================= -->
-                        <div class="widget widget-categories">
-                            <div class="widget-content">
-                                <ul class="list-unstyled">
-                                    <li class="active"><a href="#">All services</a></li>
-                                    <li><a href="#">Protection & Security</a></li>
-                                    <li><a href="#">Licensed Exchange</a></li>
-                                    <li><a href="#">Recurring Buys</a></li>
-                                    <li><a href="#">Unlimited Free Transfers</a></li>
-                                    <li><a href="#">Multi Currency Accounts</a></li>
-                                    <li><a href="#">Blockchain Smart Contracts</a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <!-- Info
-============================================= -->
-                        <div class="widget widget-info">
-                            <div class="widget--content">
-                                <div class="info--title pull-left">
-                                    Download<br>Our Brochures
-                                </div>
-                                <div class="info--icon pull-right">
-                                    <img src="{{ asset("assets/images/icons/pdficon.jpg") }}" alt="icon">
-                                </div>
-                            </div>
-                        </div> <!-- .widget-info end -->
-                    </div><!-- .col-lg-3 end -->
-                    <div class="col-sm-12 col-md-12 col-lg-9">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
                         <div class="accordion accordion-1" id="accordion01">
                             <!-- Panel 01 -->
                             <div class="card">
                                 <div class="card-heading">
                                     <a class="card-link collapsed" data-toggle="collapse" data-parent="#accordion01"
-                                        href="#collapse01-1">Which Plan Is Right For Me?</a>
+                                        href="#collapse01-1">WHAT IS THE WITHDRAWAL PROCEDURE??</a>
                                 </div>
                                 <div id="collapse01-1" class="collapse" data-parent="#accordion01">
-                                    <div class="card-body">Trends, vision dominates a lot of our subconscious
-                                        interpretation of the world around us. On top it, pleasing images create a
-                                        better user experience. Rounding up a bunch of specific designs.Trends, vision
-                                        dominates a lot of our subconscious interpretation of the world around us.
+                                    <div class="card-body">You may make withdrawal requests at any time. Withdrawing funds is safe and simple with Master Trade. You can request for a withdrawal either from your account or by contacting your account manager. You will be required to submit proper documents in order to begin the process. Our accounting department will process the requests once you request for withdrawel of Funds
                                     </div>
                                 </div>
                             </div>
@@ -94,27 +61,21 @@
                             <div class="card">
                                 <div class="card-heading">
                                     <a class="card-link collapsed" data-toggle="collapse" data-parent="#accordion01"
-                                        href="#collapse01-2">Do I have to commit to a contract? </a>
+                                        href="#collapse01-2">HOW DO I DEPOSIT FUNDS?? </a>
                                 </div>
                                 <div id="collapse01-2" class="collapse" data-parent="#accordion01">
-                                    <div class="card-body">Trends, vision dominates a lot of our subconscious
-                                        interpretation of the world around us. On top it, pleasing images create a
-                                        better user experience. Rounding up a bunch of specific designs.Trends, vision
-                                        dominates a lot of our subconscious interpretation of the world around us.
+                                    <div class="card-body">Funding your Prostackinvest account is simple and secure. You can fund your account through multiple payment methods including MoneyGram, WesternUnion, Bitcoin and Perfectmoney.
                                     </div>
                                 </div>
                             </div>
                             <!-- Panel 03 -->
                             <div class="card">
                                 <div class="card-heading">
-                                    <a class="card-link" data-toggle="collapse" data-parent="#accordion01"
-                                        href="#collapse01-3">What if I pick the wrong plan?</a>
+                                    <a class="card-link " data-toggle="collapse" data-parent="#accordion01"
+                                        href="#collapse01-3">HOW LONG DOES IT TAKE TO CLOSE MY ACCOUNT AND GET A REFUND?</a>
                                 </div>
                                 <div id="collapse01-3" class="collapse show" data-parent="#accordion01">
-                                    <div class="card-body">Trends, vision dominates a lot of our subconscious
-                                        interpretation of the world around us. On top it, pleasing images create a
-                                        better user experience. Rounding up a bunch of specific designs.Trends, vision
-                                        dominates a lot of our subconscious interpretation of the world around us.
+                                    <div class="card-body">30 days - 90 days. Depending on the amount invested.
                                     </div>
                                 </div>
                             </div>
@@ -122,13 +83,10 @@
                             <div class="card">
                                 <div class="card-heading">
                                     <a class="card-link collapsed" data-toggle="collapse" data-parent="#accordion01"
-                                        href="#collapse01-4">Any contracts or commitments?</a>
+                                        href="#collapse01-4">ARE THERE ANY HIDDEN CHARGES OR FEES?</a>
                                 </div>
                                 <div id="collapse01-4" class="collapse" data-parent="#accordion01">
-                                    <div class="card-body">Trends, vision dominates a lot of our subconscious
-                                        interpretation of the world around us. On top it, pleasing images create a
-                                        better user experience. Rounding up a bunch of specific designs.Trends, vision
-                                        dominates a lot of our subconscious interpretation of the world around us.
+                                    <div class="card-body">No. There are absolutely no hidden fees or extra charges.
                                     </div>
                                 </div>
                             </div>
@@ -136,13 +94,10 @@
                             <div class="card">
                                 <div class="card-heading">
                                     <a class="card-link collapsed" data-toggle="collapse" data-parent="#accordion01"
-                                        href="#collapse01-5">What are my payment options?</a>
+                                        href="#collapse01-5">How DO I GET STARTED?</a>
                                 </div>
                                 <div id="collapse01-5" class="collapse" data-parent="#accordion01">
-                                    <div class="card-body">Trends, vision dominates a lot of our subconscious
-                                        interpretation of the world around us. On top it, pleasing images create a
-                                        better user experience. Rounding up a bunch of specific designs.Trends, vision
-                                        dominates a lot of our subconscious interpretation of the world around us.
+                                    <div class="card-body">The steps involved in this process are really simple. All you need to do is: Investors in Master Trade must be at least 18 years of age. We guarantee the safety of personal data of users. The administration is not responsible for the transfer of your personal data to third parties. If you loose your password, click “forgot password” to your email address you will receive an activation email. IRek Wealth Investment prohibits the creation of numerous accounts without notifying the admin. You must understand the possible risks associated with investing, so don’t invest a higher amount than you can afford to loose. Invest from your heart. Any other related questions, enquires and suggestions arising during the services, you can put in a letter/ mail by contacting customer support. We will investigate the issue and you will receive a response as quickly as possible. IRek Wealth Investment will help you gain your financial freedom so do not worry and always be positive as we WIN.
                                     </div>
                                 </div>
                             </div>
@@ -150,112 +105,10 @@
                             <div class="card">
                                 <div class="card-heading">
                                     <a class="card-link collapsed" data-toggle="collapse" data-parent="#accordion06"
-                                        href="#collapse01-6">How does the free trial work?</a>
+                                        href="#collapse01-6">WHEN DO I GET PAID??</a>
                                 </div>
                                 <div id="collapse01-6" class="collapse" data-parent="#accordion01">
-                                    <div class="card-body">Trends, vision dominates a lot of our subconscious
-                                        interpretation of the world around us. On top it, pleasing images create a
-                                        better user experience. Rounding up a bunch of specific designs.Trends, vision
-                                        dominates a lot of our subconscious interpretation of the world around us.
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Panel 07 -->
-                            <div class="card">
-                                <div class="card-heading">
-                                    <a class="card-link collapsed" data-toggle="collapse" data-parent="#accordion01"
-                                        href="#collapse01-7">When should I receive my money?</a>
-                                </div>
-                                <div id="collapse01-7" class="collapse" data-parent="#accordion01">
-                                    <div class="card-body">Trends, vision dominates a lot of our subconscious
-                                        interpretation of the world around us. On top it, pleasing images create a
-                                        better user experience. Rounding up a bunch of specific designs.Trends, vision
-                                        dominates a lot of our subconscious interpretation of the world around us.
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Panel 08 -->
-                            <div class="card">
-                                <div class="card-heading">
-                                    <a class="card-link collapsed" data-toggle="collapse" data-parent="#accordion01"
-                                        href="#collapse01-8">How do I cancel my transaction?</a>
-                                </div>
-                                <div id="collapse01-8" class="collapse" data-parent="#accordion01">
-                                    <div class="card-body">Trends, vision dominates a lot of our subconscious
-                                        interpretation of the world around us. On top it, pleasing images create a
-                                        better user experience. Rounding up a bunch of specific designs.Trends, vision
-                                        dominates a lot of our subconscious interpretation of the world around us.
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Panel 09 -->
-                            <div class="card">
-                                <div class="card-heading">
-                                    <a class="card-link collapsed" data-toggle="collapse" data-parent="#accordion01"
-                                        href="#collapse01-9">Why does my transaction take so long?</a>
-                                </div>
-                                <div id="collapse01-9" class="collapse" data-parent="#accordion01">
-                                    <div class="card-body">Trends, vision dominates a lot of our subconscious
-                                        interpretation of the world around us. On top it, pleasing images create a
-                                        better user experience. Rounding up a bunch of specific designs.Trends, vision
-                                        dominates a lot of our subconscious interpretation of the world around us.
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Panel 10 -->
-                            <div class="card">
-                                <div class="card-heading">
-                                    <a class="card-link collapsed" data-toggle="collapse" data-parent="#accordion01"
-                                        href="#collapse01-10">Can I pay for 12 months in advance?</a>
-                                </div>
-                                <div id="collapse01-10" class="collapse" data-parent="#accordion01">
-                                    <div class="card-body">Trends, vision dominates a lot of our subconscious
-                                        interpretation of the world around us. On top it, pleasing images create a
-                                        better user experience. Rounding up a bunch of specific designs.Trends, vision
-                                        dominates a lot of our subconscious interpretation of the world around us.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Panel 11 -->
-                            <div class="card">
-                                <div class="card-heading">
-                                    <a class="card-link collapsed" data-toggle="collapse" data-parent="#accordion01"
-                                        href="#collapse01-11">If I have questions, where can I find answers?</a>
-                                </div>
-                                <div id="collapse01-11" class="collapse" data-parent="#accordion01">
-                                    <div class="card-body">Trends, vision dominates a lot of our subconscious
-                                        interpretation of the world around us. On top it, pleasing images create a
-                                        better user experience. Rounding up a bunch of specific designs.Trends, vision
-                                        dominates a lot of our subconscious interpretation of the world around us.
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Panel 12 -->
-                            <div class="card">
-                                <div class="card-heading">
-                                    <a class="card-link collapsed" data-toggle="collapse" data-parent="#accordion01"
-                                        href="#collapse01-12">What happens to my data if I cancel?</a>
-                                </div>
-                                <div id="collapse01-12" class="collapse" data-parent="#accordion01">
-                                    <div class="card-body">Trends, vision dominates a lot of our subconscious
-                                        interpretation of the world around us. On top it, pleasing images create a
-                                        better user experience. Rounding up a bunch of specific designs.Trends, vision
-                                        dominates a lot of our subconscious interpretation of the world around us.
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Panel 13 -->
-                            <div class="card">
-                                <div class="card-heading">
-                                    <a class="card-link collapsed" data-toggle="collapse" data-parent="#accordion01"
-                                        href="#collapse01-13">Is my data safe?</a>
-                                </div>
-                                <div id="collapse01-13" class="collapse" data-parent="#accordion01">
-                                    <div class="card-body">Trends, vision dominates a lot of our subconscious
-                                        interpretation of the world around us. On top it, pleasing images create a
-                                        better user experience. Rounding up a bunch of specific designs.Trends, vision
-                                        dominates a lot of our subconscious interpretation of the world around us.
+                                    <div class="card-body">Our standard payment plan provides for monthly payments. At the end of each month, all accumulated funds are transfered to your account. The minimum amount of your balance should be at least 70 USD.
                                     </div>
                                 </div>
                             </div>

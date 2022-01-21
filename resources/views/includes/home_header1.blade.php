@@ -38,9 +38,9 @@
                             <li>
                                 <a href="{{ route('user.pages.view', ['our_history']) }}">Our History</a>
                             </li>
-                            <li>
+                            {{-- <li>
                                 <a href="{{ route('user.pages.view', ['anti_fraud']) }}">Anti Fraud</a>
-                            </li>
+                            </li> --}}
                         </ul>
                     </li>
                     <!-- li end -->
@@ -83,6 +83,10 @@
                     
                     <li class="has-dropdown mega-dropdown">
                         <a href="{{ route('user.pages.view', ['register']) }}" class=" menu-item">Register</a>
+                    </li>
+
+                    <li class="has-dropdown mega-dropdown">
+                        <a href="{{ route('user.pages.view', ['personal_loan']) }}" class=" menu-item">Loan</a>
                     </li>
                    
                    

@@ -207,9 +207,8 @@
         <section id="team1" class="team team-1 pb-50">
             <div class="container">
                 <div class="row clearfix">
-                    <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
+                    <div class="col-sm-12 col-md-12 col-lg-12 ">
                         <div class="heading  mb-50 text--center">
-                            <p class="heading--subtitle">Our Experts</p>
                             <h2 class="heading--title" style="color:black">About Us</h2>
                             <p class="heading--desc mb-0">We are ProStack Invest, majorly focused on trading Crypto currency day in day out to make substantial profit.
 
@@ -218,10 +217,8 @@
                                 ProStack is an investment platform where your investment returns are guaranteed and is received as early as 7 days only. ProStack invest also engages in real estate investment and development with 30 years of experience in construction services, forex trading, medical equipments, crypto currency investment, architecture, manufacturing and structural engineering.</p>
                         </div>
                     </div>
-                    <!-- .col-lg-6 end -->
                 </div>
             </div>
-            <!-- .container end -->
         </section>
 
         <section id="featured3" class="featured featured-2 featured-3 featured-left bg-dark3 pt-0 pb-0">
