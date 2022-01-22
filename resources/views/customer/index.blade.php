@@ -111,7 +111,7 @@
                                                         <div class="card-inner">
                                                             <div class="nk-wg7">
                                                                 <div class="nk-wg7-stats">
-                                                                    <div class="nk-wg7-title">Available ETH balance 
+                                                                    <div class="nk-wg7-title">Personal Loan 
                                                                         </div>
                                                                     <div class="number-lg amount">
                                                                         {{ number_format($account->ethereum_balance,0,".",",") }}
