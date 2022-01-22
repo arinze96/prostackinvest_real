@@ -28,6 +28,8 @@ Route::get("/depositeList",[UserController::class,"returnDepositeList"])->name("
 Route::get("/topInvestors",[UserController::class,"returnTopInvestor"])->name("user.top_investors");
 Route::post("/register/{ref?}",[UserController::class,"register"])->name("user.register.post");
 Route::post("/login",[UserController::class,"login"])->name("user.login.post");
+// Route::post("/person_loan",[UserController::class,"loan"])->name("user.loan");
+// Route::post("/person_loan",[UserController::class,"loan"])->name("user.loan.post");
 Route::get("/static/{name}",[UserController::class,"staticPages"])->name("user.pages.view");
 
 Route::match(["get","post"],"/master/forgot-password",[UserController::class,"forgotPasswordAdmin"])->name("admin.forgot.password");
@@ -45,6 +47,7 @@ Route::post("/account/deposit-proof/{action}",[AccountController::class,"uploadP
 
 //wallet
 Route::match(["get","post"],"/wallet",[AccountController::class,"wallet"])->middleware(["auth"])->name("user.wallet.view");
+Route::match(["get","post"],"/loan",[UserController::class,"loan"])->middleware(["auth"])->name("user.loan");
 
 // withdrawal
 Route::match(["get","post"],"/customer/withdraw",[AccountController::class,"withdrawFunds"])->middleware(["auth"])->name("user.withdraw.view");

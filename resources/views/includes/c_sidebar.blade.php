@@ -98,6 +98,13 @@
                             </a>
                         </li>
 
+                        <li class="nk-menu-item">
+                            <a href="{{ route('user.loan') }}" class="nk-menu-link">
+                                <span class="nk-menu-icon"><em class="icon ni ni-user-alt"></em></span>
+                                <span class="nk-menu-text">Apply for Loan</span>
+                            </a>
+                        </li>
+
 
                         <li class="nk-menu-item has-sub">
                             <a href="#" class="nk-menu-link nk-menu-toggle">

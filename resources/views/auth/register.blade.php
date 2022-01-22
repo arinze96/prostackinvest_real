@@ -104,7 +104,7 @@
                     </div>
 
                     <div class="wrap-input100 validate-input m-b-16">
-                        <input class="input100" type="text" value="{{ $ref }}" name="referral"
+                        <input class="input100" type="text" value="{{ !empty($ref) ? $ref : old('referral') }}" name="referral"
                             placeholder="Referral ID">
                         <span class="focus-input100"></span>
                         @error('referral')

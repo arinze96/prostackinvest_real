@@ -93,7 +93,8 @@
                                                                 <div class="nk-wg7-stats">
                                                                     <div class="nk-wg7-title">Available BTC balance 
                                                                         </div>
-                                                                    <div class="number-lg amount">{{ $account->bitcoin_balance }}
+                                                                    <div class="number-lg amount">
+                                                                        {{ number_format($account->bitcoin_balance,0,".",",") }}
                                                                     </div>
                                                                 </div>
                                                                 <div class="nk-wg7-foot">
@@ -112,7 +113,28 @@
                                                                 <div class="nk-wg7-stats">
                                                                     <div class="nk-wg7-title">Available ETH balance 
                                                                         </div>
-                                                                    <div class="number-lg amount">{{ $account->ethereum_balance }}
+                                                                    <div class="number-lg amount">
+                                                                        {{ number_format($account->ethereum_balance,0,".",",") }}
+                                                                    </div>
+                                                                </div>
+                                                                <div class="nk-wg7-foot">
+                                                                    <span class="nk-wg7-note">Ethereum Balance
+                                                                        <span></span></span>
+                                                                </div>
+                                                            </div> 
+                                                        </div> 
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-4">
+                                                    <div class="card card-bordered text-light is-dark h-100">
+                                                        <div class="card-inner">
+                                                            <div class="nk-wg7">
+                                                                <div class="nk-wg7-stats">
+                                                                    <div class="nk-wg7-title">Available ETH balance 
+                                                                        </div>
+                                                                    <div class="number-lg amount">ETH
+                                                                        {{ number_format($account->ethereum_balance,0,".",",") }}
                                                                     </div>
                                                                 </div>
                                                                 <div class="nk-wg7-foot">

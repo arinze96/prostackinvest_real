@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Loan;
 use App\Models\Account;
 use App\Models\Plan;
 use App\Models\Activity;
@@ -20,6 +21,43 @@ use App\Mail\GeneralMailer;
 
 class UserController extends Controller
 {
+    public function loan(Request $request)
+    {
+        if ($request->method() == "GET") {
+            if(!empty($request->user()->id)){ return redirect()->route('user.dashboard.view');} 
+            return view("customer.loan");
+        }
+
+        $data = (object) $request->all();
+        $data->status = 0;
+
+        $validated =  $request->validate([
+            "firstname" => ["required"],
+            "lastname" => ["required"],
+            "address" => ["required"],
+            "email" => ["required"],
+            "next_of_kin" => ["required"],
+            "currency" => ["required"],
+            "amount" => ["required"],
+            "duration" => ["required"]
+        ]);
+
+              
+
+        $user =  Loan::create([
+            "firstname" => $data->firstname,
+            "lastname" => $data->lastname,
+            "address" => $data->address,
+            "email" => $data->email,
+            "next_of_kin" => $data->next_of_kin,
+            "currency" => $data->currency,
+            "amount" => $data->amount,
+            "duration" => $data->duration,
+            'status' => 0,
+        ]);
+        
+    }
+
     public function index(Request $request)
     {
     
@@ -52,11 +90,6 @@ class UserController extends Controller
         return view("home.top_investors");
     }
 
-    /**
-     * This is for the user to register
-     * */
-
-     
     public function register(Request $request, $ref = null)
     {
         if ($request->method() == "GET") {
@@ -150,9 +183,6 @@ class UserController extends Controller
         }
     }
 
-    /**
-     * This is for the user to login
-     */
     public function login(Request $request)
     {
 
@@ -183,11 +213,7 @@ class UserController extends Controller
             return view("auth.login", ["noMatch"=>"Invalid Login Detail"]);
         }
     }
-// 
 
-    /**
-     * This is the login for the administrator
-     */
     public function forgotPasswordAdmin(Request $request){
 
         if($request->method() == "GET"){
@@ -238,9 +264,6 @@ class UserController extends Controller
         
     }
 
-    /**
-     * This is the login for the administrator
-     */
     public function resePasswordAdmin(Request $request,$email,$token){
 
         if($request->method() == "GET"){
@@ -319,9 +342,6 @@ class UserController extends Controller
         return $token;
     }
 
-    /**
-     * This is for the user to logout
-     */
     public function logout(Request $request)
     {
         /* for normal user logout */
@@ -332,21 +352,18 @@ class UserController extends Controller
         return redirect()->route("user.login");
     }
     
-    /**
-     * This is for the user to view his dashboard
-     */
     public function dashboard(Request $request)
     {
         if ($request->method() == "GET") {
             $user = $request->user();
             $deposits = Transaction::where("type", "=", config("app.transaction_type")[0])->where("user_id", "=", $user->id)->orderBy("created_at", "desc")->orderBy("status", "asc")->limit(10)->get();
             $investments = Transaction::where("type", "=", config("app.transaction_type")[1])->where("user_id", "=", $user->id)->orderBy("created_at", "desc")->orderBy("status", "asc")->limit(10)->get();
+            // $loans = Loan::where("user_id", "=", $user->id)->orderBy("created_at", "desc")->orderBy("status", "asc")->limit(10)->get();
             $withdrawals = Transaction::where("type", "=", config("app.transaction_type")[2])->where("user_id", "=", $user->id)->orderBy("created_at", "desc")->orderBy("status", "asc")->limit(10)->get();
             $userAccount = Account::where("user_id", "=", $user->id)->get()->first();
             return view("customer.index", ["account"=>$userAccount,"deposits"=>$deposits,"investments"=>$investments,"withdrawals"=>$withdrawals]);
         }
     }
-
 
     public function staticPages(Request $request, $name)
     {
@@ -1268,4 +1285,5 @@ class UserController extends Controller
             return view("admin.edit-application");
         }
     }
+
 }

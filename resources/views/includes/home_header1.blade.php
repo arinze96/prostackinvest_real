@@ -1,12 +1,9 @@
 <header id="navbar-spy" class="header header-1 header-transparent">
     <nav id="primary-menu" class="navbar navbar-expand-lg navbar-light navbar-bordered">
         <div class="container">
-            <a class="navbar-brand" href="index-2.html">
                 <a href="{{ route('app.home')}}">
-                    <img class="logo logo-light" width="250px" height="60px" src="{{ asset("assets/images/logo/ProStack_Logo.png") }}" alt="Consultivo Logo" >
+                    <img class="logo logo-light" width="250px" height="60px" src="{{ asset("assets/images/logo/ProStack_Logo.png") }}" alt="Prostackinvest Logo" >
                 </a>
-                {{-- <img class="logo logo-dark" src="{{ asset("assets/images/logo/logo-dark.png") }}" alt="Consultivo Logo"> --}}
-            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
                 aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

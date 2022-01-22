@@ -7,8 +7,9 @@
                         <div class="row">
                             <div class="col-12 col-md-12 col-lg-4">
                                 <div class="navbar-header">
-                                    <a class="logo" href="{{ route('app.home')}}"> <img
-                                            src={{ asset("assets/images/logo/logo-colored.png") }} alt="logo"> </a>
+                                    <a href="{{ route('app.home')}}">
+                                        <img class="logo logo-light" width="250px" height="60px" src="{{ asset("assets/images/logo/ProStack_Logo_2.png") }}" alt="Prostackinvest Logo" >
+                                    </a>
                                 </div>
                             </div>
                             <!-- .col-md-6 end -->
