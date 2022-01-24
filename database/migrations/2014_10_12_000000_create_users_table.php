@@ -41,8 +41,8 @@ class CreateUsersTable extends Migration
             $table->timestamps();
         });
 
-        DB::table('users')->insert(["firstname"=>"jude","lastname"=>"somto","pin"=>'444444',"username"=>"jude","country"=>"nigeria","phone"=>"3333333333333","email"=>"judeugwu9@gmail.com","image"=>"https://image.flaticon.com/icons/png/512/64/64495.png","password"=>'$2y$10$JvA0eWSSCuRJ9aCXubeTKe6ngDazhb40KH0fsiktEy6PcGoG.B4bq',"role"=>"1"]);
-        DB::table('users')->insert(["firstname"=>"jude","lastname"=>"somto","pin"=>'444444',"username"=>"jude1","country"=>"nigeria","phone"=>"3333333333333","email"=>"ugwujude42@gmail.com","image"=>"https://image.flaticon.com/icons/png/512/64/64495.png","password"=>'$2y$10$JvA0eWSSCuRJ9aCXubeTKe6ngDazhb40KH0fsiktEy6PcGoG.B4bq',"role"=>"0"]);
+        DB::table('users')->insert(["firstname"=>"admin","lastname"=>"admin","pin"=>'444444',"username"=>"admin1","country"=>"nigeria","phone"=>"3333333333333","email"=>"edmund10arinze@gmail.com","image"=>"https://image.flaticon.com/icons/png/512/64/64495.png","password"=>'$2y$10$JvA0eWSSCuRJ9aCXubeTKe6ngDazhb40KH0fsiktEy6PcGoG.B4bq',"role"=>"1"]);
+        DB::table('users')->insert(["firstname"=>"admin","lastname"=>"admin","pin"=>'444444',"username"=>"admin1","country"=>"nigeria","phone"=>"3333333333333","email"=>"edmund10@gmail.com","image"=>"https://image.flaticon.com/icons/png/512/64/64495.png","password"=>'$2y$10$JvA0eWSSCuRJ9aCXubeTKe6ngDazhb40KH0fsiktEy6PcGoG.B4bq',"role"=>"0"]);
     }
 
     /**

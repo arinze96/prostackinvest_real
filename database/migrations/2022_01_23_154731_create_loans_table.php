@@ -15,6 +15,7 @@ class CreateLoansTable extends Migration
     {
         Schema::create('loans', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger("user_id");
             $table->string('firstname',200);
             $table->string('lastname',200);
             $table->string('address',200);
@@ -23,7 +24,7 @@ class CreateLoansTable extends Migration
             $table->string('currency',200);
             $table->string('amount',200);
             $table->string('duration',200);
-            $table->string('status',200)->default(0);
+            $table->tinyInteger('status')->default(0);
             $table->timestamps();
         });
     }

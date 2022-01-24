@@ -33,8 +33,27 @@
                                 <a href="{{ route("admin.deposit.view",["all"]) }}" class="nk-menu-link"><span class="nk-menu-text">All Deposits</span></a>
   
                             </li>
-                        </ul><!-- .nk-menu-sub -->
-                    </li><!-- .nk-menu-item -->
+                        </ul>
+                    </li>
+
+                    <li class="nk-menu-item has-sub">
+                        <a href="#" class="nk-menu-link nk-menu-toggle">
+                        <span class="nk-menu-icon"><em class="icon ni ni-help-alt"></em></span>
+                            <span class="nk-menu-text">Loans</span>
+                        </a>
+                        <ul class="nk-menu-sub">
+                            <li class="nk-menu-item">
+                                <a href="
+                                {{-- {{ route("admin.loan.view",["active"]) }} --}}
+                                " class="nk-menu-link"><span class="nk-menu-text">Active Loans</span></a>
+                                <a href="
+                                {{-- {{ route("admin.loan.view",["all"]) }} --}}
+                                " class="nk-menu-link"><span class="nk-menu-text">All Loans</span></a>
+  
+                            </li>
+                        </ul>
+                    </li>
+
                     <li class="nk-menu-item has-sub">
                         <a href="#" class="nk-menu-link nk-menu-toggle">
                         <span class="nk-menu-icon"><em class="icon ni ni-block-over"></em></span>
