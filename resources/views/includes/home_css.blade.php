@@ -6,7 +6,7 @@
 <meta name="author" content="zytheme" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="Consulting Business Consulting Finance Html5 Template">
-<link href="{{ asset("assets/images/favicon/favicon.png") }}" rel="icon">
+<link href="{{ asset("assets/images/logo/ProStack_favicon.png") }}" rel="icon">
 {{-- <link rel="stylesheet" href="{{ asset("assets/css/home/animate.css") }}"> --}}
 <!-- Fonts
     ============================================= -->

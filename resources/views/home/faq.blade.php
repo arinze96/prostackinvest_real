@@ -37,8 +37,6 @@
             </div><!-- .container end -->
         </section><!-- #page-title end -->
 
-        <!-- Accordion #1
-============================================= -->
         <section id="faqs" class="bg-white">
             <div class="container">
                 <div class="row">
@@ -118,8 +116,6 @@
             </div>
         </section>
 
-        <!-- Footer #1
-============================================= -->
         @include('includes.home_footer');
 
 
