@@ -641,8 +641,8 @@ class UserController extends Controller
 
                 return view("admin.$name-loans", ["loans" => $loans]);
             } else {
-                $loans =   Loan::where("status", "=", 0)->orderBy("created_at", "desc")->limit(10)->get();
-                dd($loans);
+                $loans = DB::table('loans')->get();
+                // dd($loans);
                 return view("admin.$name-loan", ["loans" => $loans]);
             }
         }

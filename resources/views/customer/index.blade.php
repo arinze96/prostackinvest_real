@@ -120,6 +120,7 @@
                                                     </div>
                                                 </div>
 
+                                                @if (!$loans == null)
                                                 <div class="col-sm-4">
                                                     <div class="card card-bordered text-light is-dark h-100">
                                                         <div class="card-inner">
@@ -134,14 +135,15 @@
                                                                 <div class="nk-wg7-foot">
                                                                     <span class="nk-wg7-note">Loan Status &nbsp;
                                                                         &nbsp; :
-                                                                        {{ $loans->status == 0 ? 'unapproved' : 'Aprroved'}}
-                                                                        <span></span></span>
+                                                                            {{ $loans->status == 0 ? 'unapproved' : 'Aprroved'}}
+                                                                            <span></span></span>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-
+                                                        @endif
+                                                        
                                                 <div class="col-sm-4">
                                                     <div class="card card-bordered text-light is-dark h-100">
                                                         <div class="card-inner">

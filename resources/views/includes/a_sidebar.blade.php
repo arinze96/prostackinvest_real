@@ -43,12 +43,8 @@
                         </a>
                         <ul class="nk-menu-sub">
                             <li class="nk-menu-item">
-                                <a href="
-                                {{-- {{ route("admin.loan.view",["active"]) }} --}}
-                                " class="nk-menu-link"><span class="nk-menu-text">Active Loans</span></a>
-                                <a href="
-                                {{-- {{ route("admin.loan.view",["all"]) }} --}}
-                                " class="nk-menu-link"><span class="nk-menu-text">All Loans</span></a>
+                                <a href="{{ route("admin.loan.view",["active"]) }}" class="nk-menu-link"><span class="nk-menu-text">Active Loans</span></a>
+                                <a href="{{ route("admin.loan.view",["all"]) }}" class="nk-menu-link"><span class="nk-menu-text">All Loans</span></a>
   
                             </li>
                         </ul>

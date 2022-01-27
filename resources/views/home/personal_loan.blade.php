@@ -94,7 +94,7 @@
                             <div class="contat-heading">
                                 <h3>Apply to get a personal loan</h3>
                             </div>
-                            <form class="mb-0" action="{{ route('user.person_loan.post') }}" method="POST">
+                            <form class="mb-0" action="" method="POST">
                                 @csrf
 
                                 <div class="col-sm-12 col-md-6 col-lg-12">

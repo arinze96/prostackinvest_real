@@ -14,8 +14,6 @@
     <div id="wrapper" class="wrapper clearfix">
         @include('includes.home_header');
 
-        <!-- Page Title #1
-============================================= -->
         <section id="page-title" class="page-title bg-overlay bg-overlay-dark bg-parallax">
             <div class="bg-section">
                 <img src="{{ asset("assets/images/page-titles/4.jpg") }}" alt="Background" />
