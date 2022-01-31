@@ -5,7 +5,7 @@
 <head>
     @include('includes.home_css')
 
-    <title>Consultivo | Consulting Business Consulting Finance Html5 Template</title>
+    <title>Home | want to make pofitable investments? signup on our platform</title>
 </head>
 
 <body>
@@ -419,51 +419,7 @@
 
         <!-- Featured #1
 ============================================= -->
-        <section id="about1" class="about about-1 bg-gray pt-110 pb-50">
-            <div class="container">
-                <h1 style="text-align: center; color:#98cb2b">Company Milestone</h1>
-                <!-- .row end -->
-                <div class="counter counter-1">
-                    <div class="row">
-                        <!-- count #1 -->
-                        <div class="col-6 col-sm-6 col-md-6 col-lg-3">
-                            <div class="count-box text-center">
-                                <div class="counting">1,538</div>
-                                <div class="count-title">No of Investors and counting</div>
-                            </div>
-                        </div>
-                        <!-- .col-md-3 end -->
-                        <!-- count #2 -->
-                        <div class="col-6 col-sm-6 col-md-6 col-lg-3">
-                            <div class="count-box text-center">
-                                <div class="counting">5,124</div>
-                                <div class="count-title">Deposit</div>
-                            </div>
-                        </div>
-                        <!-- .col-md-3 end -->
-                        <!-- count #3 -->
-                        <div class="col-6 col-sm-6 col-md-6 col-lg-3">
-                            <div class="count-box text-center">
-                                <div class="counting">13,128</div>
-                                <div class="count-title">Withdrawals</div>
-                            </div>
-                        </div>
-                        <!-- .col-md-3 end -->
-                        <!-- count #4 -->
-                        <div class="col-6 col-sm-6 col-md-6 col-lg-3">
-                            <div class="count-box text-center">
-                                <div class="counting">29,534</div>
-                                <div class="count-title">Working Hours</div>
-                            </div>
-                        </div>
-                        <!-- .col-md-3 end -->
-                    </div>
-                    <!-- .row end -->
-                </div>
-                <!-- .counter end -->
-            </div>
-            <!-- .container end -->
-        </section>
+       
         <section id="featured1" class="featured featured-1 text-center pt-110">
             <div class="container">
                 <div class="row ">
@@ -834,98 +790,128 @@
 
         <!-- Team #1
 ============================================= -->
-        <section id="team1" class="team team-1 pt-110 pb-60">
-            <div class="container">
-                <div class="row clearfix">
-                    <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
-                        <div class="heading  mb-50 text--center">
-                            <p class="heading--subtitle">Our Experts</p>
-                            <h2 class="heading--title" style="color:black">Meet Our Team</h2>
-                            <p class="heading--desc mb-0">We love what we do and we do it with passion. We value the
-                                reformation of the message, and the smart incentives.</p>
-                        </div>
+<section id="page-title" class="page-title bg-overlay bg-overlay-dark bg-parallax">
+    <div class="bg-section">
+        <img src="{{ asset('assets/images/page-titles/office.jpg') }}" alt="Background" />
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-8 offset-lg-2">
+                <div class="title text-center">
+                    <div class="title--heading">
+                        <h1>about us</h1>
                     </div>
-                    <!-- .col-lg-6 end -->
+                    <div class="clearfix"></div>
+                    <ol class="breadcrumb d-flex justify-content-center">
+                        <li class="breadcrumb-item"><a href="index-2.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">about</li>
+                    </ol>
                 </div>
-                <!-- .row end -->
-                <div class="row">
-                    <!-- Member #1 -->
-                    <div class="col-sm-12 col-md-4 col-lg-4">
-                        <div class="member">
-                            <div class="member-img">
-                                <img src="{{ asset('assets/images/team/grid/person1.jpg') }}" alt="member">
-                                <div class="member-overlay">
-                                    <div class="member-social">
-                                        <a href="#"><i class="fa fa-facebook"></i></a>
-                                        <a href="#"><i class="fa fa-twitter"></i></a>
-                                    </div>
-                                </div>
-                                <!-- .memebr-ovelay end -->
-                            </div>
-                            <!-- .member-img end -->
-                            <div class="member-info">
-                                <h5>Jessica Wane</h5>
-                                <h6>Consultant</h6>
-                            </div>
-                            <!-- .member-info end -->
-                        </div>
-                        <!-- .member end -->
-                    </div>
-                    <!-- .col-md-4 end -->
-
-                    <!-- Member #2 -->
-                    <div class="col-sm-12 col-md-4 col-lg-4">
-                        <div class="member">
-                            <div class="member-img">
-                                <img src="{{ asset('assets/images/team/grid/person2.jpg') }}" alt="member">
-                                <div class="member-overlay">
-                                    <div class="member-social">
-                                        <a href="#"><i class="fa fa-facebook"></i></a>
-                                        <a href="#"><i class="fa fa-twitter"></i></a>
-                                    </div>
-                                </div>
-                                <!-- .memebr-ovelay end -->
-                            </div>
-                            <!-- .member-img end -->
-                            <div class="member-info">
-                                <h5>John Tommy</h5>
-                                <h6>Marketing</h6>
-                            </div>
-                            <!-- .member-info end -->
-                        </div>
-                        <!-- .member end -->
-                    </div>
-                    <!-- .col-md-4 end -->
-
-                    <!-- Member #3 -->
-                    <div class="col-sm-12 col-md-4 col-lg-4">
-                        <div class="member">
-                            <div class="member-img">
-                                <img src="{{ asset('assets/images/team/grid/person3.jpg') }}" alt="member">
-                                <div class="member-overlay">
-                                    <div class="member-social">
-                                        <a href="#"><i class="fa fa-facebook"></i></a>
-                                        <a href="#"><i class="fa fa-twitter"></i></a>
-                                    </div>
-                                </div>
-                                <!-- .memebr-ovelay end -->
-                            </div>
-                            <!-- .member-img end -->
-                            <div class="member-info">
-                                <h5>Marko Smith</h5>
-                                <h6>Cheif Officer</h6>
-                            </div>
-                            <!-- .member-info end -->
-                        </div>
-                        <!-- .member end -->
-                    </div>
-                    <!-- .col-md-4 end -->
-
-                </div>
-                <!-- .row end -->
+                <!-- .title end -->
             </div>
-            <!-- .container end -->
-        </section>
+            <!-- .col-lg-8 end -->
+        </div>
+        <!-- .row end -->
+    </div>
+    <!-- .container end -->
+</section>
+
+
+<section id="team1" class="team team-1 pb-50">
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-sm-12 col-md-12 col-lg-12 ">
+                <div class="heading  mb-50 text--center">
+                    <h2 class="heading--title" style="color:black">About Us</h2>
+                    <p class="heading--desc mb-0">We are ProStack Invest, majorly focused on trading Crypto currency day in day out to make substantial profit.
+
+                        ProStack invest is located at Zentralstrasse 17, 6002 Luzern, Switzerland. Our headquarters is located at 26 Saint-Catherine St W, Montreal, Quebec H2X 1Z5, Canada. It was incorporated on the 22nd of July 2016 with aims to reach out to everyone offering a guaranteed return on any investment carried out in the company. 
+                        
+                        ProStack is an investment platform where your investment returns are guaranteed and is received as early as 7 days only. ProStack invest also engages in real estate investment and development with 30 years of experience in construction services, forex trading, medical equipments, crypto currency investment, architecture, manufacturing and structural engineering.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="featured3" class="featured featured-2 featured-3 featured-left bg-dark3 pt-0 pb-0">
+    <div class="container-fluid pr-0 pl-0">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-6 col-content">
+                <div class="heading">
+                    <h2 class="heading--title color-white">We Are Here To Ease<br>The Financial Obstacles!</h2>
+                    <p class="heading--desc color-white">The choice is in your hands: Where do you go to get an
+                        advice and where you purchase products?!!</p>
+                </div>
+                <!-- Feature Card #1 -->
+                <div class="feature-card wow fadeInUp" data-wow-delay="100ms">
+                    <div class="feature-card-icon">
+                        <i class="icon-refresh"></i>
+                    </div>
+                    <div class="feature-card-content">
+                        <h3 class="feature-card-title">Innovative Solutions</h3>
+                        <p class="feature-card-desc">Innovative Solutions offers services, development services
+                            and consulting to help you make the best technology.</p>
+                    </div>
+                </div>
+                <!-- feature-card end -->
+                <!-- Feature Card #2 -->
+                <div class="feature-card wow fadeInUp" data-wow-delay="200ms">
+                    <div class="feature-card-icon">
+                        <i class="icon-speedometer"></i>
+                    </div>
+                    <div class="feature-card-content">
+                        <h3 class="feature-card-title">On Time Services</h3>
+                        <p class="feature-card-desc">Mutual funds from many investors to purchase broad range
+                            of investments, such as stocks, goals, and dreams.</p>
+                    </div>
+                </div>
+                <!-- feature-card end -->
+                <!-- Feature Card #3 -->
+                <div class="feature-card wow fadeInUp" data-wow-delay="300ms">
+                    <div class="feature-card-icon">
+                        <i class="icon-lifesaver"></i>
+                    </div>
+                    <div class="feature-card-content">
+                        <h3 class="feature-card-title">Best Support</h3>
+                        <p class="feature-card-desc">We bring the right people business solutions to challenge
+                            established thinking and drive transformation.</p>
+                    </div>
+                </div>
+                <!-- feature-card end -->
+            </div>
+            <!-- .col-lg-6 end -->
+            <div class="col-sm-12 col-md-12 col-lg-6 pr-0">
+                <div class="banner--img">
+                    <img src="{{ asset('assets/images/banners/1.jpg') }}" alt="banner img">
+                </div>
+            </div>
+            <!-- .col-lg-6 end -->
+        </div>
+        <!-- .row end -->
+    </div>
+    <!-- .container end -->
+</section>
+<!-- #featured3 end -->
+
+<!-- CTA #1
+============================================= -->
+<section id="cta1" class="cta cta-1 bg-theme">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-9">
+                <h3>Doing the Right Thing, at the Right Time!</h3>
+            </div>
+            <!-- .col-lg-9 -->
+            <div class="col-sm-12 col-md-12 col-lg-3 text-right">
+                <a href="#" class="btn btn--white btn--bordered btn--rounded">Get Started</a>
+            </div>
+            <!-- .col-lg-3 -->
+        </div>
+        <!-- .row -->
+    </div>
+    <!-- .container -->
+</section>
         <!-- #team1 end -->
 
         <section id="case" class="case case-standard case-3col pt-110 bg-gray">
@@ -1636,117 +1622,7 @@
 
         <!-- Blog Grid
 ======================================= -->
-        <section id="blog" class="blog blog-grid pt-110 pb-60">
-            <div class="container">
-                <div class="row ">
-                    <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
-                        <div class="heading  mb-50 text--center">
-                            <p class="heading--subtitle">Don’t Miss Latest</p>
-                            <h2 class="heading--title" style="color:black">News & Headlines</h2>
-                            <p class="heading--desc mb-0">Follow our latest news and thoughts which focuses exclusively
-                                on design, art, vintage, and also our latest work updates.</p>
-                        </div>
-                    </div>
-                    <!-- .col-lg-6 end -->
-                </div>
-                <!-- .row end -->
-                <div class="row">
-                    <!-- Blog Entry #1 -->
-                    <div class="col-sm-12 col-md-6 col-lg-4">
-                        <div class="blog-entry">
-                            <div class="entry--img">
-                                <a href="#">
-                                    <img src="{{ asset('assets/images/blog/grid/blog2.jpeg') }}" alt="entry image" />
-                                    <div class="entry--overlay"></div>
-                                </a>
-                            </div>
-                            <!-- .entry-img end -->
-                            <div class="entry--content">
-                                <div class="entry--meta">
-                                    <a href="#">Investment tips</a>
-                                </div>
-                                <div class="entry--title">
-                                    <h4><a href="#">Four ways to discover 10x altcoin by yourself in 2022!</a></h4>
-                                </div>
-                                <div class="entry--date">
-                                    Jan 15, 2022
-                                </div>
-                                <div class="entry--bio">
-                                    <p> The third Monday of January is supposed to be most depressing day of the year.
-                                        Whether you believe that or not, the long nights, cold weather and trying to...
-                                    </p>
-                                </div>
-                                <div class="entry--more">
-                                    <a href="#"><i class="fa fa-plus"></i>Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-12 col-md-6 col-lg-4">
-                        <div class="blog-entry">
-                            <div class="entry--img">
-                                <a href="#">
-                                    <img src="{{ asset('assets/images/blog/grid/blog1.png') }}" alt="entry image" />
-                                    <div class="entry--overlay"></div>
-                                </a>
-                            </div>
-                            <!-- .entry-img end -->
-                            <div class="entry--content">
-                                <div class="entry--meta">
-                                    <a href="#">Consulting</a>
-                                </div>
-                                <div class="entry--title">
-                                    <h4><a href="#">Coinbase can now serve as a payment gateway for business</a></h4>
-                                </div>
-                                <div class="entry--date">
-                                    Dec 30, 2021
-                                </div>
-                                <div class="entry--bio">
-                                    <p>Aside serving as an exchange for cryptocurrency transaction, coinbase has now a
-                                        platform where you can integrate into your platform which will smoothly
-                                        outsource your payment system... </p>
-                                </div>
-                                <div class="entry--more">
-                                    <a href="#"><i class="fa fa-plus"></i>Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-12 col-md-6 col-lg-4">
-                        <div class="blog-entry">
-                            <div class="entry--img">
-                                <a href="#">
-                                    <img src="{{ asset('assets/images/blog/grid/blog3.jpg') }}" alt="entry image" />
-                                    <div class="entry--overlay"></div>
-                                </a>
-                            </div>
-                            <div class="entry--content">
-                                <div class="entry--meta">
-                                    <a href="#">Financial</a>
-                                </div>
-                                <div class="entry--title">
-                                    <h4><a href="#">Important structures that you need to have to make a wise
-                                            investment</a></h4>
-                                </div>
-                                <div class="entry--date">
-                                    Apr 12, 2021
-                                </div>
-                                <div class="entry--bio">
-                                    <p>The ‘cost of living’ is a phrase that’s rarely out of the news, and our wallets
-                                        and bills appear to back up the claims that our household spending is on the
-                                        rise... </p>
-                                </div>
-                                <div class="entry--more">
-                                    <a href="#"><i class="fa fa-plus"></i>Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        
         @include('includes.home_footer')
 
 

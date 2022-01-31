@@ -50,7 +50,7 @@
                               <label class="form-label" for="firstname">Firstname</label>
                               <div class="form-control-wrap">
                                <input required="" type="text"  class="form-control" name="firstname"  
-                               value="{{ old("firstname") }}"
+                               value="{{ $userDetails->firstname }}"
                                 placeholder="Enter firstname">
                               </div>
                               @error('firstname')
@@ -65,7 +65,7 @@
                                <label class="form-label" for="lastname">Lastname</label>
                                <div class="form-control-wrap">
                                 <input required="" type="text"  class="form-control" name="lastname"  
-                                value="{{ old("lastname") }}"
+                                value="{{ $userDetails->lastname }}"
                                  placeholder="Enter lastname">
                                </div>
                                @error('lastname')
@@ -81,7 +81,7 @@
                                <label class="form-label" for="email">Email</label>
                                <div class="form-control-wrap">
                                 <input required="" type="email"  class="form-control" name="email"  
-                                value="{{ old("email") }}"
+                                value="{{ $userDetails->email }}"
                                  placeholder="Enter email">
                                </div>
                                @error('email')
@@ -141,16 +141,16 @@
                                  <div class="form-control-wrap">
                                    <select name="amount" id="strategySelect" class="form-control">
                                     <option value="" disabled selected hidden>Amount</option>
-                                    <option value="$1,000">$1,000</option>
-                                    <option value="$3,000">$3,000</option>
-                                    <option value="$5,000">$5,000</option>
-                                    <option value="$7,000">$7,000</option>
-                                    <option value="$10,000">$10,000</option>
-                                    <option value="$15,000">$15,000</option>
-                                    <option value="$25,000">$25,000</option>
-                                    <option value="$35,000">$35,000</option>
-                                    <option value="$50,000">$50,000</option>
-                                    <option value="$100,000">$100,000</option>
+                                    <option value="1000">$1,000</option>
+                                    <option value="3000">$3,000</option>
+                                    <option value="5000">$5,000</option>
+                                    <option value="7000">$7,000</option>
+                                    <option value="10000">$10,000</option>
+                                    <option value="15000">$15,000</option>
+                                    <option value="25000">$25,000</option>
+                                    <option value="35000">$35,000</option>
+                                    <option value="50000">$50,000</option>
+                                    <option value="100000">$100,000</option>
                                     
                                 </select>
                                  </div>

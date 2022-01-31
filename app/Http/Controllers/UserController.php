@@ -24,9 +24,8 @@ class UserController extends Controller
     public function loan(Request $request)
     {
         if ($request->method() == "GET") {
-            // if(!empty($request->user()->id)){ return redirect()->route('user.dashboard.view');} 
-            return view("customer.loan");
-            // dd($request->user()->id);
+            $user = $request->user();
+            return view("customer.loan", ["userDetails" => $user]);
         }
 
         $data = (object) $request->all();
@@ -57,6 +56,8 @@ class UserController extends Controller
             "duration" => $data->duration,
             'status' => 0,
         ]);
+
+        if($loan){ return redirect()->route('user.dashboard.view');} 
     }
 
     public function index(Request $request)
@@ -641,23 +642,25 @@ class UserController extends Controller
 
                 return view("admin.$name-loans", ["loans" => $loans]);
             } else {
-                $loans = DB::table('loans')->get();
+                $loans =   Loan::where("id", "=", $id)->orderBy("created_at", "desc")->get()->first();
                 // dd($loans);
-                return view("admin.$name-loan", ["loans" => $loans]);
+                return view("admin.$name-loans", ["loans" => $loans]);
             }
         }
 
         if ($name == "edit") {
+            $loans = DB::table('loans')->get();
             $validated = $request->validate([
-                "message" => ["required"],
+                // "message" => ["required"],
                 "amount" => ["required", "numeric"],
                 "status" => ["required"]
             ]);
 
             $data = (object) $request->all();
             $loans =   Loan::where("id", "=", $id)->orderBy("created_at", "desc")->get()->first();
+            // dd($loans);
             $result = Loan::where("id", "=", $id)->update([
-                'message' => $data->message,
+                // 'message' => $data->message,
                 'amount' => $data->amount,
                 'status' => $data->status
             ]);
@@ -680,6 +683,9 @@ class UserController extends Controller
             if ($loans->status == 1) {
                 return response()->json(["error" => true, "message" => "This request has been approved previously"]);
             }
+            Loan::where("id", "=", $id)->update([
+                'status' => 1,
+            ]);
 
             $user = User::where("id", "=", $loans->user_id)->get()->first();
             $message_amount = $loans->amount;
@@ -688,17 +694,17 @@ class UserController extends Controller
                 "title" => "Loan",
                 "username" => $user->username,
                 "content" => "Hello <b>$user->username!</b><br><br>
-                            Your deposit of $message_amount has been approved successfully.<br>",
+                            Your Loan of $message_amount has been approved successfully.<br>",
                 "year" => date("Y"),
                 "appMail" => config("app.email"),
                 "domain" => config("app.url")
             ];
             $admindetails4 = [
                 "appName" => config("app.name"),
-                "title" => "Deposit",
+                "title" => "Loan",
                 "username" => "Admin",
                 "content" => "Hello <b>$user->username!</b><br><br>
-                                Your deposit of $message_amount  has been approved successfully.<br>",
+                                Your Loan of $message_amount  has been approved successfully.<br>",
                 "year" => date("Y"),
                 "appMail" => config("app.email"),
                 "domain" => config("app.url")
@@ -712,13 +718,12 @@ class UserController extends Controller
 
 
             return response()->json(["success" => true, "message" => "Loan successfully approved"]);
-        } 
-        elseif ($name == "decline") {
+        } elseif ($name == "decline") {
             $loans = Loan::where("id", "=", $id)->get()->first();
             if ($loans->status == 3) {
                 return response()->json(["error" => true, "message" => "This request has been cancled previously"]);
             }
-            Transaction::where("id", "=", $id)->update([
+            Loan::where("id", "=", $id)->update([
                 'status' => 3,
             ]);
 
@@ -727,7 +732,7 @@ class UserController extends Controller
             $message_amount = $loans->amount;
             $details = [
                 "appName" => config("app.name"),
-                "title" => "Deposit",
+                "title" => "Loan",
                 "username" => $user->username,
                 "content" => "Hello <b>$user->username!</b><br><br>
                             Your Loan Request of $message_amount has been cancled. <br><br> This is due to unverified evidence or proof of payment. <br><br> Please chat our support team for proper verifiation or mail us at " . config("app.email"),
@@ -737,7 +742,7 @@ class UserController extends Controller
             ];
             $admindetails5 = [
                 "appName" => config("app.name"),
-                "title" => "Deposit",
+                "title" => "Loan",
                 "username" => "Admin",
                 "content" => "You cancelled <b>$message_amount !</b><br><br>
                                 deposit of $user->username <br><br> due to unverified evidence or proof of payment. " . config("app.email"),
@@ -753,7 +758,7 @@ class UserController extends Controller
                 // Never reached
             }
 
-            return response()->json(["success" => true, "message" => "Deposit successfully cancled"]);
+            return response()->json(["success" => true, "message" => "Loan successfully cancled"]);
         }
     }
 

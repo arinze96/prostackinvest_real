@@ -28,7 +28,8 @@
                       <div class="nk-block-head nk-block-head-lg wide-sm">
                        <div class="nk-block-head-content">
                         <div class="nk-block-head-sub"><a class="back-to" href="javascript:void(0)" onclick="history.go(-1)"><em class="icon ni ni-arrow-left"></em><span>Back</span></a></div>
-                        <h2 class="nk-block-title fw-normal">Edit  {{ $deposit->username }} Deposit Request</h2>
+                        
+                        <h2 class="nk-block-title fw-normal">Edit  {{ $loans->firstname }} Loan Request</h2>
                        </div>
                       </div><!-- .nk-block-head -->
                       <div class="nk-block nk-block-lg">
@@ -37,7 +38,7 @@
                          <div class="preview-block">
                           <span class="preview-title-lg overline-title"></span>
                           <div class="">
-                           <form class="" method="POST" data-post-type="edit-plan" action="{{ route("admin.deposit.view",["edit",$deposit->id]) }}">
+                           <form class="" method="POST" data-post-type="edit-plan" action="{{ route("admin.loan.view",["edit",$loans->id]) }}">
 
                               @csrf
                               <div class="col-sm-12  form-row">
@@ -53,9 +54,9 @@
                               </div>
 
 
-                              <div class="col-sm-6 col-md-12 mb-2">
+                              {{-- <div class="col-sm-6 col-md-12 mb-2">
                                 <div class="form-group">
-                                 <label class="form-label" for="message"> Deposit Message</label>
+                                 <label class="form-label" for="message"> Loan Message</label>
                                  <div class="form-control-wrap">
                                   <input required="" type="text" name="message" class="form-control" id="message" placeholder="Enter message" value="{{ !empty(old("message")) ? old("message") : $deposit->message   }}">
                                  </div>
@@ -63,14 +64,14 @@
                                  <span class="text-danger" id="error_message">{{ $message }}</span>
                                  @enderror
                                 </div>
-                               </div>
+                               </div> --}}
 
 
                              <div class="col-sm-6 col-md-12 mb-2">
                               <div class="form-group">
-                               <label class="form-label" for="min">Deposit Amount ({{ $deposit->currency }})</label>
+                               <label class="form-label" for="min">Loan Amount ({{ $loans->currency }})</label>
                                <div class="form-control-wrap">
-                                <input required="" type="text" name="amount" class="form-control" id="amount" placeholder="Enter amount" value="{{ !empty(old("amount")) ? old("amount") : number_format($deposit->amount,0,"","")   }}">
+                                <input required="" type="text" name="amount" class="form-control" id="amount" placeholder="Enter amount" value="{{ !empty(old("amount")) ? old("amount") : number_format($loans->amount,0,"","")   }}">
                                </div>
                                @error('amount')
                                <span class="text-danger" id="error_amount">{{ $message }}</span>
@@ -81,12 +82,12 @@
 
                              <div class="col-sm-6 col-md-12 mb-2">
                               <div class="form-group">
-                               <label class="form-label" for="status">Deposit Status</label>
+                               <label class="form-label" for="status">Loan Status</label>
                                <div class="form-control-wrap">
                                 <select name="status"  class="form-control">
                                   <option value="" disabled selected>Select</option>
                                   @foreach(config("app.deposit_status") as $key => $status) 
-                                  <option @if ((old("status") == $key) || ($deposit->status == $key))
+                                  <option @if ((old("status") == $key) || ($loans->status == $key))
                                             selected
                                           @endif 
                                   value="{{ $key }}">{{ $status }}</option>
@@ -102,7 +103,7 @@
                             <div class="col-sm-4 mt-3">
                              <div class="form-group">
                               <div class="form-control-wrap">
-                               <button type="submit"  name="edit-plan" style="text-align:center;" class="d-block form-control btn btn-primary " >Edit Deposit Record</button>
+                               <button type="submit"  name="edit-plan" style="text-align:center;" class="d-block form-control btn btn-primary " >Edit Loan Record</button>
                               </div>
                              </div>
                             </div>

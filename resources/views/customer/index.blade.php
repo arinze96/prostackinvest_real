@@ -129,7 +129,8 @@
                                                                     <div class="nk-wg7-title">Personal Loan
                                                                     </div>
                                                                     <div class="number-lg amount">
-                                                                        {{ $loans->amount }}
+                                                                        {{-- {{ $loans->amount }} --}}
+                                                                        ${{ number_format($loans->amount, 0, '.', ',') }}
                                                                     </div>
                                                                 </div>
                                                                 <div class="nk-wg7-foot">

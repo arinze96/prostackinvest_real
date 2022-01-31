@@ -64,12 +64,12 @@
                                                             
                                                                     <td>{{ ucwords($loan->currency) }}</td>
                                                                     <td>{{ ucwords($loan->amount) }}</td>
-                                                                    <td>{{ ucwords($loan->status) }}</td>
+                                                                    <td>{{ $loan->status == 0 ? 'unapproved' : 'Approved' }}</td>
                                                                     <td>{{ date("d M,Y",strtotime($loan->created_at)) }}</td>
                                                                     <td>
                                                                         <a href="{{ route("admin.loan.view",["edit",$loan->id]) }}"><em class="icon ni ni-edit"></em></a>
-                                                                        <a class="delete_data" href="{{ route("admin.deposit.view",["delete",$loan->id]) }}" data-type="deposit" ><em  class="icon ni ni-trash-fill "></em></a>
-                                                                        <a href="{{ route("admin.deposit.view",["view",$loan->id]) }}"><em class="icon ni ni-eye-fill"></em></a>
+                                                                        <a class="delete_data" href="{{ route("admin.loan.view",["delete",$loan->id]) }}" data-type="loan" ><em  class="icon ni ni-trash-fill "></em></a>
+                                                                        {{-- <a href="{{ route("admin.deposit.view",["view",$loan->id]) }}"><em class="icon ni ni-eye-fill"></em></a> --}}
                                                                     </td>
                                                                     <td class="tb-tnx-action">
                                                                       <div class="dropdown">
@@ -77,8 +77,8 @@
                                                                           <div class="dropdown-menu dropdown-menu-right dropdown-menu-xs">
                                                                               <ul class="link-list-plain">
                                                                                   
-                                                                                  <li><a data-action="approve" data-type="deposit"  class="decline_approve" href="{{ route("admin.deposit.view",["approve",$loan->id]) }}">Approve</a></li>
-                                                                                  <li><a  data-action="decline" data-type="deposit" class="decline_approve" href="{{ route("admin.deposit.view",["decline",$loan->id]) }}">Decline</a></li>
+                                                                                  <li><a data-action="approve" data-type="loan"  class="decline_approve" href="{{ route("admin.loan.view",["approve",$loan->id]) }}">Approve</a></li>
+                                                                                  <li><a  data-action="decline" data-type="loan" class="decline_approve" href="{{ route("admin.loan.view",["decline",$loan->id]) }}">Decline</a></li>
                                                                                   
                                                                               </ul>
                                                                           </div>

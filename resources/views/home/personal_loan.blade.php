@@ -4,7 +4,7 @@
 
 <head>
     @include('includes.home_css')
-    <title>Consultivo | Consulting Business Consulting Finance Html5 Template</title>
+    <title> Personal Loan</title>
 </head>
 
 <body>

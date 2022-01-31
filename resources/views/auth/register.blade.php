@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
-    <link rel="icon" type="image/png" href="{{ asset('assets/images/icons/favicon.ico') }}" />
+<link rel="shortcut icon" type="image/png" href="{{ asset("assets/images/home/logo/ProStack_favicon.png") }}"/>
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}">
     <!--===============================================================================================-->
@@ -103,7 +103,7 @@
                         @enderror
                     </div>
 
-                    <div class="wrap-input100 validate-input m-b-16">
+                    <div class="wrap-input100 m-b-16">
                         <input class="input100" type="text" value="{{ !empty($ref) ? $ref : old('referral') }}" name="referral"
                             placeholder="Referral ID">
                         <span class="focus-input100"></span>

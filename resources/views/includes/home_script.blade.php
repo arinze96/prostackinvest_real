@@ -16,5 +16,6 @@
 <!-- RS Configration JS Files -->
 <script src="{{ asset('assets/js/rsconfig.js') }}"></script>
 
+<script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinMarquee.js"></script>
 
 
