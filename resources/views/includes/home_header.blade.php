@@ -41,7 +41,7 @@
                                         </div>
                                         <div class="contact-box-info">
                                             <p class="text-capitalize">call us</p>
-                                            <p class="text-capitalize font-heading">01065370701</p>
+                                            <p class="text-capitalize font-heading">+13236887461</p>
                                         </div>
                                     </div>
 
