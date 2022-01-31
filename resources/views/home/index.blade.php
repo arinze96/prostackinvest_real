@@ -419,7 +419,7 @@
 
         <!-- Featured #1
 ============================================= -->
-       
+
         <section id="featured1" class="featured featured-1 text-center pt-110">
             <div class="container">
                 <div class="row ">
@@ -619,7 +619,7 @@
                                             Minimum Investment
                                         </div>
                                         <p style="font-size:50px"><span
-                                                class="currency">$</span>{{ number_format($plan->min, 0, '.', ',') }}
+                                                class="currency">$</span>{{ number_format($plan->max, 0, '.', ',') }}
                                         </p>
                                         <div class="pricing--desc" style="margin-bottom:-1px">
                                             Maximum Investment
@@ -790,128 +790,136 @@
 
         <!-- Team #1
 ============================================= -->
-<section id="page-title" class="page-title bg-overlay bg-overlay-dark bg-parallax">
-    <div class="bg-section">
-        <img src="{{ asset('assets/images/page-titles/office.jpg') }}" alt="Background" />
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-8 offset-lg-2">
-                <div class="title text-center">
-                    <div class="title--heading">
-                        <h1>about us</h1>
-                    </div>
-                    <div class="clearfix"></div>
-                    <ol class="breadcrumb d-flex justify-content-center">
-                        <li class="breadcrumb-item"><a href="index-2.html">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">about</li>
-                    </ol>
-                </div>
-                <!-- .title end -->
+        <section id="page-title" class="page-title bg-overlay bg-overlay-dark bg-parallax">
+            <div class="bg-section">
+                <img src="{{ asset('assets/images/page-titles/office.jpg') }}" alt="Background" />
             </div>
-            <!-- .col-lg-8 end -->
-        </div>
-        <!-- .row end -->
-    </div>
-    <!-- .container end -->
-</section>
-
-
-<section id="team1" class="team team-1 pb-50">
-    <div class="container">
-        <div class="row clearfix">
-            <div class="col-sm-12 col-md-12 col-lg-12 ">
-                <div class="heading  mb-50 text--center">
-                    <h2 class="heading--title" style="color:black">About Us</h2>
-                    <p class="heading--desc mb-0">We are ProStack Invest, majorly focused on trading Crypto currency day in day out to make substantial profit.
-
-                        ProStack invest is located at Zentralstrasse 17, 6002 Luzern, Switzerland. Our headquarters is located at 26 Saint-Catherine St W, Montreal, Quebec H2X 1Z5, Canada. It was incorporated on the 22nd of July 2016 with aims to reach out to everyone offering a guaranteed return on any investment carried out in the company. 
-                        
-                        ProStack is an investment platform where your investment returns are guaranteed and is received as early as 7 days only. ProStack invest also engages in real estate investment and development with 30 years of experience in construction services, forex trading, medical equipments, crypto currency investment, architecture, manufacturing and structural engineering.</p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-8 offset-lg-2">
+                        <div class="title text-center">
+                            <div class="title--heading">
+                                <h1>about us</h1>
+                            </div>
+                            <div class="clearfix"></div>
+                            <ol class="breadcrumb d-flex justify-content-center">
+                                <li class="breadcrumb-item"><a href="index-2.html">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">about</li>
+                            </ol>
+                        </div>
+                        <!-- .title end -->
+                    </div>
+                    <!-- .col-lg-8 end -->
                 </div>
+                <!-- .row end -->
             </div>
-        </div>
-    </div>
-</section>
+            <!-- .container end -->
+        </section>
 
-<section id="featured3" class="featured featured-2 featured-3 featured-left bg-dark3 pt-0 pb-0">
-    <div class="container-fluid pr-0 pl-0">
-        <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-6 col-content">
-                <div class="heading">
-                    <h2 class="heading--title color-white">We Are Here To Ease<br>The Financial Obstacles!</h2>
-                    <p class="heading--desc color-white">The choice is in your hands: Where do you go to get an
-                        advice and where you purchase products?!!</p>
-                </div>
-                <!-- Feature Card #1 -->
-                <div class="feature-card wow fadeInUp" data-wow-delay="100ms">
-                    <div class="feature-card-icon">
-                        <i class="icon-refresh"></i>
+
+        <section id="team1" class="team team-1 pb-50">
+            <div class="container">
+                <div class="row clearfix">
+                    <div class="col-sm-12 col-md-12 col-lg-12 ">
+                        <div class="heading  mb-50 text--center">
+                            <h2 class="heading--title" style="color:black">About Us</h2>
+                            <p class="heading--desc mb-0">We are ProStack Invest, majorly focused on trading Crypto
+                                currency day in day out to make substantial profit.
+
+                                ProStack invest is located at Zentralstrasse 17, 6002 Luzern, Switzerland. Our
+                                headquarters is located at 26 Saint-Catherine St W, Montreal, Quebec H2X 1Z5, Canada. It
+                                was incorporated on the 22nd of July 2016 with aims to reach out to everyone offering a
+                                guaranteed return on any investment carried out in the company.
+
+                                ProStack is an investment platform where your investment returns are guaranteed and is
+                                received as early as 7 days only. ProStack invest also engages in real estate investment
+                                and development with 30 years of experience in construction services, forex trading,
+                                medical equipments, crypto currency investment, architecture, manufacturing and
+                                structural engineering.</p>
+                        </div>
                     </div>
-                    <div class="feature-card-content">
-                        <h3 class="feature-card-title">Innovative Solutions</h3>
-                        <p class="feature-card-desc">Innovative Solutions offers services, development services
-                            and consulting to help you make the best technology.</p>
-                    </div>
-                </div>
-                <!-- feature-card end -->
-                <!-- Feature Card #2 -->
-                <div class="feature-card wow fadeInUp" data-wow-delay="200ms">
-                    <div class="feature-card-icon">
-                        <i class="icon-speedometer"></i>
-                    </div>
-                    <div class="feature-card-content">
-                        <h3 class="feature-card-title">On Time Services</h3>
-                        <p class="feature-card-desc">Mutual funds from many investors to purchase broad range
-                            of investments, such as stocks, goals, and dreams.</p>
-                    </div>
-                </div>
-                <!-- feature-card end -->
-                <!-- Feature Card #3 -->
-                <div class="feature-card wow fadeInUp" data-wow-delay="300ms">
-                    <div class="feature-card-icon">
-                        <i class="icon-lifesaver"></i>
-                    </div>
-                    <div class="feature-card-content">
-                        <h3 class="feature-card-title">Best Support</h3>
-                        <p class="feature-card-desc">We bring the right people business solutions to challenge
-                            established thinking and drive transformation.</p>
-                    </div>
-                </div>
-                <!-- feature-card end -->
-            </div>
-            <!-- .col-lg-6 end -->
-            <div class="col-sm-12 col-md-12 col-lg-6 pr-0">
-                <div class="banner--img">
-                    <img src="{{ asset('assets/images/banners/1.jpg') }}" alt="banner img">
                 </div>
             </div>
-            <!-- .col-lg-6 end -->
-        </div>
-        <!-- .row end -->
-    </div>
-    <!-- .container end -->
-</section>
-<!-- #featured3 end -->
+        </section>
 
-<!-- CTA #1
+        <section id="featured3" class="featured featured-2 featured-3 featured-left bg-dark3 pt-0 pb-0">
+            <div class="container-fluid pr-0 pl-0">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-6 col-content">
+                        <div class="heading">
+                            <h2 class="heading--title color-white">We Are Here To Ease<br>The Financial Obstacles!</h2>
+                            <p class="heading--desc color-white">The choice is in your hands: Where do you go to get an
+                                advice and where you purchase products?!!</p>
+                        </div>
+                        <!-- Feature Card #1 -->
+                        <div class="feature-card wow fadeInUp" data-wow-delay="100ms">
+                            <div class="feature-card-icon">
+                                <i class="icon-refresh"></i>
+                            </div>
+                            <div class="feature-card-content">
+                                <h3 class="feature-card-title">Innovative Solutions</h3>
+                                <p class="feature-card-desc">Innovative Solutions offers services, development services
+                                    and consulting to help you make the best technology.</p>
+                            </div>
+                        </div>
+                        <!-- feature-card end -->
+                        <!-- Feature Card #2 -->
+                        <div class="feature-card wow fadeInUp" data-wow-delay="200ms">
+                            <div class="feature-card-icon">
+                                <i class="icon-speedometer"></i>
+                            </div>
+                            <div class="feature-card-content">
+                                <h3 class="feature-card-title">On Time Services</h3>
+                                <p class="feature-card-desc">Mutual funds from many investors to purchase broad range
+                                    of investments, such as stocks, goals, and dreams.</p>
+                            </div>
+                        </div>
+                        <!-- feature-card end -->
+                        <!-- Feature Card #3 -->
+                        <div class="feature-card wow fadeInUp" data-wow-delay="300ms">
+                            <div class="feature-card-icon">
+                                <i class="icon-lifesaver"></i>
+                            </div>
+                            <div class="feature-card-content">
+                                <h3 class="feature-card-title">Best Support</h3>
+                                <p class="feature-card-desc">We bring the right people business solutions to challenge
+                                    established thinking and drive transformation.</p>
+                            </div>
+                        </div>
+                        <!-- feature-card end -->
+                    </div>
+                    <!-- .col-lg-6 end -->
+                    <div class="col-sm-12 col-md-12 col-lg-6 pr-0">
+                        <div class="banner--img">
+                            <img src="{{ asset('assets/images/banners/1.jpg') }}" alt="banner img">
+                        </div>
+                    </div>
+                    <!-- .col-lg-6 end -->
+                </div>
+                <!-- .row end -->
+            </div>
+            <!-- .container end -->
+        </section>
+        <!-- #featured3 end -->
+
+        <!-- CTA #1
 ============================================= -->
-<section id="cta1" class="cta cta-1 bg-theme">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-9">
-                <h3>Doing the Right Thing, at the Right Time!</h3>
+        <section id="cta1" class="cta cta-1 bg-theme">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-9">
+                        <h3>Doing the Right Thing, at the Right Time!</h3>
+                    </div>
+                    <!-- .col-lg-9 -->
+                    <div class="col-sm-12 col-md-12 col-lg-3 text-right">
+                        <a href="#" class="btn btn--white btn--bordered btn--rounded">Get Started</a>
+                    </div>
+                    <!-- .col-lg-3 -->
+                </div>
+                <!-- .row -->
             </div>
-            <!-- .col-lg-9 -->
-            <div class="col-sm-12 col-md-12 col-lg-3 text-right">
-                <a href="#" class="btn btn--white btn--bordered btn--rounded">Get Started</a>
-            </div>
-            <!-- .col-lg-3 -->
-        </div>
-        <!-- .row -->
-    </div>
-    <!-- .container -->
-</section>
+            <!-- .container -->
+        </section>
         <!-- #team1 end -->
 
         <section id="case" class="case case-standard case-3col pt-110 bg-gray">
@@ -926,418 +934,7 @@
                         </div>
                     </div>
                 </div>
-                {{-- <div class="row">
-                    <div class="col-sm-12 col-md-12 col-lg-12">
-                        <div class="carousel owl-carousel carousel-dots" data-slide="1" data-slide-rs="1"
-                            data-autoplay="true" data-nav="false" data-dots="true" data-space="0" data-loop="true"
-                            data-speed="800">
-                            <div class="case-carousel-grid">
-                                <div class="row">
-                                    <div class="col-sm-12 col-md-6 col-lg-4 case-item filter-customer filter-tips">
-                                        <div class="case-item-container">
-                                            <div class="case--img">
-                                                <img src="assets/images/case/3col/1.jpg" alt="case Item">
-                                                <div class="case--hover">
-                                                    <div class="case--action">
-                                                        <a href="#" title="case Item"></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="case--content">
-                                                <div class="case--cat">
-                                                    <a href="#">Business Tips</a><a href="#">Consulting</a>
-                                                </div>
-                                                <div class="case--title">
-                                                    <h4><a href="case-study-single.html">Grow your business with an
-                                                            unexpected niche!</a></h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12 col-md-6 col-lg-4 case-item filter-Investment">
-                                        <div class="case-item-container">
-                                            <div class="case--img">
-                                                <img src="assets/images/case/3col/2.jpg" alt="case Item">
-                                                <div class="case--hover">
-                                                    <div class="case--action">
-                                                        <a href="#" title="case Item"></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="case--content">
-                                                <div class="case--cat">
-                                                    <a href="#">Investment</a><a href="#">Tips</a>
-                                                </div>
-                                                <div class="case--title">
-                                                    <h4><a href="case-study-single.html">Use credit reporting to improve
-                                                            client relationships.</a></h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12 col-md-6 col-lg-4 case-item filter-tips filter-Consulting">
-                                        <div class="case-item-container">
-                                            <div class="case--img">
-                                                <img src="assets/images/case/3col/3.jpg" alt="case Item">
-                                                <div class="case--hover">
-                                                    <div class="case--action">
-                                                        <a href="#" title="case Item"></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="case--content">
-                                                <div class="case--cat">
-                                                    <a href="#">Customer Service</a><a href="#">Consulting</a>
-                                                </div>
-                                                <div class="case--title">
-                                                    <h4><a href="case-study-single.html">State stamp duty surcharges for
-                                                            foreign buyers.</a></h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="col-sm-12 col-md-6 col-lg-4 case-item filter-environment filter-Consulting">
-                                        <div class="case-item-container">
-                                            <div class="case--img">
-                                                <img src="{{ asset('assets/images/case/3col/4.jpg') }}"
-                                                    alt="case Item">
-                                                <div class="case--hover">
-                                                    <div class="case--action">
-                                                        <a href="#" title="case Item"></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="case--content">
-                                                <div class="case--cat">
-                                                    <a href="#">Environment </a>
-                                                </div>
-                                                <div class="case--title">
-                                                    <h4><a href="case-study-single.html">Government changes on transfer
-                                                            of land or duty. </a></h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12 col-md-6 col-lg-4 case-item filter-tips">
-                                        <div class="case-item-container">
-                                            <div class="case--img">
-                                                <img src="{{ asset('assets/images/case/3col/5.jpg') }}"
-                                                    alt="case Item">
-                                                <div class="case--hover">
-                                                    <div class="case--action">
-                                                        <a href="#" title="case Item"></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="case--content">
-                                                <div class="case--cat">
-                                                    <a href="#">Business Growth</a><a href="#">Investment</a>
-                                                </div>
-                                                <div class="case--title">
-                                                    <h4><a href="case-study-single.html">How to explain the ASIC inquiry
-                                                            to clients!</a></h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12 col-md-6 col-lg-4 case-item filter-consulting">
-                                        <div class="case-item-container">
-                                            <div class="case--img">
-                                                <img src="{{ asset('assets/images/case/3col/6.jpg') }}"
-                                                    alt="case Item">
-                                                <div class="case--hover">
-                                                    <div class="case--action">
-                                                        <a href="#" title="case Item"></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="case--content">
-                                                <div class="case--cat">
-                                                    <a href="#">Financial Services</a>
-                                                </div>
-                                                <div class="case--title">
-                                                    <h4><a href="case-study-single.html">How blockchain technology will
-                                                            impact the broking?</a></h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="case-carousel-grid">
-                                <div class="row">
-                                    <div class="col-sm-12 col-md-6 col-lg-4 case-item filter-customer filter-tips">
-                                        <div class="case-item-container">
-                                            <div class="case--img">
-                                                <img src="{{ asset('assets/images/case/3col/1.jpg') }}"
-                                                    alt="case Item">
-                                                <div class="case--hover">
-                                                    <div class="case--action">
-                                                        <a href="#" title="case Item"></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="case--content">
-                                                <div class="case--cat">
-                                                    <a href="#">Business Tips</a><a href="#">Consulting</a>
-                                                </div>
-                                                <div class="case--title">
-                                                    <h4><a href="case-study-single.html">Grow your business with an
-                                                            unexpected niche!</a></h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12 col-md-6 col-lg-4 case-item filter-Investment">
-                                        <div class="case-item-container">
-                                            <div class="case--img">
-                                                <img src="{{ asset('assets/images/case/3col/2.jpg') }}"
-                                                    alt="case Item">
-                                                <div class="case--hover">
-                                                    <div class="case--action">
-                                                        <a href="#" title="case Item"></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="case--content">
-                                                <div class="case--cat">
-                                                    <a href="#">Investment</a><a href="#">Tips</a>
-                                                </div>
-                                                <div class="case--title">
-                                                    <h4><a href="case-study-single.html">Use credit reporting to improve
-                                                            client relationships.</a></h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12 col-md-6 col-lg-4 case-item filter-tips filter-Consulting">
-                                        <div class="case-item-container">
-                                            <div class="case--img">
-                                                <img src="{{ asset('assets/images/case/3col/3.jpg') }}"
-                                                    alt="case Item">
-                                                <div class="case--hover">
-                                                    <div class="case--action">
-                                                        <a href="#" title="case Item"></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="case--content">
-                                                <div class="case--cat">
-                                                    <a href="#">Customer Service</a><a href="#">Consulting</a>
-                                                </div>
-                                                <div class="case--title">
-                                                    <h4><a href="case-study-single.html">State stamp duty surcharges for
-                                                            foreign buyers.</a></h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="col-sm-12 col-md-6 col-lg-4 case-item filter-environment filter-Consulting">
-                                        <div class="case-item-container">
-                                            <div class="case--img">
-                                                <img src="{{ asset('assets/images/case/3col/4.jpg') }}"
-                                                    alt="case Item">
-                                                <div class="case--hover">
-                                                    <div class="case--action">
-                                                        <a href="#" title="case Item"></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="case--content">
-                                                <div class="case--cat">
-                                                    <a href="#">Environment </a>
-                                                </div>
-                                                <div class="case--title">
-                                                    <h4><a href="case-study-single.html">Government changes on transfer
-                                                            of land or duty. </a></h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12 col-md-6 col-lg-4 case-item filter-tips">
-                                        <div class="case-item-container">
-                                            <div class="case--img">
-                                                <img src="{{ asset('assets/images/case/3col/5.jpg') }}"
-                                                    alt="case Item">
-                                                <div class="case--hover">
-                                                    <div class="case--action">
-                                                        <a href="#" title="case Item"></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="case--content">
-                                                <div class="case--cat">
-                                                    <a href="#">Business Growth</a><a href="#">Investment</a>
-                                                </div>
-                                                <div class="case--title">
-                                                    <h4><a href="case-study-single.html">How to explain the ASIC inquiry
-                                                            to clients!</a></h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12 col-md-6 col-lg-4 case-item filter-consulting">
-                                        <div class="case-item-container">
-                                            <div class="case--img">
-                                                <img src="{{ asset('assets/images/case/3col/6.jpg') }}"
-                                                    alt="case Item">
-                                                <div class="case--hover">
-                                                    <div class="case--action">
-                                                        <a href="#" title="case Item"></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="case--content">
-                                                <div class="case--cat">
-                                                    <a href="#">Financial Services</a>
-                                                </div>
-                                                <div class="case--title">
-                                                    <h4><a href="case-study-single.html">How blockchain technology will
-                                                            impact the broking?</a></h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> --}}
-                {{-- <div class="payment-history-area bg-color fix area-padding-2">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="section-headline text-center">
-                                    <h3>Deposite and withdrawals history</h3>
-                                    <p>Help agencies to define their new business objectives and then create professional
-                                        software.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="deposite-content">
-                                    <div class="diposite-box">
-                                        <h3>Last deposite</h3>
-                                        <span><i class="flaticon-005-savings"></i></span>
-                                        <div class="deposite-table">
-                                            <table>
-                                                <tr>
-                                                    <th>Name</th>
-                                                    <th>Date</th>
-                                                    <th>Amount</th>
-                                                    <th>Currency</th>
-                                                </tr>
-                                                <tr>
-                                                    <td><img src="{{ asset('assets/images/home/icon/m.png') }}" alt="">Admond
-                                                        sayhel</td>
-                                                    <td><?php echo date('d F, Y (l)'); ?></td>
-                                                    <td>$1000</td>
-                                                    <td>Bitcoin</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><img src="{{ asset('assets/images/home/icon/m1.png') }}" alt="">Jonshon
-                                                    </td>
-                                                    <td><?php echo date('d F, Y (l)'); ?></td>
-                                                    <td>$5000</td>
-                                                    <td>USD</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><img src="{{ asset('assets/images/home/icon/m2.png') }}" alt="">Hopper
-                                                    </td>
-                                                    <td><?php echo date('d F, Y (l)'); ?></td>
-                                                    <td>$4000</td>
-                                                    <td>Ripple</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><img src="{{ asset('assets/images/home/icon/m3.png') }}" alt="">Admond
-                                                        sayhel</td>
-                                                    <td><?php echo date('d F, Y (l)'); ?></td>
-                                                    <td>$3000</td>
-                                                    <td>Bitcoin</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><img src="{{ asset('assets/images/home/icon/m4.png') }}" alt="">Anjel
-                                                        july</td>
-                                                    <td><?php echo date('d F, Y (l)'); ?></td>
-                                                    <td>$500</td>
-                                                    <td>USD</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><img src="{{ asset('assets/images/home/icon/m5.png') }}" alt="">Lagisha
-                                                    </td>
-                                                    <td><?php echo date('d F, Y (l)'); ?></td>
-                                                    <td>$5000</td>
-                                                    <td>Bitcoin</td>
-                                                </tr>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="deposite-content">
-                                    <div class="diposite-box">
-                                        <h3>Last withdrawals</h3>
-                                        <span><i class="flaticon-042-wallet"></i></span>
-                                        <div class="deposite-table">
-                                            <table>
-                                                <tr>
-                                                    <th>Name</th>
-                                                    <th>Date</th>
-                                                    <th>Amount</th>
-                                                    <th>Currency</th>
-                                                </tr>
-                                                <tr>
-                                                    <td><img src="{{ asset('assets/images/home/icon/m.png') }}" alt="">Arnold
-                                                    </td>
-                                                    <td><?php echo date('d F, Y (l)'); ?></td>
-                                                    <td>$1000</td>
-                                                    <td>USD</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><img src="{{ asset('assets/images/home/icon/m1.png') }}" alt="">Jhon
-                                                        Abra</td>
-                                                    <td><?php echo date('d F, Y (l)'); ?></td>
-                                                    <td>$6000</td>
-                                                    <td>USD</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><img src="{{ asset('assets/images/home/icon/m2.png') }}" alt="">Lanisha
-                                                    </td>
-                                                    <td><?php echo date('d F, Y (l)'); ?></td>
-                                                    <td>$5000</td>
-                                                    <td>USD</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><img src="{{ asset('assets/images/home/icon/m3.png') }}" alt="">Gongales
-                                                    </td>
-                                                    <td><?php echo date('d F, Y (l)'); ?></td>
-                                                    <td>$2000</td>
-                                                    <td>USD</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><img src="{{ asset('assets/images/home/icon/m4.png') }}" alt="">Admond
-                                                        sayhel</td>
-                                                    <td><?php echo date('d F, Y (l)'); ?></td>
-                                                    <td>$1000</td>
-                                                    <td>USD</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><img src="{{ asset('assets/images/home/icon/m5.png') }}" alt="">Remond
-                                                    </td>
-                                                    <td><?php echo date('d F, Y (l)'); ?></td>
-                                                    <td>$3000</td>
-                                                    <td>USD</td>
-                                                </tr>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> --}}
+
                 <h2 style="color:black">Last Deposits</h2>
                 <div class="table-wrapper">
                     <table class="fl-table">
@@ -1622,7 +1219,7 @@
 
         <!-- Blog Grid
 ======================================= -->
-        
+
         @include('includes.home_footer')
 
 
