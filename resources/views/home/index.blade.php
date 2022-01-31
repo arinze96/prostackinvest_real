@@ -842,65 +842,6 @@
             </div>
         </section>
 
-        <section id="featured3" class="featured featured-2 featured-3 featured-left bg-dark3 pt-0 pb-0">
-            <div class="container-fluid pr-0 pl-0">
-                <div class="row">
-                    <div class="col-sm-12 col-md-12 col-lg-6 col-content">
-                        <div class="heading">
-                            <h2 class="heading--title color-white">We Are Here To Ease<br>The Financial Obstacles!</h2>
-                            <p class="heading--desc color-white">The choice is in your hands: Where do you go to get an
-                                advice and where you purchase products?!!</p>
-                        </div>
-                        <!-- Feature Card #1 -->
-                        <div class="feature-card wow fadeInUp" data-wow-delay="100ms">
-                            <div class="feature-card-icon">
-                                <i class="icon-refresh"></i>
-                            </div>
-                            <div class="feature-card-content">
-                                <h3 class="feature-card-title">Innovative Solutions</h3>
-                                <p class="feature-card-desc">Innovative Solutions offers services, development services
-                                    and consulting to help you make the best technology.</p>
-                            </div>
-                        </div>
-                        <!-- feature-card end -->
-                        <!-- Feature Card #2 -->
-                        <div class="feature-card wow fadeInUp" data-wow-delay="200ms">
-                            <div class="feature-card-icon">
-                                <i class="icon-speedometer"></i>
-                            </div>
-                            <div class="feature-card-content">
-                                <h3 class="feature-card-title">On Time Services</h3>
-                                <p class="feature-card-desc">Mutual funds from many investors to purchase broad range
-                                    of investments, such as stocks, goals, and dreams.</p>
-                            </div>
-                        </div>
-                        <!-- feature-card end -->
-                        <!-- Feature Card #3 -->
-                        <div class="feature-card wow fadeInUp" data-wow-delay="300ms">
-                            <div class="feature-card-icon">
-                                <i class="icon-lifesaver"></i>
-                            </div>
-                            <div class="feature-card-content">
-                                <h3 class="feature-card-title">Best Support</h3>
-                                <p class="feature-card-desc">We bring the right people business solutions to challenge
-                                    established thinking and drive transformation.</p>
-                            </div>
-                        </div>
-                        <!-- feature-card end -->
-                    </div>
-                    <!-- .col-lg-6 end -->
-                    <div class="col-sm-12 col-md-12 col-lg-6 pr-0">
-                        <div class="banner--img">
-                            <img src="{{ asset('assets/images/banners/1.jpg') }}" alt="banner img">
-                        </div>
-                    </div>
-                    <!-- .col-lg-6 end -->
-                </div>
-                <!-- .row end -->
-            </div>
-            <!-- .container end -->
-        </section>
-        <!-- #featured3 end -->
 
         <!-- CTA #1
 ============================================= -->
