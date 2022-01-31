@@ -80,7 +80,7 @@
         <div class="row">
             <div class="col-12 col-md-12 col-md-12 text--center footer--copyright">
                 <div class="copyright">
-                    <span>© 2022, Pro Stack Invest</span> <a
+                    <span>©2016-2022, ProStack invest</span> <a
                         href="http://prostackinvest.com">prostackinvest.com</a>
                 </div>
             </div>
