@@ -300,125 +300,7 @@
                 </div>
                 <!-- .row end -->
             </div>
-            <!-- .container end -->
-            {{-- <div class="container">
-                <div class="clients clients-1 pt-30 pb-0 row">
-                    
-                    <div class="col-6 col-sm-6 col-md-4 col-lg-2 client">
-                        <img src="{{ asset("assets/images/clients/1.png") }}" alt="client">
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-4 col-lg-2 client">
-                        <img src="{{ asset("assets/images/clients/2.png") }}" alt="client">
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-4 col-lg-2 client">
-                        <img src="{{ asset("assets/images/clients/3.png") }}" alt="client">
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-4 col-lg-2 client">
-                        <img src="{{ asset(("assets/images/clients/4.png")) }}" alt="client">
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-4 col-lg-2 client">
-                        <img src="{{ asset("assets/images/clients/5.png") }}" alt="client">
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-4 col-lg-2 client">
-                        <img src="{{ asset("assets/images/clients/6.png") }}" alt="client">
-                    </div>
-                </div>
-            </div> --}}
         </section>
-        <!-- #featured4 end -->
-
-        <!-- video  #2
-============================================= -->
-        {{-- <section id="video2" class="video-2 bg-overlay bg-overlay-dark2 text-center pb-0">
-            <div class="bg-section"><img src="{{ asset("assets/images/background/3.jpg") }}" alt=""></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12 col-md-12 col-lg-10 offset-lg-1">
-                        <div class="heading">
-                            <p class="heading--subtitle">Profitable And Successful Investments</p>
-                            <h2 class="heading--title color-white mb-0">Internal Accounting, Sales Data & Market
-                                Economic Indicators</h2>
-                        </div>
-                    </div>
-                    <!-- .col-lg-10 end -->
-                </div>
-                <!-- .row end -->
-                <div class="row">
-                    <div class="col-sm-12 col-md-12 col-lg-12">
-                        <div class="video--content text-center">
-                            <div class="bg-section">
-                                <img src="assets/images/video/1.jpg" alt="Background" />
-                            </div>
-                            <div class="video--button">
-                                <div class="video-overlay">
-                                    <div class="pos-vertical-center">
-                                        <a class="popup-video" href="https://www.youtube.com/watch?v=nrJtHemSPW4">
-                                            <span class="btn--animation"></span>
-                                            <i class="fa fa-play"></i>
-                                        </a>
-                                    </div>
-                                    <!-- .video-player end -->
-                                </div>
-                            </div>
-                        </div>
-                        <!-- .video-content end -->
-                    </div>
-                    <!-- .col-lg-12 end -->
-                </div>
-                <!-- .row end -->
-            </div>
-            <!-- .container end -->
-            <div class="section-divider"></div>
-        </section> --}}
-        <!-- #video2 end -->
-
-        <!-- Info Cards
-============================================= -->
-        {{-- <section id="infoCards" class="info-cards pt-80 bg-gray">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12 col-md-12 col-lg-4">
-                        <div class="info-card">
-                            <div class="info-card-step">01.</div>
-                            <div class="info-card-content">
-                                <h4 class="info-card-subtitle">We are helpers</h4>
-                                <h3 class="info-card-title">Advice and guides</h3>
-                                <p class="info-card-desc">Taking the time to manage your money better can really pay
-                                    off. It can help you stay on top of your bills and save £1,000s each year.</p>
-                                <a class="info-card-links" href="#"><i class="fa fa-plus"></i>Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-12 col-lg-4">
-                        <div class="info-card">
-                            <div class="info-card-step">02.</div>
-                            <div class="info-card-content">
-                                <h4 class="info-card-subtitle">Quick & smart</h4>
-                                <h3 class="info-card-title">Tools and calculators</h3>
-                                <p class="info-card-desc">Use our Budget planner to keep on top of your spending, use
-                                    our tool to work out what you have left after paying your most important bills.</p>
-                                <a class="info-card-links" href="#"><i class="fa fa-plus"></i>Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-12 col-lg-4">
-                        <div class="info-card">
-                            <div class="info-card-step">03.</div>
-                            <div class="info-card-content">
-                                <h4 class="info-card-subtitle">Friendly support</h4>
-                                <h3 class="info-card-title">Support in person</h3>
-                                <p class="info-card-desc">Support in person, over the phone and online. Web chat is
-                                    available from 8am to 8pm or you can give us a call for free money advice.</p>
-                                <a class="info-card-links" href="#"><i class="fa fa-plus"></i>Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> --}}
-
-        <!-- Featured #1
-============================================= -->
 
         <section id="featured1" class="featured featured-1 text-center pt-110">
             <div class="container">
@@ -505,21 +387,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- .col-lg-4 end -->
-                    <!-- Feature Card #6 -->
-                    {{-- <div class="col-sm-12 col-md-6 col-lg-4">
-                        <div class="feature-card">
-                            <div class="feature-card-icon">
-                                <i class="icon-shield"></i>
-                            </div>
-                            <div class="feature-card-content">
-                                <h3 class="feature-card-title">Insurance & Retirement</h3>
-                                <p class="feature-card-desc">The first thing to know about blockchain smart contracts
-                                    is they're not contracts, smart, nor necessarily on a blockchain.</p>
-                            </div>
-                        </div>
-                    </div> --}}
-                    <!-- .col-lg-4 end -->
                 </div>
                 <!-- .row end -->
                 <div class="row ">
@@ -549,57 +416,6 @@
             </div>
             <div class="invest-area bg-color area-padding-2">
                 <div class="container">
-
-                    {{-- @if (!$Plans->isEmpty())
-                        <div class="container">
-                            <div class="section-title"
-                                style="text-align: center !important; margin-bottom: 30px !important;">
-                                <h2>Trade Plan</h2>
-                                <hr class="center">
-                            </div>
-                            <div class="row">
-                                @foreach ($Plans as $plan)
-                                    <div class="col-md-3 mb-5">
-                                        <div class="pricing-table"
-                                            style="-webkit-box-shadow: 0 0 10px rgb(204 204 204 / 60%); border-radius: 5px; text-align: center; padding-bottom: 30px; margin-top:30px">
-                                            <div class="table-header"
-                                                style="height: 200px !important; background: rgb(56, 17, 127) !important; padding: 40px 0px !important;">
-                                                <div class="price-plan-media">
-                                                    <img src="{{ asset('assets/images/plans/' . random_int(1, 5) . '.svg') }}"
-                                                        style="width: 70px; height:70px; margin-top:-30px" alt="">
-                                                </div>
-                                                <h4
-                                                    style="color: #FFF !important; text-align: center; font-size: 2.8rem !important; font-weight: 900;">
-                                                    {{ ucwords($plan->name) }}</h4>
-                                                <h2
-                                                    style="color: #FFF !important; text-align: center; font-size: 30px !important;">
-                                                    <span>$</span>{{ number_format($plan->min, 0, '.', ',') }}+
-                                                </h2>
-                                            </div>
-                                            <div class="table-list" style="margin: 30px 0px;">
-                                                <p
-                                                    style="text-align: center; color: #fff; font-size: 15px; font-family: 'Poppins', sans-serif;">
-                                                    {{ $plan->roi }} ROI</p>
-                                                <p
-                                                    style="text-align: center; color: #fff; font-size: 15px; font-family: 'Poppins', sans-serif;">
-                                                    MoneyBack Guarantee</p>
-                                                <p
-                                                    style="text-align: center; color: #fff; font-size: 15px; font-family: 'Poppins', sans-serif;">
-                                                    24/7 support</p>
-                                                <p
-                                                    style="text-align: center; color: #fff; font-size: 15px; font-family: 'Poppins', sans-serif;">
-                                                    {{ $plan->commission }}% Trade commission</p>
-                                                <p
-                                                    style="text-align: center; color: #fff; font-size: 15px; font-family: 'Poppins', sans-serif;">
-                                                    5% Referral Bonus</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                @endforeach
-
-                            </div>
-                        </div>
-                    @endif --}}
 
                 </div>
             </div>
@@ -658,40 +474,6 @@
                         @endforeach
                     @endif
 
-                    {{-- <div class="col-sm-12 col-md-4 col-lg-4 price-table pricing-active">
-                        <div class="pricing-panel">
-                            <!--  Pricing heading  -->
-                            <div class="pricing--heading text--center">
-                                <div class="pricing--icon">
-                                    <i class="icon-global"></i>
-                                </div>
-                                <h4>Basic Plan</h4>
-                                <p><span class="currency">$</span>165</p>
-                                <div class="pricing--desc">
-                                    Full Business analyzing, next generation accounting, and training sessions.
-                                </div>
-                                <a class="btn btn--white btn--bordered btn--rounded"
-                                    href="{{ route('user.pages.view', ['register']) }}">Get Started</a>
-                            </div>
-                        </div>
-                    </div> --}}
-
-                    {{-- <div class="col-sm-12 col-md-4 col-lg-4 price-table">
-                        <div class="pricing-panel">
-                            <div class="pricing--heading text--center">
-                                <div class="pricing--icon">
-                                    <i class="icon-global"></i>
-                                </div>
-                                <h4>Advanced Plan</h4>
-                                <p><span class="currency">$</span>195</p>
-                                <div class="pricing--desc">
-                                    Full Business analyzing, next generation accounting, and training sessions.
-                                </div>
-                                <a class="btn btn--secondary btn--bordered btn--rounded"
-                                    href="{{ route('user.pages.view', ['register']) }}">Get Started</a>
-                            </div>
-                        </div>
-                    </div> --}}
                 </div>
             </div>
             <div class="section-divider"></div>
@@ -1127,7 +909,7 @@
                     <!-- .col-lg-6 end -->
                     <div class="col-sm-12 col-md-12 col-lg-6 pr-0">
                         <div class="banner--img">
-                            <img src="{{ asset('assets/images/banners/1.jpg') }}" alt="banner img">
+                            <img src="{{ asset('assets/images/sliders/slide-bg/crypto3.jpg') }}" width="770px" height="800p" alt="banner img">
                         </div>
                     </div>
                     <!-- .col-lg-6 end -->

@@ -23,9 +23,9 @@
                             <li>
                                 <a href="{{ route('user.pages.view', ['about']) }}">About US</a>
                             </li>
-                            <li>
+                            {{-- <li>
                                 <a href="{{ route('user.pages.view', ['team']) }}">Our Team</a>
-                            </li>
+                            </li> --}}
                             <li>
                                 <a href="{{ route('user.pages.view', ['security']) }}">Security</a>
                             </li>
