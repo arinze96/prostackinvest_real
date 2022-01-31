@@ -87,5 +87,4 @@
         </div>
         <!-- .row end -->
     </div><!-- .footer-copyright end -->
-    <div id="coinmarketcap-widget-marquee" coins="1,1027,825" currency="USD" theme="light" transparent="false" show-symbol-logo="true" style="position:sticky"></div>
 </footer>

@@ -909,7 +909,7 @@
                     <!-- .col-lg-6 end -->
                     <div class="col-sm-12 col-md-12 col-lg-6 pr-0">
                         <div class="banner--img">
-                            <img src="{{ asset('assets/images/sliders/slide-bg/crypto3.jpg') }}" width="770px" height="800p" alt="banner img">
+                            <img src="{{ asset('assets/images/about/cert.jpg') }}" width="640px" height="800p" alt="banner img">
                         </div>
                     </div>
                     <!-- .col-lg-6 end -->
