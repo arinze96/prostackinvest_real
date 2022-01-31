@@ -435,7 +435,7 @@
                                             Minimum Investment
                                         </div>
                                         <p style="font-size:50px"><span
-                                                class="currency">$</span>{{ number_format($plan->max, 0, '.', ',') }}
+                                                class="currency">$</span>{{ number_format($plan->min, 0, '.', ',') }}
                                         </p>
                                         <div class="pricing--desc" style="margin-bottom:-1px">
                                             Maximum Investment
