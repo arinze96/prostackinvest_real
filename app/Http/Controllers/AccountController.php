@@ -536,7 +536,7 @@ class AccountController extends Controller
                 return view("customer.$name-setting", ["error"=>"Invalid Transaction Pin","application"=>$application,"account"=>$userAccount]);
             }
             $result = Account::where("user_id", "=", $user->id)->update([
-                'perfectmoney_address' => $data->perfectmoney_address,
+                // 'perfectmoney_address' => $data->perfectmoney_address,
                 'bitcoin_address' => $data->bitcoin_address,
                 'usdt_address' => $data->usdt_address,
                 'ethereum_address' => $data->ethereum_address,
