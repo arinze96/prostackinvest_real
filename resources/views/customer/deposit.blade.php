@@ -100,7 +100,7 @@
                                                     @if ($application->ethereum_address)
                                                     <option value="ETH">ETHEREUM </option>
                                                     @endif
-              
+{{--               
                                                     @if ($application->litecoin_address)
                                                     <option value="LTC">LITCOIN </option>
                                                     @endif
@@ -115,7 +115,7 @@
                                                     
                                                     @if ($application->dodgecoin_address)
                                                     <option  value="DODGE">DODGE COIN </option>
-                                                    @endif
+                                                    @endif --}}
                                                     
                                                     @if ($application->usdt_address)
                                                     <option  value="USDT">TETHER (USDT) </option>
