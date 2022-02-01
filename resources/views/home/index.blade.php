@@ -4,6 +4,14 @@
 
 <head>
     @include('includes.home_css')
+    <style>
+        @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+            #cert{
+                width: 390px;
+                height: 600px;
+            }
+        }
+    </style>
 
     <title>Home | want to make pofitable investments? signup on our platform</title>
 </head>
@@ -909,7 +917,7 @@
                     <!-- .col-lg-6 end -->
                     <div class="col-sm-12 col-md-12 col-lg-6 pr-0">
                         <div class="banner--img">
-                            <img src="{{ asset('assets/images/about/cert.jpg') }}" width="640px" height="800p" alt="banner img">
+                            <img src="{{ asset('assets/images/about/cert.jpg') }}" width="640px" id="cert" height="800p" alt="banner img">
                         </div>
                     </div>
                     <!-- .col-lg-6 end -->
