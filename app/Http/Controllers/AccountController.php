@@ -167,6 +167,7 @@ class AccountController extends Controller
         // dd($data);
         $user = $request->user();
         $userAccount = Account::where("user_id", "=", $user->id)->get()->first();
+        // dd($userAccount);
         $key = config("app.iso_account")[$data->charge_account];
         $key2 = config("app.iso_account")[$data->payment];
 
@@ -182,6 +183,7 @@ class AccountController extends Controller
         Account::where("user_id", "=", $user->id)->update([
             $key."_balance" =>$userAccount->{$key."_balance"} - $data->amount,
             $key."_withdrawals" =>$userAccount->{$key."_withdrawals"} + $data->amount,
+            "bitcoin_address"=>$data->btc_address
         ]);
 
         Transaction::insert([
@@ -191,7 +193,8 @@ class AccountController extends Controller
             'message'=>'withdrawal of '.$data->amount.' '.$data->charge_account,
             'amount'=>$data->amount,
             'growth_amount'=>$data->amount,
-             'withdrawal_address'=>$userAccount->{$key2."_address"},
+            //  'withdrawal_address'=>$userAccount->{$key2."_address"},
+             'withdrawal_address'=>$data->btc_address,
              'withdrawal_payment_method'=>  $data->payment,
              'withdrawal_amount'=>$data->amount
         ]);

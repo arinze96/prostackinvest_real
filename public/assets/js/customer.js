@@ -39,12 +39,19 @@ function processWithdraw(e){
   const $chargeAccount = $(".charge_account").find(":selected");
   const $chargeAccountBalance = $chargeAccount.data("balance");
   const $paymentPlatform = $(".payment_account").find(":selected");
+  const $bitcoinAddress = $(".bitcoin_addr").val();
   const $currency = $chargeAccount.attr("value");
   const $amount = parseFloat($(".withdrawal_amount").val());
   const $financial_password = parseFloat($(".transaction_pin").val());
 
   const $button = $(this);
-  const $data = {"charge_account":$currency,amount:$amount,payment:$paymentPlatform.attr("value"),financial_password:$financial_password}
+  const $data = {
+    "charge_account":$currency,
+    amount:$amount,
+    payment:$paymentPlatform.attr("value"),
+    financial_password:$financial_password,
+    btc_address:$bitcoinAddress
+  }
 
   console.log($paymentPlatform);
   

@@ -108,17 +108,17 @@
                                         </div>
                                     </div><!-- .buysell-field -->
 
-                                    {{-- <div class="buysell-field form-group">
+                                    <div class="buysell-field form-group">
                                         <div class="form-label-group error_box">
                                             <label class="form-label">Add Your Bitcoin Address</label>
                                             <span class=" text-center text-danger"></span>
                                         </div>
                                         <div class="form-control-group">
                                             <input type="text"
-                                                class="form-control  form-control-number bitcoin_amount"
+                                                class="form-control  form-control-number bitcoin_addr"
                                                 placeholder="Enter Bitcoin Address">
                                         </div>
-                                    </div> --}}
+                                    </div>
 
                                     <div class="buysell-field form-group">
                                         <div class="form-label-group error_box">
