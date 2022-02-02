@@ -158,10 +158,13 @@ class AccountController extends Controller
         if ($request->method()  == "GET") {
             $user = $request->user();
             $userAccount = Account::where("user_id", "=", $user->id)->get()->first();
+            // dd($userAccount);
             $application = Application::where("id", "=", "1")->get()->first();
+            // dd($application);
             return view("customer.withdraw", ["application"=>$application,"account"=>$userAccount]);
         }
         $data = (object) $request->all();
+        // dd($data);
         $user = $request->user();
         $userAccount = Account::where("user_id", "=", $user->id)->get()->first();
         $key = config("app.iso_account")[$data->charge_account];

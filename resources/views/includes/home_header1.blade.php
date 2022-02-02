@@ -2,7 +2,7 @@
     <nav id="primary-menu" class="navbar navbar-expand-lg navbar-light navbar-bordered">
         <div class="container">
                 <a href="{{ route('app.home')}}">
-                    <img class="logo logo-light" width="250px" height="60px" src="{{ asset("assets/images/logo/ProStack_Logo.png") }}" alt="Prostackinvest Logo" >
+                    <img class="logo logo-light" width="230px" height="60px" src="{{ asset("assets/images/logo/ProStack_Logo.png") }}" alt="Prostackinvest Logo" >
                 </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
                 aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">

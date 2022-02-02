@@ -75,7 +75,7 @@
                                 </div>
                                </div>
 
-                               <div class="col-sm-6 col-md-12 mb-2">
+                               {{-- <div class="col-sm-6 col-md-12 mb-2">
                                 <div class="form-group">
                                  <label class="form-label" for="litecoin_address">Litecoin Address</label>
                                  <div class="form-control-wrap">
@@ -85,7 +85,7 @@
                                  <span class="text-danger" id="error_name">{{ $message }}</span>
                                  @enderror
                                 </div>
-                               </div>
+                               </div> --}}
 
                                {{-- <div class="col-sm-6 col-md-12 mb-2">
                                 <div class="form-group">

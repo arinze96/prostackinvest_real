@@ -2,7 +2,7 @@
 <html lang="zxx" class="js">
 
 <head>
-    <title>{{ config("app.name") }}</title>
+    <title>{{ config('app.name') }}</title>
     @include('includes.c_css')
 </head>
 
@@ -31,103 +31,134 @@
                                     </ul>
                                 </div><!-- .buysell-nav -->
                                 <div class="buysell-title text-center">
-                                    <p class="title">Withdrawal of funds from your {{ ucwords(strtolower(config("app.name"))) }} account balance is available using 5 payment systems - BTC, ETH, LTC, USDT, Perfect Money. Select the account then select the payment system to which you want to withdraw funds, enter the withdrawal amount and click the "Withdraw".</p>
+                                    <p class="title">Withdrawal of funds from your
+                                        {{ ucwords(strtolower(config('app.name'))) }} account balance is available
+                                        using 5 payment systems - BTC, ETH, LTC, USDT, Perfect Money. Select the account
+                                        then select the payment system to which you want to withdraw funds, enter the
+                                        withdrawal amount and click the "Withdraw".</p>
 
-                                    <p>IMPORTANT!!! Withdrawals are available only to those wallets that are saved in the "Payment  Data" section.</p>
+                                    <p>IMPORTANT!!! Withdrawals are available only to those wallets that are saved in
+                                        the "Payment Data" section.</p>
                                 </div><!-- .buysell-title -->
                                 <div class="buysell-block">
-                             
 
-                                        <div class="col-md-12 error_box mt-4">
-                                            <p id="error_box" class="text-danger"></p>
-                                            <p id="error_box1" class="text-danger"></p>
+
+                                    <div class="col-md-12 error_box mt-4">
+                                        <p id="error_box" class="text-danger"></p>
+                                        <p id="error_box1" class="text-danger"></p>
+                                    </div>
+
+                                    <div class="buysell-field form-group">
+                                        <div class="form-label-group">
+                                            <label class="form-label" for="">Choose Account</label>
+                                            <span class="error_box text-center text-danger"></span>
+                                        </div>
+                                        <div class="form-control-group">
+                                            <select name="currency" id="currency"
+                                                class="charge_account  form-control  form-control-number">
+                                                <option data-balance="{{ $account->dolla_balance }}" value="USD"
+                                                    class="small"></i>USD</option>
+                                                <option data-balance="{{ $account->bitcoin_balance }}" value="BTC"
+                                                    class="small"></i>BTC</option>
+                                                <option data-balance="{{ $account->ethereum_balance }}" value="ETH"
+                                                    class="small"></i>ETH</option>
+                                                <option data-balance="{{ $account->referral_balance }}" value="BONUS"
+                                                    class="small"></i>BONUS</option>
+                                            </select>
+                                        </div>
+                                    </div><!-- .buysell-field -->
+
+                                    <div class="buysell-field form-group">
+                                        <div class="form-label-group">
+                                            <label class="form-label" for="">Payment Method</label>
+                                            <span class="error_box text-danger"></span>
+                                        </div>
+                                        <div class="form-control-group">
+                                            <select
+                                                class="payment_account form-control form-select  form-control-number">
+                                                {{-- @if (!empty($account->perfectmoney_address))
+                                                    <option value="Perfect-Money">Perfect Money</option>
+                                                    @endif --}}
+                                                @if (!empty($account->bitcoin_address))
+                                                    <option value="BTC">BTC</option>
+                                                @endif
+                                                @if (!empty($account->usdt_address))
+                                                    <option value="USDT">USDT</option>
+                                                @endif
+                                                @if (!empty($account->ethereum_address))
+                                                    <option value="ETH">ETH</option>
+                                                @endif
+                                                {{-- @if (!empty($account->litecoin_address))
+                                                    <option value="LTC">LTC</option>
+                                                    @endif --}}
+                                            </select>
                                         </div>
 
-                                        <div class="buysell-field form-group">
-                                            <div class="form-label-group">
-                                                <label class="form-label" for="">Choose Account</label>
-                                                <span class="error_box text-center text-danger"></span>
-                                            </div>
-                                            <div class="form-control-group">
-                                                <select  name="currency" id="currency" class="charge_account  form-control  form-control-number">
-                                                    <option data-balance="{{ $account->dolla_balance }}" value="USD" class="small"></i>USD</option>
-                                                    <option data-balance="{{ $account->bitcoin_balance }}" value="BTC" class="small"></i>BTC</option>
-                                                    <option data-balance="{{ $account->ethereum_balance }}" value="ETH" class="small"></i>ETH</option>
-                                                    <option data-balance="{{ $account->referral_balance }}" value="BONUS" class="small"></i>BONUS</option>
-                                                </select>
-                                            </div>
-                                        </div><!-- .buysell-field -->
+                                    </div><!-- .buysell-field -->
 
-                                        <div class="buysell-field form-group">
-                                            <div class="form-label-group">
-                                                <label class="form-label" for="">Payment Method</label>
-                                                <span class="error_box text-danger"></span>
-                                            </div>
-                                            <div class="form-control-group">
-                                                <select  class="payment_account form-control form-select  form-control-number">
-                                                    @if (!empty($account->perfectmoney_address))
-                                                    <option value="Perfect-Money">Perfect Money</option>
-                                                    @endif
-                                                    @if (!empty($account->bitcoin_address))
-                                                    <option value="BTC">BTC</option>
-                                                    @endif
-                                                    @if (!empty($account->usdt_address ))
-                                                    <option value="USDT">USDT</option>
-                                                    @endif
-                                                    @if (!empty($account->ethereum_address))
-                                                    <option value="ETH">ETH</option>
-                                                    @endif
-                                                    @if (!empty($account->litecoin_address))
-                                                    <option value="LTC">LTC</option>
-                                                    @endif
-                                                </select>
-                                            </div>
+                                    <div class="buysell-field form-group">
+                                        <div class="form-label-group error_box">
+                                            <label class="form-label">Amount to Withdraw</label>
+                                            <span class=" text-center text-danger"></span>
+                                        </div>
+                                        <div class="form-control-group">
+                                            <input type="text"
+                                                class="form-control  form-control-number withdrawal_amount"
+                                                placeholder="Enter Amount">
+                                        </div>
+                                    </div><!-- .buysell-field -->
 
-                                        </div><!-- .buysell-field -->
+                                    {{-- <div class="buysell-field form-group">
+                                        <div class="form-label-group error_box">
+                                            <label class="form-label">Add Your Bitcoin Address</label>
+                                            <span class=" text-center text-danger"></span>
+                                        </div>
+                                        <div class="form-control-group">
+                                            <input type="text"
+                                                class="form-control  form-control-number bitcoin_amount"
+                                                placeholder="Enter Bitcoin Address">
+                                        </div>
+                                    </div> --}}
 
-                                        <div class="buysell-field form-group">
-                                            <div class="form-label-group error_box">
-                                                <label class="form-label" >Amount to Withdraw</label>
-                                                <span class=" text-center text-danger" ></span>
-                                            </div>
-                                            <div class="form-control-group">
-                                                <input type="text" class="form-control  form-control-number withdrawal_amount"   placeholder="Enter Amount">
-                                            </div>
-                                        </div><!-- .buysell-field -->
-
-                                        <div class="buysell-field form-group">
-                                            <div class="form-label-group error_box">
-                                                <label class="form-label" >Transaction Pin</label>
-                                                <span class=" text-center text-danger" ></span>
-                                            </div>
-                                            <div class="form-control-group">
-                                                <input type="text" class="form-control  form-control-number transaction_pin"   placeholder="Financial Pin">
-                                            </div>
-                                        </div><!-- .buysell-field -->
+                                    <div class="buysell-field form-group">
+                                        <div class="form-label-group error_box">
+                                            <label class="form-label">Transaction Pin</label>
+                                            <span class=" text-center text-danger"></span>
+                                        </div>
+                                        <div class="form-control-group">
+                                            <input type="text" class="form-control  form-control-number transaction_pin"
+                                                placeholder="Financial Pin">
+                                        </div>
+                                    </div><!-- .buysell-field -->
 
 
-                                        <div class="row">
-                                            <div class="col-sm-12 py-2 my-1 col-md-612 col-lg-12">
-                                                <div class="rounded d-flex p-2 px-3 align-items-center" style="border: 1px dashed #171a1d;">
-                                                    <div class="col-sm-12 col-md-12 col-lg-12 small-p muted my-3 position-relative">
-                                                        {{-- <input type="number" name="" class="form-control"> --}}
-                                                        {{-- <span class="absolute">Enter amount</span> --}}
-                                                        <p class="label-price">Final balance: <b class="px-2 font-weight-bold main_display" style="color: #ED8B58;"> 0 USD</b></p>
-                                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 py-2 my-1 col-md-612 col-lg-12">
+                                            <div class="rounded d-flex p-2 px-3 align-items-center"
+                                                style="border: 1px dashed #171a1d;">
+                                                <div
+                                                    class="col-sm-12 col-md-12 col-lg-12 small-p muted my-3 position-relative">
+                                                    {{-- <input type="number" name="" class="form-control"> --}}
+                                                    {{-- <span class="absolute">Enter amount</span> --}}
+                                                    <p class="label-price">Final balance: <b
+                                                            class="px-2 font-weight-bold main_display"
+                                                            style="color: #ED8B58;"> 0 USD</b></p>
                                                 </div>
+                                            </div>
                                             <div class="col-sm-12 col-md-12 col-lg-12 py-3 ">
-                                                <button data-url="{{ route("user.withdraw.view") }}" class="btn btn-primary btn-block process_withdraw">
+                                                <button data-url="{{ route('user.withdraw.view') }}"
+                                                    class="btn btn-primary btn-block process_withdraw">
                                                     Withdraw
                                                 </button>
                                             </div>
                                         </div>
 
-                                  
-                                </div><!-- .buysell-block -->
-                            </div><!-- .buysell -->
-                        </div>
-                        <!-- table -->
-                        {{-- <div class="nk-block nk-block-lg mt-5 ">
+
+                                    </div><!-- .buysell-block -->
+                                </div><!-- .buysell -->
+                            </div>
+                            <!-- table -->
+                            {{-- <div class="nk-block nk-block-lg mt-5 ">
                             <div class="nk-block-head">
                                 <div class="nk-block-head-content">
                                     <h4 class="nk-block-title">Recent Deposit History</h4>
@@ -183,27 +214,27 @@
                                 </table>
                             </div>
                         </div> --}}
-                        <!-- nk-block -->
-                        <!-- table -->
+                            <!-- nk-block -->
+                            <!-- table -->
+                        </div>
                     </div>
+                    <!-- content @e -->
+                    <!-- footer @s -->
+                    @include('includes.c_footer')
+                    <!-- footer @e -->
                 </div>
-                <!-- content @e -->
-                <!-- footer @s -->
-                @include('includes.c_footer')
-                <!-- footer @e -->
+                <!-- wrap @e -->
             </div>
-            <!-- wrap @e -->
+            <!-- main @e -->
         </div>
-        <!-- main @e -->
-    </div>
 
 
-    {{-- footer --}}
+        {{-- footer --}}
 
         {{-- footer --}}
         @include('includes.c_script')
 
-    <!-- END PAGE CONTAINER-->
+        <!-- END PAGE CONTAINER-->
 </body>
 
 </html>
