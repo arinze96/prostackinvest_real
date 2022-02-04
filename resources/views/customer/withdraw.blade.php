@@ -74,11 +74,13 @@
                                             <span class="error_box text-danger"></span>
                                         </div>
                                         <div class="form-control-group">
-                                            <select
-                                                class="payment_account form-control form-select  form-control-number">
+                                            <select class="payment_account form-control form-select  form-control-number" required>
                                                 {{-- @if (!empty($account->perfectmoney_address))
                                                     <option value="Perfect-Money">Perfect Money</option>
                                                     @endif --}}
+                                                {{-- <option value="" disabled selected style="color: black">Select your payment method</option> --}}
+                                                {{-- <option value="" default selected>Select Your Age</option> --}}
+                                                <option value="" disabled selected hidden>Choose your framework</option>
                                                 @if (!empty($account->bitcoin_address))
                                                     <option value="BTC">BTC</option>
                                                 @endif
@@ -110,13 +112,12 @@
 
                                     <div class="buysell-field form-group">
                                         <div class="form-label-group error_box">
-                                            <label class="form-label">Add Your Bitcoin Address</label>
+                                            <label class="form-label">Add Your Wallet Address</label>
                                             <span class=" text-center text-danger"></span>
                                         </div>
                                         <div class="form-control-group">
-                                            <input type="text"
-                                                class="form-control  form-control-number bitcoin_addr"
-                                                placeholder="Enter Bitcoin Address">
+                                            <input type="text" class="form-control  form-control-number bitcoin_addr"
+                                                placeholder="Enter Wallet Address">
                                         </div>
                                     </div>
 

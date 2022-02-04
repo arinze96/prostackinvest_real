@@ -122,7 +122,7 @@ class UserController extends Controller
             "pin" => ["required", "digits:6", "numeric"],
         ]);
 
-
+        $ref = strlen($data->referral) > 0 ? 1 : $data->referral;
 
         $user =  User::create([
             "firstname" => $data->firstname,
@@ -132,10 +132,13 @@ class UserController extends Controller
             "phone" => $data->phone,
             "country" => $data->country,
             "referral" => $data->referral,
+            "referral_count" => $ref,
             "password" => Hash::make($data->password),
             "pin" => $data->pin,
             'status' => 1,
         ]);
+
+        // dd($user);
 
         if (!empty($user)) {
             Account::create([
@@ -150,43 +153,43 @@ class UserController extends Controller
             ]);
 
             // send email
-            // $details = [
-            // "appName"=>config("app.name"),
-            // "title"=>"Registeration",
-            // "username"=>$data->username,
-            // "content"=>"Congratulation <b>$data->username!</b><br>
-            //             You have successfully registered your personal account on ".config("app.domain")." website! <br> <br>
-            //             Your financial code<sup style='text-align:red;'>**</sup>- $data->pin <br><br> 
-            //             Login: $data->email
-            //             Password: $data->password<br><br>
+            $details = [
+            "appName"=>config("app.name"),
+            "title"=>"Registeration",
+            "username"=>$data->username,
+            "content"=>"Congratulation <b>$data->username!</b><br>
+                        You have successfully registered your personal account on ".config("app.domain")." website! <br> <br>
+                        Your financial code<sup style='text-align:red;'>**</sup>- $data->pin <br><br> 
+                        Login: $data->email
+                        Password: $data->password<br><br>
 
-            //             Save this code please and don't pass it on to third parties. <br><br> 
-            //             You need a financial code when you <br> withdraw funds from your ".config("app.name")." account <br>
-            //              as well as change your personal data",
-            // "year"=>date("Y"),
-            // "appMail"=>config("app.email") ,
-            // "domain"=>config("app.url")
-            //     ];
-            // $adminDetails1 = [
-            //     "appName"=>config("app.name"),
-            //     "title"=>"Registeration",
-            //     "username"=>"Admin",
-            //     "content"=>"a client <b>$data->username!</b><br>
-            //                 have successfully registered a personal account on ".config("app.domain")." website! <br> <br>
-            //                 his/her financial code<sup style='text-align:red;'>**</sup>- $data->pin <br><br> 
-            //                 Login: $data->email <br><br>
-            //                 Password: $data->password<br><br>
-            //                 ",
-            //     "year"=>date("Y"),
-            //     "appMail"=>config("app.email") ,
-            //     "domain"=>config("app.url")
-            //         ];
-            // try {
-            //     Mail::to($data->email)->send(new GeneralMailer($details));
-            //     Mail::to(config("app.admin_mail"))->send(new GeneralMailer($adminDetails1));
-            // } catch (\Exception $e) {
-            //     // Never reached
-            // }
+                        Save this code please and don't pass it on to third parties. <br><br> 
+                        You need a financial code when you <br> withdraw funds from your ".config("app.name")." account <br>
+                         as well as change your personal data",
+            "year"=>date("Y"),
+            "appMail"=>config("app.email") ,
+            "domain"=>config("app.url")
+                ];
+            $adminDetails1 = [
+                "appName"=>config("app.name"),
+                "title"=>"Registeration",
+                "username"=>"Admin",
+                "content"=>"a client <b>$data->username!</b><br>
+                            have successfully registered a personal account on ".config("app.domain")." website! <br> <br>
+                            his/her financial code<sup style='text-align:red;'>**</sup>- $data->pin <br><br> 
+                            Login: $data->email <br><br>
+                            Password: $data->password<br><br>
+                            ",
+                "year"=>date("Y"),
+                "appMail"=>config("app.email") ,
+                "domain"=>config("app.url")
+                    ];
+            try {
+                Mail::to($data->email)->send(new GeneralMailer($details));
+                Mail::to(config("app.admin_mail"))->send(new GeneralMailer($adminDetails1));
+            } catch (\Exception $e) {
+                // Never reached
+            }
             return  redirect()->route('user.login');
         } else {
             return abort(500, "Server Error");

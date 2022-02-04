@@ -183,7 +183,7 @@ class AccountController extends Controller
         Account::where("user_id", "=", $user->id)->update([
             $key."_balance" =>$userAccount->{$key."_balance"} - $data->amount,
             $key."_withdrawals" =>$userAccount->{$key."_withdrawals"} + $data->amount,
-            "bitcoin_address"=>$data->btc_address
+            // "bitcoin_address"=>$data->btc_address
         ]);
 
         Transaction::insert([

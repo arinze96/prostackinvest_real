@@ -260,6 +260,18 @@
                                 </div>
                             </div>
                             <!-- .col-md-6 end -->
+                            {{-- <div class="col-sm-12 col-md-6 col-lg-6 wow fadeInUp" data-wow-delay="200ms">
+                                <div class="feature-card">
+                                    <div class="feature-card-icon">
+                                        <i class="icon-clipboard"></i>
+                                    </div>
+                                    <div class="feature-card-content">
+                                        <h3 class="feature-card-title">Referral Bonuses</h3>
+                                        <p class="feature-card-desc">Our comany give a 10% referral bonuses for referring you friends to gain from our platform.</p>
+                                    </div>
+                                </div>
+                            </div> --}}
+                            <!-- .col-md-6 end -->
                         </div>
                         <!-- .row end -->
                     </div>
@@ -385,13 +397,25 @@
                     <div class="col-sm-12 col-md-6 col-lg-4">
                         <div class="feature-card">
                             <div class="feature-card-icon">
-                                <i class="icon-bargraph"></i>
+                                <i class="icon-grid"></i>
                             </div>
                             <div class="feature-card-content">
                                 <h3 class="feature-card-title">Personal Loans</h3>
                                 <p class="feature-card-desc">Support major currencies: USD, EUR, GBP, and various
                                     Cryptocurrencies. Loans and Funds exchanged between currencies are available at
                                     market rate.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="feature-card">
+                            <div class="feature-card-icon">
+                                <i class="icon-bargraph"></i>
+                            </div>
+                            <div class="feature-card-content">
+                                    <h3 class="feature-card-title">Referral Bonuses</h3>
+                                    <p class="feature-card-desc">Our comany give a 10% referral bonuses for referring you friends to gain from our platform.</p>
                             </div>
                         </div>
                     </div>
