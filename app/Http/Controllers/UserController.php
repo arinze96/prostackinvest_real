@@ -381,7 +381,7 @@ class UserController extends Controller
             // dd($loans);
             $withdrawals = Transaction::where("type", "=", config("app.transaction_type")[2])->where("user_id", "=", $user->id)->orderBy("created_at", "desc")->orderBy("status", "asc")->limit(10)->get();
             $userAccount = Account::where("user_id", "=", $user->id)->get()->first();
-            return view("customer.index", ["account" => $userAccount, "deposits" => $deposits, "investments" => $investments, "withdrawals" => $withdrawals, "loans" => $loans]);
+            return view("customer.index", ["user"=>$user, "account" => $userAccount, "deposits" => $deposits, "investments" => $investments, "withdrawals" => $withdrawals, "loans" => $loans]);
         }
     }
 

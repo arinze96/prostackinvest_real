@@ -121,30 +121,30 @@
                                                 </div>
 
                                                 @if (!$loans == null)
-                                                <div class="col-sm-4">
-                                                    <div class="card card-bordered text-light is-dark h-100">
-                                                        <div class="card-inner">
-                                                            <div class="nk-wg7">
-                                                                <div class="nk-wg7-stats">
-                                                                    <div class="nk-wg7-title">Personal Loan
-                                                                    </div>
-                                                                    <div class="number-lg amount">
-                                                                        {{-- {{ $loans->amount }} --}}
-                                                                        ${{ number_format($loans->amount, 0, '.', ',') }}
-                                                                    </div>
-                                                                </div>
-                                                                <div class="nk-wg7-foot">
-                                                                    <span class="nk-wg7-note">Loan Status &nbsp;
-                                                                        &nbsp; :
-                                                                            {{ $loans->status == 0 ? 'unapproved' : 'Aprroved'}}
-                                                                            <span></span></span>
+                                                    <div class="col-sm-4">
+                                                        <div class="card card-bordered text-light is-dark h-100">
+                                                            <div class="card-inner">
+                                                                <div class="nk-wg7">
+                                                                    <div class="nk-wg7-stats">
+                                                                        <div class="nk-wg7-title">Personal Loan
                                                                         </div>
+                                                                        <div class="number-lg amount">
+                                                                            {{-- {{ $loans->amount }} --}}
+                                                                            ${{ number_format($loans->amount, 0, '.', ',') }}
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="nk-wg7-foot">
+                                                                        <span class="nk-wg7-note">Loan Status &nbsp;
+                                                                            &nbsp; :
+                                                                            {{ $loans->status == 0 ? 'unapproved' : 'Aprroved' }}
+                                                                            <span></span></span>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        @endif
-                                                        
+                                                    </div>
+                                                @endif
+
                                                 <div class="col-sm-4">
                                                     <div class="card card-bordered text-light is-dark h-100">
                                                         <div class="card-inner">
@@ -177,8 +177,8 @@
                                                                     </div>
                                                                 </div>
                                                                 <div class="nk-wg7-foot">
-                                                                    <span class="nk-wg7-note">Referral Balance
-                                                                        <span></span></span>
+                                                                    <span class="nk-wg7-note">
+                                                                        No of Referral: <span style="color: white; font-size:30px">{{ $user->referral_count }}</span></span>
                                                                 </div>
                                                             </div><!-- .nk-wg7 -->
                                                         </div><!-- .card-inner -->
@@ -377,7 +377,7 @@
                                                                         <td scope="row">
                                                                             {{ ucwords($investment->message) }} </td>
                                                                         <td>{{ ucwords($investment->currency) }}</td>
-                                                                        <td>{{ $investment->currency == 'USD' ? number_format($investment->growth_amount, 0, '.', ',') : $investment->growth_amount }}
+                                                                        <td>{{ $investment->currency == 'USD'? number_format($investment->growth_amount, 0, '.', ','): $investment->growth_amount }}
                                                                         </td>
 
                                                                         <td>{{ date('d M,Y', strtotime($investment->created_at)) }}
