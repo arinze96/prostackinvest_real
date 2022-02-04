@@ -122,7 +122,8 @@ class UserController extends Controller
             "pin" => ["required", "digits:6", "numeric"],
         ]);
 
-        $ref = strlen($data->referral) > 0 ? 1 : $data->referral;
+        $allRef = User::where("referral", "=", "{$data->referral}")->get();
+        $refCount = count($allRef);
 
         $user =  User::create([
             "firstname" => $data->firstname,
@@ -132,14 +133,12 @@ class UserController extends Controller
             "phone" => $data->phone,
             "country" => $data->country,
             "referral" => $data->referral,
-            "referral_count" => $ref,
+            "referral_count" => 0,
             "password" => Hash::make($data->password),
             "pin" => $data->pin,
             'status' => 1,
         ]);
-
-        // dd($user);
-
+       
         if (!empty($user)) {
             Account::create([
                 "user_id" => $user->id,
@@ -150,6 +149,10 @@ class UserController extends Controller
                 "bitcoincash_address" => "00",
                 "binancecoin_address" => "00",
                 "dodgecoin_address" => "00",
+            ]);
+
+            User::where("username", "=", $user->referral)->update([
+                "referral_count" =>$refCount + 1,
             ]);
 
             // send email
