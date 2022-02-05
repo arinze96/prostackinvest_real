@@ -85,7 +85,7 @@
 
                             <div class="col-sm-12 col-md-12 col-lg-12">
                                 <div class="case--study-text">
-                                    <p>Since IRek Wealth Investment came on board in 2014, the company has successfully managed several investments for our numerous clients. With the feat achieved so far, we have resolved to indeed, showcase our business to the global community by carrying everybody along. Not only are we desirous of giving out our services but that our clients will on every side, benefit from us too. We welcome you to IRek Wealth Investment... Welcome to the future of the Investment Banking…</p>
+                                    <p>Since ProstackInvest came on board in 2016, the company has successfully managed several investments for our numerous clients. With the feat achieved so far, we have resolved to indeed, showcase our business to the global community by carrying everybody along. Not only are we desirous of giving out our services but that our clients will on every side, benefit from us too. We welcome you to IRek Wealth Investment... Welcome to the future of the Investment Banking…</p>
                                 </div>
                                 <!-- .case-study-text end -->
                             </div>
