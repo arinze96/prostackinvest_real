@@ -46,11 +46,12 @@
                                                             <thead>
                                                                 <tr>
                                                                 
-                                                                    <th scope="col">Fullname/Username/Email</th>
+                                                                    <th scope="col">Username</th>
                                                                     <th scope="col">Currency</th>
-                                                                    <th scope="col">Amount</th>
-                                                                    <th scope="col">Total</th>
-                                                                    <th scope="col">Daily</th>
+                                                                    <th scope="col">Invested Amount</th>
+                                                                    <th scope="col">Current Amount</th>
+                                                                    <th scope="col">Days of investment</th>
+                                                                    <th scope="col">Daily </th>
                                                                     <th scope="col">Start/End Date</th>
                                                                    
                                                                     <th scope="col">Duration</th>
@@ -62,7 +63,8 @@
                                                             <tbody>
                                                                 @foreach ($investments as $key => $investment)
                                                                 <tr>
-                                                                    <th scope="row">{{ ucwords($investment->firstname) }} {{ ucwords($investment->lastname) }} / {{ ucwords($investment->username) }} / {{ ucwords($investment->email) }}</th>
+                                                                    
+                                                                    <th scope="row">{{ ucwords($investment->username) }}</th>
                                                                     <td>{{ ucwords($investment->currency) }}</td>
                                                                     <td>{{ ($investment->currency == "USD") ? number_format($investment->amount,0,".",",") : $investment->amount }}</td>
                                                                     <?php
@@ -70,8 +72,30 @@
                                                                       $commission = ($amount * $investment->percent_commission)/100;
                                                                       $total = $amount + $commission;
                                                                       $daily = $commission/preg_replace('~\D~', '', $investment->duration);
+
+                                                                      ////////////////CURRENT AMOUNT/////////////////////
+
+                                                                      $time_started = strtotime($investment->created_at);
+                                                                      $elapsed = time() - $time_started;
+                                                                      $counts = floor($elapsed/(60*60*24)) == 0  || floor($elapsed/(60*60*24)) == -1 ? 1 : floor($elapsed/(60*60*24));
+
+                                                                      $daily_earnings = $investment->amount + ($daily*$counts);
+                                                                    //   $daily_earnings = ($counts == 24 || $counts% 24 == 0) ? $investment->amount + $daily : $investment->amount;
+                                                                    //   echo $daily_earnings;
+                                                                    //   echo $investment->amount;
+                                                                    //   echo $daily;
+                                                                    //   echo $counts;
                                                                     ?>
-                                                                    <td>{{ ($investment->currency == "USD") ? number_format($total,0,".",",") : $total }}</td>
+                                                                    <td>{{ floor($daily_earnings) }}</td>
+                                                                    <?php 
+                                                                      $start = strtotime($investment->created_at);
+                                                                      $stop = strtotime($investment->close_date);
+                                                                      $today = time(); 
+                                                                      $days_diff = $stop - $start;
+                                                                      $remaining_days = ($today - $start)/86400;
+                                                                    //   echo gettype($investment->duration);
+                                                                    ?>
+                                                                    <td>{{ ($remaining_days < 1) ? 'Day 1/'. $investment->duration : 'Day'.round(intval($remaining_days)) . '/' . $investment->duration }}</td>
                                                                     <td>{{ ($investment->currency == "USD") ? number_format($daily,0,".",",") : $daily }}</td>
                                                                     <td>{{ date("d M,Y",strtotime($investment->created_at)) }} / <b class="text-danger">{{ date("d M,Y",strtotime($investment->close_date)) }}</b></td>
                                                                     <td>{{ ucwords($investment->duration) }}</td>

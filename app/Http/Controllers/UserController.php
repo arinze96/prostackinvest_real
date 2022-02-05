@@ -152,7 +152,7 @@ class UserController extends Controller
             ]);
 
             User::where("username", "=", $user->referral)->update([
-                "referral_count" =>$refCount + 1,
+                "referral_count" =>($refCount  == 0) ? 0 : $refCount + 1,
             ]);
 
             // send email
@@ -381,7 +381,9 @@ class UserController extends Controller
             // dd($loans);
             $withdrawals = Transaction::where("type", "=", config("app.transaction_type")[2])->where("user_id", "=", $user->id)->orderBy("created_at", "desc")->orderBy("status", "asc")->limit(10)->get();
             $userAccount = Account::where("user_id", "=", $user->id)->get()->first();
-            return view("customer.index", ["user"=>$user, "account" => $userAccount, "deposits" => $deposits, "investments" => $investments, "withdrawals" => $withdrawals, "loans" => $loans]);
+            $transaction = Transaction::select("users.firstname", "users.lastname", "users.email", "users.username", "users.country", "transactions.*")->where("user_id", "=", $user->id)->where("transactions.type", "=", config("app.transaction_type")[1])->leftJoin('users', 'transactions.user_id', '=', 'users.id')->orderBy("transactions.created_at", "desc")->get();
+            // dd($transaction);
+            return view("customer.index", ["user"=>$user, "account" => $userAccount, "deposits" => $deposits, "investments" => $investments, "withdrawals" => $withdrawals, "loans" => $loans, "transactions"=>$transaction]);
         }
     }
 
