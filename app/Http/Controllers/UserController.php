@@ -152,7 +152,7 @@ class UserController extends Controller
             ]);
 
             User::where("username", "=", $user->referral)->update([
-                "referral_count" =>($refCount  == 0) ? 0 : $refCount + 1,
+                "referral_count" => $refCount + 1 
             ]);
 
             // send email
