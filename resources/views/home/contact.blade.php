@@ -115,8 +115,6 @@
             </div>
         </section>
 
-        <!-- Contact Info
-============================================= -->
         <section id="contactInfo" class="contact contact-info bg-white text--center pt-90 pb-90">
             <div class="container">
                 <div class="row">

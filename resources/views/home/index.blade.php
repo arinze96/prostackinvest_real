@@ -511,6 +511,38 @@
             <div class="section-divider"></div>
         </section>
         <!-- #pricing1 end -->
+        <section id="contact1" class="contact contact-1 pt-110 pb-110 text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-10 offset-lg-1">
+                        <form class="mb-0">
+                            <div class="row">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
+                                        <div class="heading heading-2 mb-50 text--center">
+                                            <p class="heading--subtitle">Have A Question?</p>
+                                            <h2 class="heading--title">Get in touch</h2>
+                                            <p class="heading--desc mb-0">We understand the importance of approaching each work
+                                                integrally and believe in the power of simple and easy communication.</p>
+                                        </div>
+                                    </div>
+                                    <!-- .col-lg-6 end -->
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-6" style="background-color: black; height:315px">
+                                    <h1 style="color: white; margin-top:30px; font-size:40px">If you are wandering how it all works? watch this video</h1>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-6" style="background-color: black; height:315px">
+                                    <iframe width="470" height="315" src="https://www.youtube.com/embed/5Uh720poZ8w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- form end -->
+                    </div>
+                </div>
+                <!-- .row end -->
+            </div>
+            <!-- .container end -->
+        </section>
 
         <!-- Testimonial #1
 ============================================= -->
@@ -941,7 +973,7 @@
                     <!-- .col-lg-6 end -->
                     <div class="col-sm-12 col-md-12 col-lg-6 pr-0">
                         <div class="banner--img">
-                            <img src="{{ asset('assets/images/about/certificate.jpg') }}" width="640px" id="cert" height="800p" alt="banner img">
+                            <img src="{{ asset('assets/images/about/picz.jpg') }}" width="640px" id="cert" height="800p" alt="banner img">
                         </div>
                     </div>
                     <!-- .col-lg-6 end -->

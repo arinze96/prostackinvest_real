@@ -16,7 +16,7 @@
 <!-- RS Configration JS Files -->
 <script src="{{ asset('assets/js/rsconfig.js') }}"></script>
 
-<script type="text/javascript">
+{{-- <script type="text/javascript">
     (function() {
         var options = {
             whatsapp: "+13236887461", // WhatsApp number
@@ -36,7 +36,7 @@
         var x = document.getElementsByTagName('script')[0];
         x.parentNode.insertBefore(s, x);
     })();
-</script>
+</script> --}}
 
 <script type="text/javascript">
     baseUrl = "https://widgets.cryptocompare.com/";
