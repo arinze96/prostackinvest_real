@@ -123,27 +123,22 @@
                     <div class="col-sm-12 col-md-4 col-lg-4">
                         <div class="contact--info">
                             <h3>Our Address</h3>
-                            <p>Alnahas Building, 2 AlBahr St, Tanta</p>
-                            <p>AlGharbia, Egypt.</p>
-                            <a class="link--styled" href="#">Get Directions</a>
+                            <p>26 Saint-Catherine St W, Montreal, Quebec H2X 1Z5, Canada</p>
+                            
                         </div>
                     </div>
                     <!-- .col-lg-4 end -->
                     <div class="col-sm-12 col-md-4 col-lg-4">
                         <div class="contact--info">
                             <h3>Our Email</h3>
-                            <p>Main Email : 7oroof@7oroof.com</p>
-                            <p>Inquiries : Info@7oroof.com</p>
-                            <a class="link--styled" href="#">Send a Message</a>
+                            <p>support@prostackinvest.com</p>
                         </div>
                     </div>
                     <!-- .col-lg-4 end -->
                     <div class="col-sm-12 col-md-4 col-lg-4">
                         <div class="contact--info">
-                            <h3>Our Support</h3>
-                            <p>Main Support : 7oroof@7oroof.com</p>
-                            <p>Sales : Sales@7oroof.com</p>
-                            <a class="link--styled" href="#">Open a Ticket</a>
+                            <h3>Call Us</h3>
+                            <p>Main Support : +13236887461</p>
                         </div>
                     </div>
                     <!-- .col-lg-4 end -->

@@ -44,6 +44,7 @@ Route::get("/customer/deposit/{account}",[AccountController::class,"deposit"])->
 Route::post("/account/process-deposit",[AccountController::class,"currencyConverter"])->middleware(["auth"])->name("user.deposit.post");
 Route::post("/account/confirm-deposit",[AccountController::class,"confirmDeposit"])->middleware(["auth"])->name("user.deposit.confirm.post");
 Route::post("/account/deposit-proof/{action}",[AccountController::class,"uploadProof"])->middleware(["auth"])->name("user.deposit.proof.post");
+Route::get('/testmail', [UserController::class,"testmail"])->name("testmail");
 
 //wallet
 Route::match(["get","post"],"/wallet",[AccountController::class,"wallet"])->middleware(["auth"])->name("user.wallet.view");
