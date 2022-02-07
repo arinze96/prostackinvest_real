@@ -88,7 +88,7 @@
                                                                     <div class="nk-wg7-title">Available USD balance
                                                                     </div>
                                                                     <div class="number-lg amount">
-                                                                        ${{ number_format($account->dolla_balance, 0, '.', ',') }}
+                                                                        ${{ number_format($account->dolla_balance + $account->referral_balance, 0, '.', ',') }}
                                                                     </div>
                                                                 </div>
                                                                 <div class="nk-wg7-foot">

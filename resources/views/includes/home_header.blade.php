@@ -58,7 +58,7 @@
     <div class="container">
         <nav id="primary-menu" class="navbar navbar-expand-lg navbar-light bg-dark3">
 
-            <a class="navbar-brand hidden-lg hidden-md" href="index-2.html">
+            <a class="navbar-brand hidden-lg hidden-md" href="{{ route('app.home')}}">
                 <img class="logo logo-light" width="250px" height="60px" src="{{ asset("assets/images/logo/ProStack_Logo.png") }}" alt="Prostackinvest Logo" >
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
