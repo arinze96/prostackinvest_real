@@ -487,7 +487,7 @@
                                         </div>
                                         <div style="margin-bottom: 15px"></div>
                                         <div class="pricing--desc" style="margin-bottom:-1px">
-                                            Referral Commision: {{ $plan->commission }}%
+                                            Referral Commision: 10%
                                         </div>
                                         <div style="margin-bottom: 15px"></div>
                                         <div class="pricing--desc" style="margin-bottom:-1px">
