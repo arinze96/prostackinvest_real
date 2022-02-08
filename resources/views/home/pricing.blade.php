@@ -28,8 +28,8 @@
                             </div>
                             <div class="clearfix"></div>
                             <ol class="breadcrumb d-flex justify-content-center">
-                                <li class="breadcrumb-item"><a href="index-2.html">Home</a></li>
-                                <li class="breadcrumb-item"><a href="index-2.html">about</a></li>
+                                <li class="breadcrumb-item"><a href="{{ route('app.home') }}">Home</a></li>
+                                <li class="breadcrumb-item"><a href="{{ route('user.pages.view', ['pricing'])  }}">pricing</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Our Pricing</li>
                             </ol>
                         </div><!-- .title end -->
@@ -108,56 +108,61 @@
                 <div class="row">
                     <!-- Pricing Packge #1
    ============================================= -->
+                    
+
                     @if (!$Plans->isEmpty())
-                        @foreach ($Plans as $plan)
-                            <div class="col-sm-12 col-md-4 col-lg-4 price-table pricing-active">
-                                <div class="pricing-panel">
-                                    <!--  Pricing heading  -->
-                                    <div class="pricing--heading text--center">
-                                        <div class="pricing--icon">
-                                            <i class="icon-global"></i>
-                                        </div>
-                                        <h4>{{ ucwords($plan->name) }}</h4>
-                                        <div class="pricing--desc" style="margin-bottom:-1px">
-                                            Minimum Investment
-                                        </div>
-                                        <p style="font-size:50px"><span
-                                                class="currency">$</span>{{ number_format($plan->min, 0, '.', ',') }}
-                                        </p>
-                                        <div class="pricing--desc" style="margin-bottom:-1px">
-                                            Maximum Investment
-                                        </div>
-                                        <p style="font-size:50px"><span
-                                                class="currency">$</span>{{ number_format($plan->max, 0, '.', ',') }}
-                                        </p>
-                                        <div class="pricing--desc" style="margin-bottom:-1px">
-                                            Daily ROI: {{ $plan->roi }}%
-                                        </div>
-                                        <div style="margin-bottom: 10px"></div>
-                                        <div class="pricing--desc" style="margin-bottom:-1px">
-                                            Duration: {{ $plan->duration }}%
-                                        </div>
-                                        <div style="margin-bottom: 10px"></div>
-                                        <div class="pricing--desc" style="margin-bottom:-1px">
-                                            Referral Commision: {{ $plan->commission }}%
-                                        </div>
-                                        <div style="margin-bottom: 10px"></div>
-                                        <div class="pricing--desc" style="margin-bottom:-1px">
-                                            Capital Return: YES
-                                        </div>
-                                        <div style="margin-bottom: 10px"></div>
-                                        <div class="pricing--desc" style="margin-bottom:0px">
-                                            Instant Withdrawal: YES
-                                        </div>
-                                        <div style="margin-bottom: 10px"></div>
-                                        <div class="pricing--desc" style="margin-bottom: 0px">
-                                            24/7 Live Support
-                                        </div>
+                    @foreach ($Plans as $plan)
+                        <div class="col-sm-12 col-md-4 col-lg-4 price-table pricing-active">
+                            <div class="pricing-panel">
+                                <!--  Pricing heading  -->
+                                <div class="pricing--heading text--center">
+                                    <div class="pricing--icon">
+                                        <i class="icon-global"></i>
                                     </div>
+                                    <h4>{{ ucwords($plan->name) }}</h4>
+                                    <p style="font-size:50px"><span
+                                            class="currency"></span>{{ $plan->roi }}%
+                                    </p>
+                                    <p style="text-align: center;font-size:16px; margin-top:-5px; margin-bottom:50px">Per Day</p>
+                                    
+                                    <div class="pricing--desc" style="margin-bottom:-1px">
+                                        Min: &nbsp; $</span>{{ number_format($plan->min, 0, '.', ',') }}
+                                    </div>
+                                    <div style="margin-bottom: 15px"></div>
+                                    <div class="pricing--desc" style="margin-bottom:-1px">
+                                        Max: &nbsp; $</span>{{ number_format($plan->max, 0, '.', ',') }}
+                                    </div>
+                                    <div style="margin-bottom: 15px"></div>
+                                    <div class="pricing--desc" style="margin-bottom:-1px">
+                                        Total Returns: {{ $plan->roi * 7 }}%
+                                    </div>
+                                    <div style="margin-bottom: 15px"></div>
+                                    <div class="pricing--desc" style="margin-bottom:-1px">
+                                        Duration: {{ $plan->duration }}
+                                    </div>
+                                    <div style="margin-bottom: 15px"></div>
+                                    <div class="pricing--desc" style="margin-bottom:-1px">
+                                        Referral Commision: {{ $plan->commission }}%
+                                    </div>
+                                    <div style="margin-bottom: 15px"></div>
+                                    <div class="pricing--desc" style="margin-bottom:-1px">
+                                        Capital Return: YES
+                                    </div>
+                                    <div style="margin-bottom: 15px"></div>
+                                    <div class="pricing--desc" style="margin-bottom:0px">
+                                        Instant Withdrawal: YES
+                                    </div>
+                                    <div style="margin-bottom: 15px"></div>
+                                    <div class="pricing--desc" style="margin-bottom: 0px">
+                                        24/7 Live Support
+                                    </div>
+                                    {{-- <a class="btn btn--secondary btn--bordered btn--rounded"
+                                    href="{{ route('user.pages.view', ['register']) }}">Get Started</a> --}}
                                 </div>
                             </div>
-                        @endforeach
-                    @endif
+                        </div>
+                    @endforeach
+                @endif
                 </div><!-- .row end -->
             </div><!-- .container end -->
             <div class="section-divider"></div>

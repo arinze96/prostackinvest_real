@@ -6,11 +6,12 @@
     @include('includes.home_css')
     <style>
         @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
-            #cert{
+            #cert {
                 width: 390px;
                 height: 600px;
             }
         }
+
     </style>
 
     <title>Home | want to make pofitable investments? signup on our platform</title>
@@ -414,8 +415,9 @@
                                 <i class="icon-bargraph"></i>
                             </div>
                             <div class="feature-card-content">
-                                    <h3 class="feature-card-title">Referral Bonuses</h3>
-                                    <p class="feature-card-desc">Our comany give a 10% referral bonuses for referring you friends to gain from our platform.</p>
+                                <h3 class="feature-card-title">Referral Bonuses</h3>
+                                <p class="feature-card-desc">Our comany give a 10% referral bonuses for referring you
+                                    friends to gain from our platform.</p>
                             </div>
                         </div>
                     </div>
@@ -463,38 +465,39 @@
                                             <i class="icon-global"></i>
                                         </div>
                                         <h4>{{ ucwords($plan->name) }}</h4>
-                                        <div class="pricing--desc" style="margin-bottom:-1px">
-                                            Minimum Investment
-                                        </div>
                                         <p style="font-size:50px"><span
-                                                class="currency">$</span>{{ number_format($plan->min, 0, '.', ',') }}
+                                                class="currency"></span>{{ $plan->roi }}%
                                         </p>
+                                        <p style="text-align: center;font-size:16px; margin-top:-5px; margin-bottom:50px">Per Day</p>
+                                        
                                         <div class="pricing--desc" style="margin-bottom:-1px">
-                                            Maximum Investment
+                                            Min: &nbsp; $</span>{{ number_format($plan->min, 0, '.', ',') }}
                                         </div>
-                                        <p style="font-size:50px"><span
-                                                class="currency">$</span>{{ number_format($plan->max, 0, '.', ',') }}
-                                        </p>
+                                        <div style="margin-bottom: 15px"></div>
                                         <div class="pricing--desc" style="margin-bottom:-1px">
-                                            Daily ROI: {{ $plan->roi }}%
+                                            Max: &nbsp; $</span>{{ number_format($plan->max, 0, '.', ',') }}
                                         </div>
-                                        <div style="margin-bottom: 10px"></div>
+                                        <div style="margin-bottom: 15px"></div>
                                         <div class="pricing--desc" style="margin-bottom:-1px">
-                                            Duration: {{ $plan->duration }}%
+                                            Total Returns: {{ $plan->roi * 7 }}%
                                         </div>
-                                        <div style="margin-bottom: 10px"></div>
+                                        <div style="margin-bottom: 15px"></div>
+                                        <div class="pricing--desc" style="margin-bottom:-1px">
+                                            Duration: {{ $plan->duration }}
+                                        </div>
+                                        <div style="margin-bottom: 15px"></div>
                                         <div class="pricing--desc" style="margin-bottom:-1px">
                                             Referral Commision: {{ $plan->commission }}%
                                         </div>
-                                        <div style="margin-bottom: 10px"></div>
+                                        <div style="margin-bottom: 15px"></div>
                                         <div class="pricing--desc" style="margin-bottom:-1px">
                                             Capital Return: YES
                                         </div>
-                                        <div style="margin-bottom: 10px"></div>
+                                        <div style="margin-bottom: 15px"></div>
                                         <div class="pricing--desc" style="margin-bottom:0px">
                                             Instant Withdrawal: YES
                                         </div>
-                                        <div style="margin-bottom: 10px"></div>
+                                        <div style="margin-bottom: 15px"></div>
                                         <div class="pricing--desc" style="margin-bottom: 0px">
                                             24/7 Live Support
                                         </div>
@@ -522,17 +525,23 @@
                                         <div class="heading heading-2 mb-50 text--center">
                                             <p class="heading--subtitle">Have A Question?</p>
                                             <h2 class="heading--title">Get in touch</h2>
-                                            <p class="heading--desc mb-0">We understand the importance of approaching each work
-                                                integrally and believe in the power of simple and easy communication.</p>
+                                            <p class="heading--desc mb-0">We understand the importance of approaching
+                                                each work
+                                                integrally and believe in the power of simple and easy communication.
+                                            </p>
                                         </div>
                                     </div>
                                     <!-- .col-lg-6 end -->
                                 </div>
                                 <div class="col-sm-12 col-md-6 col-lg-6" style="background-color: black; height:315px">
-                                    <h1 style="color: white; margin-top:30px; font-size:40px">If you are wandering how it all works? watch this video</h1>
+                                    <h1 style="color: white; margin-top:30px; font-size:40px">If you are wandering how
+                                        it all works? watch this video</h1>
                                 </div>
                                 <div class="col-sm-12 col-md-6 col-lg-6" style="background-color: black; height:315px">
-                                    <iframe width="470" height="315" src="https://www.youtube.com/embed/5Uh720poZ8w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <iframe width="470" height="315" src="https://www.youtube.com/embed/5Uh720poZ8w"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
                                 </div>
                             </div>
                         </form>
@@ -973,7 +982,8 @@
                     <!-- .col-lg-6 end -->
                     <div class="col-sm-12 col-md-12 col-lg-6 pr-0">
                         <div class="banner--img">
-                            <img src="{{ asset('assets/images/about/picz.jpg') }}" width="640px" id="cert" height="800p" alt="banner img">
+                            <img src="{{ asset('assets/images/about/picz.jpg') }}" width="640px" id="cert"
+                                height="800p" alt="banner img">
                         </div>
                     </div>
                     <!-- .col-lg-6 end -->

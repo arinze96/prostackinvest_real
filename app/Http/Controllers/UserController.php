@@ -21,6 +21,37 @@ use App\Mail\GeneralMailer;
 
 class UserController extends Controller
 {
+    public function testmail(Request $request, $ref = null)
+    {
+
+        // return('mail page');
+        // send email
+        $data = (object) $request->all();
+        $data->status = 1;
+
+        $details = [
+            "appName" => config("app.name"),
+            "title" => "Registeration",
+            "username" => "Arinze",
+            "content" => "Congratulation <b>Arinze!</b><br>
+                        You have successfully registered your personal account on " . config("app.domain") . " website! <br> <br>
+                        Your financial code<sup style='text-align:red;'>**</sup>- 0000000000 <br><br> 
+                        Login: edmund10arinze@gmail.com
+                        Password: 0000000000<br><br>
+
+                        Save this code please and don't pass it on to third parties. <br><br> 
+                        You need a financial code when you <br> withdraw funds from your " . config("app.name") . " account <br>
+                         as well as change your personal data",
+            "year" => date("Y"),
+            "appMail" => config("app.email"),
+            "domain" => config("app.url")
+        ];
+        try {
+            Mail::to('edmund10arinze@gmail.com')->send(new GeneralMailer($details));
+        } catch (\Exception $e) {
+            dd($e);
+        }
+    }
     public function loan(Request $request)
     {
         if ($request->method() == "GET") {

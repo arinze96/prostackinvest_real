@@ -29,7 +29,7 @@
                             </div>
                             <div class="clearfix"></div>
                             <ol class="breadcrumb d-flex justify-content-center">
-                                <li class="breadcrumb-item"><a href="index-2.html">Home</a></li>
+                                <li class="breadcrumb-item"><a href="{{ route('app.home')  }}">Home</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Get A Personal Loan</li>
                             </ol>
                         </div><!-- .title end -->

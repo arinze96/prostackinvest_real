@@ -80,11 +80,7 @@
                                                                       $counts = floor($elapsed/(60*60*24)) == 0  || floor($elapsed/(60*60*24)) == -1 ? 1 : floor($elapsed/(60*60*24));
 
                                                                       $daily_earnings = $investment->amount + ($daily*$counts);
-                                                                    //   $daily_earnings = ($counts == 24 || $counts% 24 == 0) ? $investment->amount + $daily : $investment->amount;
-                                                                    //   echo $daily_earnings;
-                                                                    //   echo $investment->amount;
-                                                                    //   echo $daily;
-                                                                    //   echo $counts;
+                                                                    
                                                                     ?>
                                                                     <td>{{ floor($daily_earnings) }}</td>
                                                                     <?php 

@@ -28,8 +28,8 @@
                             </div>
                             <div class="clearfix"></div>
                             <ol class="breadcrumb d-flex justify-content-center">
-                                <li class="breadcrumb-item"><a href="index-2.html">Home</a></li>
-                                <li class="breadcrumb-item"><a href="index-2.html">Case Studies</a></li>
+                                <li class="breadcrumb-item"><a href="{{ route('app.home')  }}">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">Case Studies</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Single Case Studies</li>
                             </ol>
                         </div>

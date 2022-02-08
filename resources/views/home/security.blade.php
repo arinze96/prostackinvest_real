@@ -24,13 +24,12 @@
                     <div class="col-sm-12 col-md-12 col-lg-12">
                         <div class="title text-center">
                             <div class="title--heading">
-                                <h1>SECURITY</h1>
+                                <h1>OUR PORTFOLIO</h1>
                             </div>
                             <div class="clearfix"></div>
                             <ol class="breadcrumb d-flex justify-content-center">
-                                <li class="breadcrumb-item"><a href="index-2.html">Home</a></li>
-                                <li class="breadcrumb-item"><a href="index-2.html">Case Studies</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Single Case Studies</li>
+                                <li class="breadcrumb-item"><a href="{{ route('app.home')  }}">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Security</li>
                             </ol>
                         </div>
                         <!-- .title end -->
