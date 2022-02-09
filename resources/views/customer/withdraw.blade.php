@@ -62,8 +62,8 @@
                                                     class="small"></i>BTC</option>
                                                 <option data-balance="{{ $account->ethereum_balance }}" value="ETH"
                                                     class="small"></i>ETH</option>
-                                                <option data-balance="{{ $account->referral_balance }}" value="BONUS"
-                                                    class="small"></i>BONUS</option>
+                                                {{-- <option data-balance="{{ $account->referral_balance }}" value="BONUS"
+                                                    class="small"></i>BONUS</option> --}}
                                             </select>
                                         </div>
                                     </div><!-- .buysell-field -->

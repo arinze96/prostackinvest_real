@@ -285,17 +285,17 @@
                                                                         withdrawal
                                                                     </span>
                                                                 </div>
-                                                            </div><!-- .nk-wg7 -->
-                                                        </div><!-- .card-inner -->
-                                                    </div><!-- .card -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
 
 
-                                            </div><!-- .row -->
-                                        </div><!-- .nk-block -->
-                                    </div><!-- .col -->
-                                </div><!-- .row -->
-                            </div><!-- .nk-block -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <!-- recent deposits -->
                             <div class="nk-block">
                                 <div class="row g-gs">

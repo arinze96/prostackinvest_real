@@ -31,7 +31,7 @@
                                         </div>
                                         <div class="contact-box-info">
                                             <p class="text-capitalize ">email us</p>
-                                            <p class="font-heading">admin@prostackinvest.com</p>
+                                            <p class="font-heading">support@prostackinvest.com</p>
                                         </div>
                                     </div>
 
