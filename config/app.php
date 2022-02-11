@@ -40,7 +40,7 @@ return [
     "domain"=> "Prostackinvest",
     "referral_initial_percent"=>5,
     "referral_consequent_percent"=>1,
-    "admin_mail"=>"edmund10arinze@gmail.com",
+    "admin_mail"=>"support@prostackinvest.com",
 
 
 
