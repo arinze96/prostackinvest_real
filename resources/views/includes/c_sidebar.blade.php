@@ -101,7 +101,7 @@
                         </li>
 
 
-                        <li class="nk-menu-item has-sub">
+                        {{-- <li class="nk-menu-item has-sub">
                             <a href="#" class="nk-menu-link nk-menu-toggle">
                                 <span class="nk-menu-icon"><em class="icon ni ni-activity-alt"></em></span>
                                 <span class="nk-menu-text">Your Activity</span>
@@ -116,15 +116,15 @@
                                     <a href="{{ route('user.history.view', ['withdraw']) }}" class="nk-menu-link">
                                         <span class="nk-menu-text">Withdrawal History</span>
                                     </a>
-                                </li>
+                                </li> --}}
                                 {{-- <li class="nk-menu-item">
                                     <a href="{{ route('user.history.view', ['exchange']) }}" class="nk-menu-link">
                                         <span class="nk-menu-text">Exchange History</span>
                                     </a>
                                 </li> --}}
 
-                            </ul>
-                        </li>
+                            {{-- </ul>
+                        </li> --}}
 
                         
                         <li class="nk-menu-item has-sub">
