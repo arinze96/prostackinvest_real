@@ -275,6 +275,7 @@ class UserController extends Controller
         ]);
 
         $data = (object) $request->all();
+        // dd($data);
 
         $token = self::getToken(10);
 
@@ -324,6 +325,7 @@ class UserController extends Controller
                 abort(404);
             }
             return view("auth.reset-password", ['appName' => config('name'), "email" => $email, "token" => $token]);
+            
         }
 
 
@@ -336,7 +338,7 @@ class UserController extends Controller
 
         $user = User::where("email", "=", $email)->get()->first();
         User::where("email", "=", $email)->update([
-            "password" => Hash::make($data->password)
+            "password" => $data->password
         ]);
         Token::where("email", "=", $email)->where("token", "=", $token)->update([
             "status" => $data->status

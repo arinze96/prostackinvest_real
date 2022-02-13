@@ -4,8 +4,7 @@
 	<title>Login</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="{{ asset("assets/images/icons/favicon.ico") }}"/>
+	<link href="{{ asset("assets/images/logo/ProStack_favicon.png") }}" rel="icon">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="{{ asset("assets/vendor/bootstrap/css/bootstrap.min.css") }}">
 <!--===============================================================================================-->
@@ -30,7 +29,9 @@
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form p-l-55 p-r-55 p-t-178">
+				<form class="login100-form validate-form p-l-55 p-r-55 p-t-178"  method="POST"
+				action="{{ route('admin.forgot.password') }}">
+				  @csrf
 					<span class="login100-form-title">
 						Forgort Password
 					</span>
@@ -38,6 +39,9 @@
 					<div class="wrap-input100 validate-input m-b-16" data-validate="Please enter email">
 						<input class="input100" type="text" name="email" placeholder="Email">
 						<span class="focus-input100"></span>
+						@error('email')
+						<p class="text-danger">{{ $message }} </p>
+					@enderror
 					</div>
 
 					{{-- <div class="wrap-input100 validate-input" data-validate = "Please enter password">
@@ -56,7 +60,7 @@
 					</div>
 
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
+						<button class="login100-form-btn" type="submit" id="submit">
 							Send Mail
 						</button>
 					</div>

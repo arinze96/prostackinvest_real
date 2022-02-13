@@ -80,7 +80,7 @@
                             </tr>
                             <tr>
                                 <td style="padding: 0 30px 20px">
-                                    <p style="margin-bottom: 10px;">Hi {{ $data['username'] }},</p>
+                                    {{-- <p style="margin-bottom: 10px;">Hi {{ $data['username'] }},</p> --}}
                                     <p style="margin-bottom: 2px;">{!! $data["content"] !!}</p>
                                 </td>
                             </tr>

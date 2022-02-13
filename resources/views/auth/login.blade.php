@@ -65,7 +65,7 @@
                             Forgot
                         </span>
 
-                        <a href="{{ route('user.pages.view', ['forgot-password']) }}" class="txt2">
+                        <a href="{{ route('admin.forgot.password') }}" class="txt2">
                             Password?
                         </a>
                     </div>

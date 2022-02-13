@@ -18,7 +18,8 @@ use App\Http\Controllers\AccountController;
 
 Route::get('/', [UserController::class,"index"])->name("app.home");
 Route::get("/register/{ref?}",[UserController::class,"register"])->name("user.register");
-Route::get("/forgot-password",[UserController::class,"forgotPasswordAdmin"])->name("user.forgot-password");
+// Route::get("/forgot-password",[UserController::class,"forgotPasswordAdmin"])->name("user.forgot-password");
+// Route::match(["get","post"],"/forgot-password",[UserController::class,"forgotPasswordAdmin"])->name("admin.forgot.password");
 Route::get("/login",[UserController::class,"login"])->name("user.login");
 Route::get("/faq",[UserController::class,"returnFAQ"])->name("user.faq");
 Route::get("/privacy",[UserController::class,"returnPrivacy"])->name("user.privacy");
