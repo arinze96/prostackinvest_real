@@ -44,7 +44,7 @@
                         <p class="text-success" style="text-align: center">{{ $trueMatch }}</p>
                     @endif
                     <span class="login100-form-title">
-                        Forgort Password
+                        Forgot Password
                     </span>
 
                     <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter email">
