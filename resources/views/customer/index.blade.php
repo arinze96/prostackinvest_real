@@ -88,7 +88,16 @@
                                                                     <div class="nk-wg7-title">Available USD balance
                                                                     </div>
                                                                     <div class="number-lg amount">
-                                                                    ${{ number_format($account->dolla_balance + $account->referral_balance, 0, '.', ',') }}
+                                                                        
+                                                                        {{-- {{  $amount = $investments->amount
+                                                                            $commission = ($amount * $investments->percent_commission) / 100
+                                                                            $total = $amount + $commission
+                                                                            $daily = $commission / preg_replace('~\D~', '', $investments->duration)
+                                                                         
+                                                                         dd($investments)
+                                                                          }} --}}
+                                                                          {{-- {{ ($investments) }} --}}
+                                                                         ${{ number_format($account->dolla_balance + $account->referral_balance, 0, '.', ',') }}
                                                                     </div>
                                                                 </div>
                                                                 <div class="nk-wg7-foot">
@@ -100,7 +109,7 @@
                                                     </div><!-- .card -->
                                                 </div>
 
-                                                
+
 
                                                 <div class="col-sm-4">
                                                     <div class="card card-bordered text-light is-dark h-100">
@@ -180,7 +189,8 @@
                                                                 </div>
                                                                 <div class="nk-wg7-foot">
                                                                     <span class="nk-wg7-note">
-                                                                        No of Referral: <span style="color: white; font-size:30px">{{ $user->referral_count }}</span></span>
+                                                                        No of Referral: <span
+                                                                            style="color: white; font-size:30px">{{ $user->referral_count }}</span></span>
                                                                 </div>
                                                             </div><!-- .nk-wg7 -->
                                                         </div><!-- .card-inner -->
@@ -377,34 +387,52 @@
                                                                 @foreach ($investments as $key => $investment)
                                                                     <tr>
                                                                         <th scope="row">{{ $key + 1 }} </th>
-                                                                        <td>{{ number_format($investment->amount,0,".",",")  }}</td>
+                                                                        <td>{{ number_format($investment->amount, 0, '.', ',') }}
+                                                                        </td>
                                                                         <?php
                                                                         $amount = $investment->amount;
-                                                                        $commission = ($amount * $investment->percent_commission)/100;
+                                                                        $commission = ($amount * $investment->percent_commission) / 100;
                                                                         $total = $amount + $commission;
-                                                                        $daily = $commission/preg_replace('~\D~', '', $investment->duration);
-  
+                                                                        $daily = $commission / preg_replace('~\D~', '', $investment->duration);
+                                                                        
                                                                         ////////////////CURRENT AMOUNT/////////////////////
-  
+                                                                        
                                                                         $time_started = strtotime($investment->created_at);
                                                                         $elapsed = time() - $time_started;
-                                                                        $counts = floor($elapsed/(60*60*24)) == 0  || floor($elapsed/(60*60*24)) == -1 ? 1 : floor($elapsed/(60*60*24));
-  
-                                                                        $daily_earnings = $investment->amount + ($daily*$counts);
-                                                                      
-                                                                      ?>
-                                                                      <td>{{ floor($daily_earnings) }}</td>
-                                                                      <?php 
+                                                                        $counts = floor($elapsed / (60 * 60 * 24)) == 0 || floor($elapsed / (60 * 60 * 24)) == -1 ? 1 : floor($elapsed / (60 * 60 * 24));
+                                                                        
+                                                                        $daily_earnings = $investment->amount + $daily * $counts;
+                                                                        
+                                                                        ?>
+                                                                        <?php
                                                                         $start = strtotime($investment->created_at);
                                                                         $stop = strtotime($investment->close_date);
-                                                                        $today = time(); 
+                                                                        $today = time();
                                                                         $days_diff = $stop - $start;
-                                                                        $remaining_days = ($today - $start)/86400;
-                                                                      //   echo gettype($investment->duration);
-                                                                      ?>
-                                                                      <td>{{ ($remaining_days < 1) ? 'Day 1/'. $investment->duration : 'Day'.round(intval($remaining_days)) . '/' . $investment->duration }}</td>
-                                                                      <td>{{ ($investment->currency == "USD") ? number_format($daily,0,".",",") : $daily }}</td>
-                                                                        
+                                                                        $remaining_days = ($today - $start) / 86400;
+                                                                        $no_of_days = $investment->duration;
+                                                                        $exploded = explode(' ', $no_of_days);
+                                                                        $numeric = (int) $exploded[0];
+                                                                        //   echo gettype($investment->duration);
+                                                                        ?>
+                                                                        @if ($remaining_days < 8)
+                                                                            <td>{{ floor($daily_earnings) }}</td>
+                                                                        @else
+                                                                            <td>{{ floor($investment->amount + $daily * $numeric) }}
+                                                                            </td>
+                                                                        @endif
+
+                                                                         @if ($remaining_days < 1)
+                                                                                 <td>{{ 'Day 1/'. $investment->duration }}</td>
+                                                                            @elseif ($remaining_days < 8)
+                                                                               <td>{{  'Day'.round(intval($remaining_days)) .
+                                                                                '/' . $investment->duration }}</td>
+                                                                            @elseif ($remaining_days > 7)
+                                                                                <td><h6 style="color:green; font-size:12px">completed</h6></td>
+                                                                            @endif
+                                                                        <td>{{ $investment->currency == 'USD' ? number_format($daily, 0, '.', ',') : $daily }}
+                                                                        </td>
+
 
                                                                         <td>{{ date('d M,Y', strtotime($investment->created_at)) }}
                                                                         </td>
@@ -466,7 +494,6 @@
                                                             </thead>
                                                             <tbody>
                                                                 @foreach ($withdrawals as $item => $data)
-
                                                                     <tr>
                                                                         <td>{{ $item + 1 }}</td>
                                                                         <td>{{ $data->message }}</td>

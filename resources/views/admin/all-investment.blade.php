@@ -4,7 +4,7 @@
 <head>
     @include('includes.a_css')
     <!-- Page Title  -->
-    <title>{{ config("app.name") }} Admin</title>
+    <title>{{ config('app.name') }} Admin</title>
 </head>
 
 <body class="nk-body bg-lighter npc-general has-sidebar ">
@@ -42,77 +42,112 @@
                                                 <div class="card-inner">
                                                     <div class="table-responsive">
                                                         @if (!$investments->isEmpty())
-                                                        <table class="table">
-                                                            <thead>
-                                                                <tr>
-                                                                
-                                                                    <th scope="col">Username</th>
-                                                                    <th scope="col">Currency</th>
-                                                                    <th scope="col">Invested Amount</th>
-                                                                    <th scope="col">Current Amount</th>
-                                                                    <th scope="col">Days of investment</th>
-                                                                    <th scope="col">Daily </th>
-                                                                    <th scope="col">Start/End Date</th>
-                                                                   
-                                                                    <th scope="col">Duration</th>
-                                                                    <th scope="col">Commission</th>
-                                                                    <th scope="col">Status</th>
-                                                                    <th scope="col">Action</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                @foreach ($investments as $key => $investment)
-                                                                <tr>
-                                                                    
-                                                                    <th scope="row">{{ ucwords($investment->username) }}</th>
-                                                                    <td>{{ ucwords($investment->currency) }}</td>
-                                                                    <td>{{ ($investment->currency == "USD") ? number_format($investment->amount,0,".",",") : $investment->amount }}</td>
-                                                                    <?php
-                                                                      $amount = $investment->amount;
-                                                                      $commission = ($amount * $investment->percent_commission)/100;
-                                                                      $total = $amount + $commission;
-                                                                      $daily = $commission/preg_replace('~\D~', '', $investment->duration);
+                                                            <table class="table">
+                                                                <thead>
+                                                                    <tr>
 
-                                                                      ////////////////CURRENT AMOUNT/////////////////////
+                                                                        <th scope="col">Username</th>
+                                                                        <th scope="col">Currency</th>
+                                                                        <th scope="col">Invested Amount</th>
+                                                                        <th scope="col">Current Amount</th>
+                                                                        <th scope="col">Days of investment</th>
+                                                                        <th scope="col">Daily </th>
+                                                                        <th scope="col">Start/End Date</th>
 
-                                                                      $time_started = strtotime($investment->created_at);
-                                                                      $elapsed = time() - $time_started;
-                                                                      $counts = floor($elapsed/(60*60*24)) == 0  || floor($elapsed/(60*60*24)) == -1 ? 1 : floor($elapsed/(60*60*24));
+                                                                        <th scope="col">Duration</th>
+                                                                        <th scope="col">Commission</th>
+                                                                        <th scope="col">Status</th>
+                                                                        <th scope="col">Action</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    @foreach ($investments as $key => $investment)
+                                                                        <tr>
 
-                                                                      $daily_earnings = $investment->amount + ($daily*$counts);
-                                                                    
-                                                                    ?>
-                                                                    <td>{{ floor($daily_earnings) }}</td>
-                                                                    <?php 
-                                                                      $start = strtotime($investment->created_at);
-                                                                      $stop = strtotime($investment->close_date);
-                                                                      $today = time(); 
-                                                                      $days_diff = $stop - $start;
-                                                                      $remaining_days = ($today - $start)/86400;
-                                                                    //   echo gettype($investment->duration);
-                                                                    ?>
-                                                                    <td>{{ ($remaining_days < 1) ? 'Day 1/'. $investment->duration : 'Day'.round(intval($remaining_days)) . '/' . $investment->duration }}</td>
-                                                                    <td>{{ ($investment->currency == "USD") ? number_format($daily,0,".",",") : $daily }}</td>
-                                                                    <td>{{ date("d M,Y",strtotime($investment->created_at)) }} / <b class="text-danger">{{ date("d M,Y",strtotime($investment->close_date)) }}</b></td>
-                                                                    <td>{{ ucwords($investment->duration) }}</td>
-                                                                    <td>{{ ucwords($investment->percent_commission) }}%</td>
+                                                                            <th scope="row">
+                                                                                {{ ucwords($investment->username) }}
+                                                                            </th>
+                                                                            <td>{{ ucwords($investment->currency) }}
+                                                                            </td>
+                                                                            <td>{{ $investment->currency == 'USD' ? number_format($investment->amount, 0, '.', ',') : $investment->amount }}
+                                                                            </td>
+                                                                            <?php
+                                                                            $amount = $investment->amount;
+                                                                            $commission = ($amount * $investment->percent_commission) / 100;
+                                                                            $total = $amount + $commission;
+                                                                            $daily = $commission / preg_replace('~\D~', '', $investment->duration);
+                                                                            // echo $daily;
+                                                                            
+                                                                            ////////////////CURRENT AMOUNT/////////////////////
+                                                                            
+                                                                            $time_started = strtotime($investment->created_at);
+                                                                            $elapsed = time() - $time_started;
+                                                                            $counts = floor($elapsed / (60 * 60 * 24)) == 0 || floor($elapsed / (60 * 60 * 24)) == -1 ? 1 : floor($elapsed / (60 * 60 * 24));
+                                                                            
+                                                                            $daily_earnings = $investment->amount + $daily * $counts;
+                                                                            
+                                                                            ?>
+                                                                             <?php
+                                                                             $start = strtotime($investment->created_at);
+                                                                             $stop = strtotime($investment->close_date);
+                                                                             $today = time();
+                                                                             $days_diff = $stop - $start;
+                                                                             $remaining_days = ($today - $start) / 86400;
+                                                                             $no_of_days = $investment->duration;
+                                                                             $exploded = explode(" ",$no_of_days);
+                                                                             $numeric =  (int)$exploded[0];
+                                                                             ?>
+                                                                             {{-- <td>{{ $remaining_days < 1? 'Day 1/' . $investment->duration: 'Day' . round(intval($remaining_days)) . '/' . $investment->duration }}
+                                                                             </td> --}}
+                                                                             @if ($remaining_days < 8)
+                                                                             <td>{{ floor($daily_earnings) }}</td>
+                                                                             @else
+                                                                             <td>{{ floor($investment->amount + $daily * $numeric) }}</td>
+                                                                             @endif
+                                                                           
+
+                                                                            @if ($remaining_days < 1)
+                                                                                 <td>{{ 'Day 1/'. $investment->duration }}</td>
+                                                                            @elseif ($remaining_days < 8)
+                                                                               <td>{{  'Day'.round(intval($remaining_days)) .
+                                                                                '/' . $investment->duration }}</td>
+                                                                            @elseif ($remaining_days > 7)
+                                                                                <td><h6 style="color:green; font-size:12px">completed</h6></td>
+                                                                            @endif
+
+                                                                            <td>{{ $investment->currency == 'USD' ? number_format($daily, 0, '.', ',') : $daily }}
+                                                                            </td>
+                                                                            <td>{{ date('d M,Y', strtotime($investment->created_at)) }}
+                                                                                / <b
+                                                                                    class="text-danger">{{ date('d M,Y', strtotime($investment->close_date)) }}</b>
+                                                                            </td>
+                                                                            <td>{{ ucwords($investment->duration) }}
+                                                                            </td>
+                                                                            <td>{{ ucwords($investment->percent_commission) }}%
+                                                                            </td>
 
 
 
-                                                                    <td>{{ ucwords(config("app.tx_status")[$investment->status]) }}</td>
-                                                                  
-                                                                    <td>
-                                                                        <a href="{{ route("admin.deposit.view",["edit",$investment->id]) }}"><em class="icon ni ni-edit"></em></a>
-                                                                        <a class="delete_data text-danger" href="{{ route("admin.deposit.view",["delete",$investment->id]) }}" data-type="deposit" ><em  class="icon ni ni-trash-fill "></em></a>
-                                                                        {{-- <a href="{{ route("admin.deposit.view",["view",$investment->id]) }}"><em class="icon ni ni-eye-fill"></em></a> --}}
-                                                                    </td>
+                                                                            <td>{{ ucwords(config('app.tx_status')[$investment->status]) }}
+                                                                            </td>
 
-                                                                </tr>
-                                                                @endforeach
-                                                            </tbody>
-                                                        </table>
+                                                                            <td>
+                                                                                <a
+                                                                                    href="{{ route('admin.deposit.view', ['edit', $investment->id]) }}"><em
+                                                                                        class="icon ni ni-edit"></em></a>
+                                                                                <a class="delete_data text-danger"
+                                                                                    href="{{ route('admin.deposit.view', ['delete', $investment->id]) }}"
+                                                                                    data-type="deposit"><em
+                                                                                        class="icon ni ni-trash-fill "></em></a>
+                                                                                {{-- <a href="{{ route("admin.deposit.view",["view",$investment->id]) }}"><em class="icon ni ni-eye-fill"></em></a> --}}
+                                                                            </td>
+
+                                                                        </tr>
+                                                                    @endforeach
+                                                                </tbody>
+                                                            </table>
                                                         @else
-                                                            <h4 class="text-center">No  Investment at the moment</h4>
+                                                            <h4 class="text-center">No Investment at the moment</h4>
                                                         @endif
                                                     </div>
                                                 </div>
