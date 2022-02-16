@@ -88,14 +88,14 @@
                                                                     <div class="nk-wg7-title">Available USD balance
                                                                     </div>
                                                                     <div class="number-lg amount">
-                                                                        
-                                                                        {{-- {{  $amount = $investments->amount
-                                                                            $commission = ($amount * $investments->percent_commission) / 100
-                                                                            $total = $amount + $commission
-                                                                            $daily = $commission / preg_replace('~\D~', '', $investments->duration)
+                                                                        <?php
+                                                                        //   $amount = $investments->amount;
+                                                                        //     $commission = ($amount * $investments->percent_commission) / 100;
+                                                                        //     $total = $amount + $commission;
+                                                                        //     $daily = $commission / preg_replace('~\D~', '', $investments->duration);
+                                                                        // echo $investments->amount;
                                                                          
-                                                                         dd($investments)
-                                                                          }} --}}
+                                                                          ?>
                                                                           {{-- {{ ($investments) }} --}}
                                                                          ${{ number_format($account->dolla_balance + $account->referral_balance, 0, '.', ',') }}
                                                                     </div>
