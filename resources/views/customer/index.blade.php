@@ -103,7 +103,7 @@
                                                                         $no_of_days = $investments[$lastInvestment]->duration;
                                                                         $exploded = explode(' ', $no_of_days);
                                                                         $numeric = (int) $exploded[0];
-                                                                        $all = $numeric * $daily;
+                                                                        $all = ($numeric * $daily) + $amount;
                                                                         // echo $all;
                                                                         // echo $today;
                                                                         // echo '<br>'; 
