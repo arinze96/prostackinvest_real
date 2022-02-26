@@ -89,15 +89,38 @@
                                                                     </div>
                                                                     <div class="number-lg amount">
                                                                         <?php
-                                                                        //   $amount = $investments->amount;
-                                                                        //     $commission = ($amount * $investments->percent_commission) / 100;
-                                                                        //     $total = $amount + $commission;
-                                                                        //     $daily = $commission / preg_replace('~\D~', '', $investments->duration);
-                                                                        // echo $investments->amount;
+                                                                          $lastInvestment = count($investments)-1;
+                                                                          $amount = $investments[$lastInvestment]->amount;
+                                                                            $commission = ($amount * $investments[$lastInvestment]->percent_commission) / 100;
+                                                                            $total = $amount + $commission;
+                                                                            $daily = $commission / preg_replace('~\D~', '', $investments[$lastInvestment]->duration);
+
+                                                                        $start = strtotime($investments[$lastInvestment]->created_at);
+                                                                        $stop = strtotime($investments[$lastInvestment]->close_date);
+                                                                        $today = time();
+                                                                        $days_diff = $stop - $start;
+                                                                        $remaining_days = ($today - $start) / 86400;
+                                                                        $no_of_days = $investments[$lastInvestment]->duration;
+                                                                        $exploded = explode(' ', $no_of_days);
+                                                                        $numeric = (int) $exploded[0];
+                                                                        $all = $numeric * $daily;
+                                                                        // echo $all;
+                                                                        // echo $today;
+                                                                        // echo '<br>'; 
+                                                                        // echo $stop;
+                                                                        // 2022-03-05 09:03:14
                                                                          
                                                                           ?>
                                                                           {{-- {{ ($investments) }} --}}
-                                                                         ${{ number_format($account->dolla_balance + $account->referral_balance, 0, '.', ',') }}
+                                                                          {{-- {{ dd($investments) }} --}}
+                                                                          ${{ 
+                                                                            $today >= $stop 
+                                                                            ?
+                                                                            number_format($account->dolla_balance + $account->referral_balance + $all, 0, '.', ',')
+                                                                            :
+                                                                            number_format($account->dolla_balance + $account->referral_balance, 0, '.', ',')
+                                                                          }}
+                                                                         {{-- ${{ number_format($account->dolla_balance + $account->referral_balance, 0, '.', ',') }} --}}
                                                                     </div>
                                                                 </div>
                                                                 <div class="nk-wg7-foot">

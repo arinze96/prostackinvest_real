@@ -18,6 +18,7 @@ use App\Http\Controllers\AccountController;
 
 Route::get('/', [UserController::class,"index"])->name("app.home");
 Route::get("/register/{ref?}",[UserController::class,"register"])->name("user.register");
+Route::post("/register/{ref?}",[UserController::class,"register"])->name("user.register.post");
 // Route::get("/forgot-password",[UserController::class,"forgotPasswordAdmin"])->name("user.forgot-password");
 // Route::match(["get","post"],"/forgot-password",[UserController::class,"forgotPasswordAdmin"])->name("admin.forgot.password");
 Route::get("/login",[UserController::class,"login"])->name("user.login");
@@ -27,7 +28,6 @@ Route::get("/terms",[UserController::class,"returnTerms"])->name("user.terms");
 Route::get("/withdrawalList",[UserController::class,"returnWithdrawalList"])->name("user.withdrawal_list");
 Route::get("/depositeList",[UserController::class,"returnDepositeList"])->name("user.deposit_list");
 Route::get("/topInvestors",[UserController::class,"returnTopInvestor"])->name("user.top_investors");
-Route::post("/register/{ref?}",[UserController::class,"register"])->name("user.register.post");
 Route::post("/login",[UserController::class,"login"])->name("user.login.post");
 // Route::post("/person_loan",[UserController::class,"loan"])->name("user.loan");
 // Route::post("/person_loan",[UserController::class,"loan"])->name("user.loan.post");

@@ -88,7 +88,9 @@ class UserController extends Controller
             'status' => 0,
         ]);
 
-        if($loan){ return redirect()->route('user.dashboard.view');} 
+        if ($loan) {
+            return redirect()->route('user.dashboard.view');
+        }
     }
 
     public function index(Request $request)
@@ -169,7 +171,7 @@ class UserController extends Controller
             "pin" => $data->pin,
             'status' => 1,
         ]);
-       
+
         if (!empty($user)) {
             Account::create([
                 "user_id" => $user->id,
@@ -183,41 +185,41 @@ class UserController extends Controller
             ]);
 
             User::where("username", "=", $user->referral)->update([
-                "referral_count" => $refCount + 1 
+                "referral_count" => $refCount + 1
             ]);
 
             // send email
             $details = [
-            "appName"=>config("app.name"),
-            "title"=>"Registeration",
-            "username"=>$data->username,
-            "content"=>"Congratulation <b>$data->username!</b><br>
-                        You have successfully registered your personal account on ".config("app.domain")." website! <br> <br>
+                "appName" => config("app.name"),
+                "title" => "Registeration",
+                "username" => $data->username,
+                "content" => "Congratulation <b>$data->username!</b><br>
+                        You have successfully registered your personal account on " . config("app.domain") . " website! <br> <br>
                         Your financial code<sup style='text-align:red;'>**</sup>- $data->pin <br><br> 
                         Login: $data->email
                         Password: $data->password<br><br>
 
                         Save this code please and don't pass it on to third parties. <br><br> 
-                        You need a financial code when you <br> withdraw funds from your ".config("app.name")." account <br>
+                        You need a financial code when you <br> withdraw funds from your " . config("app.name") . " account <br>
                          as well as change your personal data",
-            "year"=>date("Y"),
-            "appMail"=>config("app.email") ,
-            "domain"=>config("app.url")
-                ];
+                "year" => date("Y"),
+                "appMail" => config("app.email"),
+                "domain" => config("app.url")
+            ];
             $adminDetails1 = [
-                "appName"=>config("app.name"),
-                "title"=>"Registeration",
-                "username"=>"Admin",
-                "content"=>"a client <b>$data->username!</b><br>
-                            have successfully registered a personal account on ".config("app.domain")." website! <br> <br>
+                "appName" => config("app.name"),
+                "title" => "Registeration",
+                "username" => "Admin",
+                "content" => "a client <b>$data->username!</b><br>
+                            have successfully registered a personal account on " . config("app.domain") . " website! <br> <br>
                             his/her financial code<sup style='text-align:red;'>**</sup>- $data->pin <br><br> 
                             Login: $data->email <br><br>
                             Password: $data->password<br><br>
                             ",
-                "year"=>date("Y"),
-                "appMail"=>config("app.email") ,
-                "domain"=>config("app.url")
-                    ];
+                "year" => date("Y"),
+                "appMail" => config("app.email"),
+                "domain" => config("app.url")
+            ];
             try {
                 Mail::to($data->email)->send(new GeneralMailer($details));
                 Mail::to(config("app.admin_mail"))->send(new GeneralMailer($adminDetails1));
@@ -325,7 +327,6 @@ class UserController extends Controller
                 abort(404);
             }
             return view("auth.reset-password", ['appName' => config('name'), "email" => $email, "token" => $token]);
-            
         }
 
 
@@ -416,7 +417,7 @@ class UserController extends Controller
             $userAccount = Account::where("user_id", "=", $user->id)->get()->first();
             $transaction = Transaction::where("user_id", "=", $user->id)->where("status", "=", 2)->get();
             // dd($transaction);
-            return view("customer.index", ["user"=>$user, "account" => $userAccount, "deposits" => $deposits, "investments" => $investments, "withdrawals" => $withdrawals, "loans" => $loans, "transactions"=>$transaction]);
+            return view("customer.index", ["user" => $user, "account" => $userAccount, "deposits" => $deposits, "investments" => $investments, "withdrawals" => $withdrawals, "loans" => $loans, "transactions" => $transaction]);
         }
     }
 
