@@ -2,6 +2,7 @@ $(document).ready(function(){
   $(".delete_data").click(deleteHandler);
   $(".go_back").click(goBack);
   $(".decline_approve").click(processApproveOrDecline)
+  $(".add_investments").click(addInvestment)
 })
 
 
@@ -68,6 +69,7 @@ function deleteHandler(e){
         data: {},
         headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
         success: function ($response) {
+          
           $response = JSON.parse($response);
           if($response.success){
             swal({
@@ -77,7 +79,56 @@ function deleteHandler(e){
             }).then(res=>{
               location.reload();
             })
-          }
+          }else{
+            swal({
+              text:`${$response.message}`,
+              icon: "error",
+              buttons: true
+            }).then(function(){
+              location.reload()
+            })
+           }
+        }
+      })
+    }
+  })
+}
+
+function addInvestment(e){
+  e.preventDefault();
+  $url = $(this).attr("href");
+  $type = $(this).attr("data-type")
+  swal({
+    text:"Are you sure you want to add investment to total balance ",
+    icon: "info",
+    buttons: true
+  }).then((response)=>{
+    if(response == true){
+      $.ajax({
+        type: "POST",
+        url: $url,
+        data: {},
+        headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+        success: function ($response) {
+          // console.log($response);
+          // $response = JSON.parse($response);
+          if($response.success){
+            swal({
+              text:"added successfully",
+              icon: "success",
+              buttons: true
+            }).then(res=>{
+              location.reload();
+            })
+          }else{
+            swal({
+              text:`${$response.message}`,
+              icon: "error",
+              buttons: true
+            }).then(function(){
+              // location.reload()
+            })
+           }
         }
       })
     }

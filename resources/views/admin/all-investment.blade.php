@@ -133,13 +133,21 @@
 
                                                                             <td>
                                                                                 <a
-                                                                                    href="{{ route('admin.deposit.view', ['edit', $investment->id]) }}"><em
-                                                                                        class="icon ni ni-edit"></em></a>
+                                                                                    href="{{ route('admin.deposit.view', ['edit', $investment->id]) }}">
+                                                                                    <em class="icon ni ni-edit"></em>
+                                                                                </a>
+
                                                                                 <a class="delete_data text-danger"
                                                                                     href="{{ route('admin.deposit.view', ['delete', $investment->id]) }}"
-                                                                                    data-type="deposit"><em
-                                                                                        class="icon ni ni-trash-fill "></em></a>
-                                                                                {{-- <a href="{{ route("admin.deposit.view",["view",$investment->id]) }}"><em class="icon ni ni-eye-fill"></em></a> --}}
+                                                                                    data-type="deposit">
+                                                                                    <em class="icon ni ni-trash-fill "></em>
+                                                                                </a>
+
+                                                                                <a class="add_investments"
+                                                                                href="{{ route("admin.deposit.view",["addInvestment",$investment->id]) }}">
+                                                                                    <em class="icon ni ni-home"></em>
+                                                                                </a>
+
                                                                             </td>
 
                                                                         </tr>

@@ -623,7 +623,17 @@ class UserController extends Controller
 
 
             return response()->json(["success" => true, "message" => "Deposit successfully approved"]);
-        } elseif ($name == "decline") {
+        }elseif($name == 'addInvestment') {
+            $investment = Transaction::where("id", "=", $id)->get()->first();
+            if(strtotime($investment->close_date) >= time()){
+                return response()->json(["error" => true, "message" => "This investment is still running"]);
+            }
+            $acct_user = Account::where("user_id", "=", $investment->user_id)->get()->first();
+            Account::where("user_id", "=", $investment->user_id)->update([
+                    "dolla_balance" =>$acct_user->dolla_balance + $investment->growth_amount
+                ]);
+                echo json_encode(["success" => true]);
+        }elseif ($name == "decline") {
             $deposit = Transaction::where("id", "=", $id)->get()->first();
             $userAccount = Account::where("id", "=", $deposit->user_id)->get()->first();
             if ($deposit->status == 3) {

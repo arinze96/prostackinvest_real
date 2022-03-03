@@ -38,7 +38,7 @@ return [
     "edit_names"=>[],
     "address"=>"1260 Broadway, New York, NY 10001",
     "domain"=> "Prostackinvest",
-    "referral_initial_percent"=>5,
+    "referral_initial_percent"=>10,
     "referral_consequent_percent"=>1,
     "admin_mail"=>"support@prostackinvest.com",
 

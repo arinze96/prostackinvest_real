@@ -418,6 +418,9 @@
                                                                         $commission = ($amount * $investment->percent_commission) / 100;
                                                                         $total = $amount + $commission;
                                                                         $daily = $commission / preg_replace('~\D~', '', $investment->duration);
+
+                                                                        echo $daily;
+                                                                        echo '<br>';
                                                                         
                                                                         ////////////////CURRENT AMOUNT/////////////////////
                                                                         
@@ -426,6 +429,8 @@
                                                                         $counts = floor($elapsed / (60 * 60 * 24)) == 0 || floor($elapsed / (60 * 60 * 24)) == -1 ? 1 : floor($elapsed / (60 * 60 * 24));
                                                                         
                                                                         $daily_earnings = $investment->amount + $daily * $counts;
+
+                                                                        echo $daily_earnings;
                                                                         
                                                                         ?>
                                                                         <?php
@@ -438,6 +443,8 @@
                                                                         $exploded = explode(' ', $no_of_days);
                                                                         $numeric = (int) $exploded[0];
                                                                         //   echo gettype($investment->duration);
+                                                                        echo '<br>';
+                                                                        echo $numeric;
                                                                         ?>
                                                                         @if ($remaining_days < 8)
                                                                             <td>{{ floor($daily_earnings) }}</td>
