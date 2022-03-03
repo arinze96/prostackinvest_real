@@ -647,8 +647,8 @@ class UserController extends Controller
         elseif($name == 'addRef'){
             $acct_user = Account::where("user_id", "=", $id)->get()->first();
             $user = $request->user();
-            echo ($acct_user);
-            echo $acct_user->dolla_balance + $acct_user->referral_balance;
+            // echo ($acct_user);
+            // echo $acct_user->dolla_balance + $acct_user->referral_balance;
 
            
             Account::where("user_id", "=", $id)->update([
