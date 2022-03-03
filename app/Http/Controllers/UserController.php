@@ -532,6 +532,8 @@ class UserController extends Controller
                     Transaction::select("users.firstname", "users.lastname", "users.phone", "users.username", "users.country", "transactions.*")->where("type", "=", config("app.transaction_type")[0])->where("transactions.status", "=", 1)->orderBy("transactions.created_at", "desc")->leftJoin('users', 'transactions.user_id', '=', 'users.id')->get() :
 
                     Transaction::select("users.firstname", "users.lastname", "users.phone", "users.username", "users.country", "transactions.*")->where("type", "=", config("app.transaction_type"))->orderBy("transactions.created_at", "desc")->leftJoin('users', 'transactions.user_id', '=', 'users.id')->get();
+                    $ac = Account::where("user_id", "=", $request->user_id);
+                    dd($ac);
 
                 return view("admin.$name-deposit", ["deposits" => $deposits]);
             } else {
@@ -575,11 +577,15 @@ class UserController extends Controller
             } else {
                 return view("admin.$name-deposit", ["deposit" => $deposits, "error" => "Deposit data failed to update"]);
             }
-        } elseif ($name == "delete") {
+        } 
+        
+        elseif ($name == "delete") {
             $deposit = Transaction::where("id", "=", $id)->get()->first();
             $deposit->delete();
             echo json_encode(["success" => true]);
-        } elseif ($name == "approve") {
+        } 
+        
+        elseif ($name == "approve") {
             $deposit = Transaction::where("id", "=", $id)->get()->first();
             $userAccount = Account::where("id", "=", $deposit->user_id)->get()->first();
             if ($deposit->status == 2) {
@@ -623,7 +629,9 @@ class UserController extends Controller
 
 
             return response()->json(["success" => true, "message" => "Deposit successfully approved"]);
-        }elseif($name == 'addInvestment') {
+        }
+        
+        elseif($name == 'addInvestment') {
             $investment = Transaction::where("id", "=", $id)->get()->first();
             if(strtotime($investment->close_date) >= time()){
                 return response()->json(["error" => true, "message" => "This investment is still running"]);
@@ -634,7 +642,23 @@ class UserController extends Controller
                 ]);
                 // echo json_encode(["success" => true]);
                 return response()->json(["success" => true]);
-        }elseif ($name == "decline") {
+        }
+
+        elseif($name == 'addRef'){
+            $acct_user = Account::where("user_id", "=", $id)->get()->first();
+            $user = $request->user();
+            echo ($acct_user);
+            echo $acct_user->dolla_balance + $acct_user->referral_balance;
+
+           
+            Account::where("user_id", "=", $id)->update([
+                    "dolla_balance" => $acct_user->dolla_balance + $acct_user->referral_balance
+                ]);
+                return response()->json(["success" => true]);
+               
+        }
+        
+        elseif ($name == "decline") {
             $deposit = Transaction::where("id", "=", $id)->get()->first();
             $userAccount = Account::where("id", "=", $deposit->user_id)->get()->first();
             if ($deposit->status == 3) {

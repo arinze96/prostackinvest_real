@@ -120,7 +120,7 @@
                                                                             // ?
                                                                             // number_format($account->dolla_balance + $account->referral_balance + $all, 0, '.', ',')
                                                                             // :
-                                                                            number_format($account->dolla_balance + $account->referral_balance, 0, '.', ',')
+                                                                            number_format($account->dolla_balance, 0, '.', ',')
                                                                           }}
                                                                          {{-- ${{ number_format($account->dolla_balance + $account->referral_balance, 0, '.', ',') }} --}}
                                                                     </div>

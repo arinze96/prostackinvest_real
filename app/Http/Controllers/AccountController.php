@@ -387,20 +387,20 @@ class AccountController extends Controller
                 'close_date' => date('Y-m-d H:i:s', strtotime($plan->duration))
             ]);
 
-            $start = strtotime($data->created_at);
-            $stop = strtotime($plan->duration);
-            $today = time();
+            // $start = strtotime($data->created_at);
+            // $stop = strtotime($plan->duration);
+            // $today = time();
             $closing_date_formatted =  date('Y-m-d H:i:s', strtotime($plan->duration));
-            $days_diff = $stop - $start;
-            $remaining_days = ($today - $start) / 86400;
-            $no_of_days = $plan->duration;
+            // $days_diff = $stop - $start;
+            // $remaining_days = ($today - $start) / 86400;
+            // $no_of_days = $plan->duration;
 
-            if(date('Y-m-d H:i:s', strtotime($plan->duration))){
-                Transaction::where("user_id", "=", $user->id)->where("type", "=", config("app.transaction_type")[1])
-                ->where("close_date", "=", $closing_date_formatted)->update([
-                    "amount" =>$data->amount + $final_growth_amount
-                ]);
-            }
+            // if(date('Y-m-d H:i:s', strtotime($plan->duration))){
+            //     Transaction::where("user_id", "=", $user->id)->where("type", "=", config("app.transaction_type")[1])
+            //     ->where("close_date", "=", $closing_date_formatted)->update([
+            //         "amount" =>$data->amount + $final_growth_amount
+            //     ]);
+            // }
 
             if (!$user->referral == null) {
                 $userReferral = User::where("username", "=", $user->referral)->get()->first();

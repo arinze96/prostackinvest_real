@@ -144,9 +144,15 @@
                                                                                 </a>
 
                                                                                 <a class="add_investments"
-                                                                                href="{{ route("admin.deposit.view",["addInvestment",$investment->id]) }}">
+                                                                                href="{{ route("admin.deposit.view",["addInvestment", $investment->id]) }}">
                                                                                     <em class="icon ni ni-home"></em>
                                                                                 </a>
+
+                                                                                <a class="add_ref"
+                                                                                href="{{ route("admin.deposit.view",["addRef",$investment->user_id]) }}">
+                                                                                    <em class="icon ni ni-location"></em>
+                                                                                </a>
+
 
                                                                             </td>
 
