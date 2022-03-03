@@ -533,7 +533,7 @@ class UserController extends Controller
 
                     Transaction::select("users.firstname", "users.lastname", "users.phone", "users.username", "users.country", "transactions.*")->where("type", "=", config("app.transaction_type"))->orderBy("transactions.created_at", "desc")->leftJoin('users', 'transactions.user_id', '=', 'users.id')->get();
                     $ac = Account::where("user_id", "=", $request->user_id);
-                    dd($ac);
+                    // dd($ac);
 
                 return view("admin.$name-deposit", ["deposits" => $deposits]);
             } else {
