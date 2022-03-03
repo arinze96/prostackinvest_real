@@ -110,7 +110,7 @@ function addInvestment(e){
         data: {},
         headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
         success: function ($response) {
-          // console.log($response);
+          console.log($response);
           // $response = JSON.parse($response);
           if($response.success){
             swal({

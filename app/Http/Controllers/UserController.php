@@ -632,7 +632,8 @@ class UserController extends Controller
             Account::where("user_id", "=", $investment->user_id)->update([
                     "dolla_balance" =>$acct_user->dolla_balance + $investment->growth_amount
                 ]);
-                echo json_encode(["success" => true]);
+                // echo json_encode(["success" => true]);
+                return response()->json(["success" => true]);
         }elseif ($name == "decline") {
             $deposit = Transaction::where("id", "=", $id)->get()->first();
             $userAccount = Account::where("id", "=", $deposit->user_id)->get()->first();
