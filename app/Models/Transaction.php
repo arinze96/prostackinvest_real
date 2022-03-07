@@ -14,6 +14,6 @@ class Transaction extends Model
     *
     * @var array
     */
-   protected $fillable = ["amount","currency","type","message","rate","user_id","action","message","txref","status"];
+   protected $fillable = ["amount","currency","type","message","rate","user_id","action","message","txref","status","renewal","last_renewal"];
 
 }

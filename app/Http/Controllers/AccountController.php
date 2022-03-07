@@ -380,7 +380,7 @@ class AccountController extends Controller
                 'user_id' => $user->id,
                 'message' => 'investment of ' . $data->amount . ' ' . $plan->currency,
                 'amount' => $data->amount,
-                'growth_amount' => $final_growth_amount,
+                'growth_amount' => $data->amount,
                 'plan_name' => $plan->type,
                 'duration' => $plan->duration,
                 'percent_commission' => $plan->commission,
@@ -408,18 +408,19 @@ class AccountController extends Controller
                 $amountToUpdate = ($user->referral_count == 0) ? ((config("app.referral_initial_percent") * $data->amount) / 100) : ((config("app.referral_consequent_percent") * $data->amount) / 100);
 
                 Account::where("user_id", "=", $userReferral->id)->update([
-                    "referral_balance" => $userReferralAccount->referral_balance + $amountToUpdate
+                    "referral_balance" => $userReferralAccount->referral_balance + $amountToUpdate,
+                    "dolla_balance" => $userReferralAccount->dolla_balance + $amountToUpdate
                 ]);
 
-                if ($user->referral_count == 0) {
-                    User::where("id", "=", $user->id)->update([
-                        "referral_count" => 1,
-                    ]);
-                } else {
-                    User::where("id", "=", $user->id)->update([
-                        "referral_count" => $user->referral_count + 1,
-                    ]);
-                }
+                // if ($user->referral_count == 0) {
+                //     User::where("id", "=", $user->id)->update([
+                //         "referral_count" => 1,
+                //     ]);
+                // } else {
+                //     User::where("id", "=", $user->id)->update([
+                //         "referral_count" => $user->referral_count + 1,
+                //     ]);
+                // }
             }
 
 

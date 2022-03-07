@@ -39,7 +39,7 @@ return [
     "address"=>"1260 Broadway, New York, NY 10001",
     "domain"=> "Prostackinvest",
     "referral_initial_percent"=>10,
-    "referral_consequent_percent"=>1,
+    "referral_consequent_percent"=>10,
     "admin_mail"=>"support@prostackinvest.com",
 
 

@@ -22,9 +22,11 @@ class CreateTransactionsTable extends Migration
             $table->decimal("amount",16,10)->default(0.00);
             $table->decimal("growth_amount",16,10)->default(0.00);
             $table->text("proof")->nullable();
+            $table->string("renewal",200)->default('1 day');
             $table->string("plan_name",200)->nullable();
             $table->string("duration",200)->nullable();
             $table->string("percent_commission",200)->nullable();
+            $table->timestamp('last_renewal')->nullable();
             $table->timestamp('close_date')->nullable();
             $table->string("withdrawal_address",200)->nullable();
             $table->string("withdrawal_payment_method",200)->nullable();
