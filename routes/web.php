@@ -80,7 +80,9 @@ Route::get("/customer/logout",[UserController::class,"logout"])->middleware(["au
 
 
 
-
+Route::get('/update', function () {
+  Artisan::call('update:accurral');
+});
 
 
 
