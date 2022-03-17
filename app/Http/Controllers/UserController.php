@@ -184,7 +184,7 @@ class UserController extends Controller
                 "dodgecoin_address" => "00",
             ]);
 
-            User::where("username", "=", $user->referral)->update([
+            User::where("username", "=", $user->referral)->update([ 
                 "referral_count" => $refCount + 1
             ]);
 

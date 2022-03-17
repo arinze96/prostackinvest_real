@@ -372,6 +372,10 @@ class AccountController extends Controller
             $exploded = explode(' ', $plan->duration);
             $numeric = (int) $exploded[0];
             $final_growth_amount = $amount + ($daily * $numeric);
+            $modified_close_date = $numeric + 1;
+            $new_one = array( $modified_close_date, 'days');
+            $new_close_date = implode(" ", $new_one);
+            
 
 
             Transaction::insert([
@@ -384,7 +388,8 @@ class AccountController extends Controller
                 'plan_name' => $plan->type,
                 'duration' => $plan->duration,
                 'percent_commission' => $plan->commission,
-                'close_date' => date('Y-m-d H:i:s', strtotime($plan->duration))
+                'close_date' => date('Y-m-d H:i:s', strtotime($new_close_date))
+                // 'close_date' => date('Y-m-d H:i:s', strtotime($plan->duration))
             ]);
 
             // $start = strtotime($data->created_at);

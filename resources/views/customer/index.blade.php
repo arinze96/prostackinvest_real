@@ -440,6 +440,8 @@
                                                                         $no_of_days = $investment->duration;
                                                                         $exploded = explode(' ', $no_of_days);
                                                                         $numeric = (int) $exploded[0];
+                                                                        $actual_close_date = strtotime($investment->close_date) - (24*60*60);
+                                                                        $actual_closing_date =  gmdate("Y-m-d\TH:i:s\Z", $actual_close_date);
                                                                         //   echo gettype($investment->duration);
                                                                       
                                                                         ?>
@@ -466,7 +468,7 @@
                                                                         </td>
 
                                                                         <td> <b
-                                                                                class="text-danger">{{ date('d M,Y', strtotime($investment->close_date)) }}</b>
+                                                                                class="text-danger">{{ date('d M,Y', strtotime($actual_closing_date)) }}</b>
                                                                         </td>
                                                                         <td>{{ ucwords($investment->duration) }}</td>
                                                                         <td>{{ ucwords($investment->percent_commission) }}%
