@@ -538,10 +538,14 @@
                                         it all works? watch this video</h1>
                                 </div>
                                 <div class="col-sm-12 col-md-6 col-lg-6" style="background-color: black; height:315px">
-                                    <iframe width="470" height="315" src="https://www.youtube.com/embed/5Uh720poZ8w"
+                                    {{-- <iframe width="470" height="315" src="{{ asset("assets/video/prostack.mp4") }}"
                                         title="YouTube video player" frameborder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen></iframe>
+                                        allowfullscreen></iframe> --}}
+                                        <video width="470" height="315" controls>
+                                            <source src="{{ asset("assets/video/prostack.mp4") }}" type="video/mp4">
+                                            No video support.
+                                            </video>
                                 </div>
                             </div>
                         </form>
