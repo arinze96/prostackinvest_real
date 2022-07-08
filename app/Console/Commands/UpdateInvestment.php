@@ -94,7 +94,7 @@ class UpdateInvestment extends Command
                     
                
                         $newAmount = ($investment->growth_amount + $dailyAmount) * $increamentTime;
-                        // echo "\n entered newAmount : $newAmount , accural-amount($increamentTime per day ) : $dailyAmount , initial-amount: $investment->amount , roi : $investment->percent_commission , duration : $totalDaysForInvestment";
+                         echo "\n entered newAmount : $newAmount , accural-amount($increamentTime per day ) : $dailyAmount , initial-amount: $investment->amount , roi : $investment->percent_commission , duration : $totalDaysForInvestment";
 
                         $result = Transaction::where("id", "=", $investment->id)->update([
                             'growth_amount'=>$newAmount,

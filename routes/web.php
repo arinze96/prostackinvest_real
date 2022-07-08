@@ -121,3 +121,7 @@ Route::get("/admin/edit-application/{id}",[UserController::class,"editApplicatio
 Route::get('/linkstorage', function () {
   Artisan::call('storage:link');
 });
+
+Route::get('/update', function () {
+  Artisan::call('update:accurral');
+});

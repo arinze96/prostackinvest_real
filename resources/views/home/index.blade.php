@@ -298,8 +298,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col">
-                                        <textarea class="form-control" name="contact-message" id="contact-message"
-                                            rows="2" placeholder="Request"></textarea>
+                                        <textarea class="form-control" name="contact-message" id="contact-message" rows="2" placeholder="Request"></textarea>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -468,8 +467,10 @@
                                         <p style="font-size:50px"><span
                                                 class="currency"></span>{{ $plan->roi }}%
                                         </p>
-                                        <p style="text-align: center;font-size:16px; margin-top:-5px; margin-bottom:50px">Per Day</p>
-                                        
+                                        <p
+                                            style="text-align: center;font-size:16px; margin-top:-5px; margin-bottom:50px">
+                                            Per Day</p>
+
                                         <div class="pricing--desc" style="margin-bottom:-1px">
                                             Min: &nbsp; $</span>{{ number_format($plan->min, 0, '.', ',') }}
                                         </div>
@@ -542,10 +543,10 @@
                                         title="YouTube video player" frameborder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                         allowfullscreen></iframe> --}}
-                                        <video width="470" height="315" controls>
-                                            <source src="{{ asset("assets/video/prostack.mp4") }}" type="video/mp4">
-                                            No video support.
-                                            </video>
+                                    <video width="470" height="315" controls>
+                                        <source src="{{ asset('assets/video/prostack.mp4') }}" type="video/mp4">
+                                        No video support.
+                                    </video>
                                 </div>
                             </div>
                         </form>
