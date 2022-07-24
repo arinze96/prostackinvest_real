@@ -387,7 +387,7 @@ class AccountController extends Controller
                 'growth_amount' => $data->amount,
                 'plan_name' => $plan->type,
                 'duration' => $plan->duration,
-                'percent_commission' => $plan->commission,
+                'percent_commission' => $plan->roi,
                 'close_date' => date('Y-m-d H:i:s', strtotime($new_close_date))
                 // 'close_date' => date('Y-m-d H:i:s', strtotime($plan->duration))
             ]);

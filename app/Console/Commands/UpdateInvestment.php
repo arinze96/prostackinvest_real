@@ -40,8 +40,11 @@ class UpdateInvestment extends Command
     public function handle()
     {
 
-        $activeInvestments  = Transaction::where("status", "=", "1")->where("type", "=", "investment")->get();
+        $activeInvestments  = Transaction::where("status", "=", "1")->where("type", "=", "investment")->orderBy("created_at", "desc")->get();
+        echo "<pre>";
         // print_r($activeInvestments);
+
+        // die();
         foreach ($activeInvestments as $key => $investment) {
 
                 
@@ -89,21 +92,26 @@ class UpdateInvestment extends Command
                 }
                 elseif(preg_match("/day/i", strtolower($investment->renewal)))
                 {
-                    echo "\n".Carbon::parse($lastRenewDate)->diffInDays($todayDate,false);
+                    echo "\n Investment $investment->id : Last Renew Date : $lastRenewDate  -  Today Date : $todayDate = ".Carbon::parse($lastRenewDate)->diffInDays($todayDate,false);
                     if((Carbon::parse($lastRenewDate)->diffInDays($todayDate,false)) >= $increamentTime){
                     
                
                         $newAmount = ($investment->growth_amount + $dailyAmount) * $increamentTime;
-                         echo "\n entered newAmount : $newAmount , accural-amount($increamentTime per day ) : $dailyAmount , initial-amount: $investment->amount , roi : $investment->percent_commission , duration : $totalDaysForInvestment";
-
+                         echo "\n <b> Investment $investment->id Entered newAmount: </b> $newAmount";
+                         echo "\n <b> Investment $investment->id Accural-amount($increamentTime per day ) : </b> $dailyAmount ";
+                         echo "\n <b> Investment $investment->id Initial-amount: : </b> $investment->amount";
+                         echo "\n <b> Investment $investment->id Roi : </b> $investment->percent_commission";
+                         echo "\n <b> Investment $investment->id Duration : </b> $totalDaysForInvestment";
+                         echo "\n <b> Investment $investment->id Days remaining : </b> $daysRemining";
+                        
                         $result = Transaction::where("id", "=", $investment->id)->update([
                             'growth_amount'=>$newAmount,
                             "status" => ($daysRemining == 0) ? 2 : 1,
                             "last_renewal"=>date("Y-m-d h:i:s")
                         ]);
 
-                        //update account
-                        if (($daysRemining == 0)) {
+                        // // //update account
+                        if (($daysRemining <= 0)) {
                             $userAccount = Account::where("user_id", "=", "$investment->user_id")->get()->first();
                             $balance = $userAccount->{config('app.iso_account')[$investment->currency]."_balance"} + $newAmount;
                             Account::where("user_id", "=", "$investment->user_id")->update([
