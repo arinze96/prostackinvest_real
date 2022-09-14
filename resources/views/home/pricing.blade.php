@@ -46,7 +46,7 @@
                         <!-- count #1 -->
                         <div class="col-6 col-sm-6 col-md-6 col-lg-3">
                             <div class="count-box text-center">
-                                <div class="counting">1,538</div>
+                                <div class="counting">156,538</div>
                                 <div class="count-title">No of Investors and counting</div>
                             </div>
                         </div>
@@ -54,7 +54,7 @@
                         <!-- count #2 -->
                         <div class="col-6 col-sm-6 col-md-6 col-lg-3">
                             <div class="count-box text-center">
-                                <div class="counting">5,124</div>
+                                <div class="counting">15,124</div>
                                 <div class="count-title">Deposit</div>
                             </div>
                         </div>
@@ -62,7 +62,7 @@
                         <!-- count #3 -->
                         <div class="col-6 col-sm-6 col-md-6 col-lg-3">
                             <div class="count-box text-center">
-                                <div class="counting">13,128</div>
+                                <div class="counting">33,128</div>
                                 <div class="count-title">Withdrawals</div>
                             </div>
                         </div>
@@ -70,7 +70,7 @@
                         <!-- count #4 -->
                         <div class="col-6 col-sm-6 col-md-6 col-lg-3">
                             <div class="count-box text-center">
-                                <div class="counting">29,534</div>
+                                <div class="counting">52,560</div>
                                 <div class="count-title">Working Hours</div>
                             </div>
                         </div>

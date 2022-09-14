@@ -8,7 +8,7 @@
                             <div class="col-12 col-md-12 col-lg-4">
                                 <div class="navbar-header">
                                     <a href="{{ route('app.home')}}">
-                                        <img class="logo logo-light" width="220px" height="60px" src="{{ asset("assets/images/logo/ProStack_Logo_2.png") }}" alt="Prostackinvest brand Logo" >
+                                        <img class="logo logo-light" width="220px" height="60px" src="{{ asset("assets/ProStack-01.png") }}" alt="Prostackinvest brand Logo" >
                                     </a>
                                 </div>
                             </div>
@@ -59,7 +59,7 @@
         <nav id="primary-menu" class="navbar navbar-expand-lg navbar-light bg-dark3">
 
             <a class="navbar-brand hidden-lg hidden-md" href="{{ route('app.home')}}">
-                <img class="logo logo-light" width="250px" height="60px" src="{{ asset("assets/images/logo/ProStack_Logo.png") }}" alt="Prostackinvest Logo" >
+                <img class="logo logo-light" width="250px" height="60px" src="{{ asset("assets/ProStack-01.png") }}" alt="Prostackinvest Logo" >
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
                 aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">

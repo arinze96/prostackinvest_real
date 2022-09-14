@@ -415,8 +415,7 @@
                             </div>
                             <div class="feature-card-content">
                                 <h3 class="feature-card-title">Referral Bonuses</h3>
-                                <p class="feature-card-desc">Our comany give a 10% referral bonuses for referring you
-                                    friends to gain from our platform.</p>
+                                <p class="feature-card-desc">Our comany gives a 10% referral bonuses for referring family and friends </p>
                             </div>
                         </div>
                     </div>

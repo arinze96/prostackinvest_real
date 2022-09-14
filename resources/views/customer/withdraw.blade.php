@@ -32,8 +32,8 @@
                                 </div><!-- .buysell-nav -->
                                 <div class="buysell-title text-center">
                                     <p class="title">Withdrawal of funds from your
-                                        {{ ucwords(strtolower(config('app.name'))) }} account balance is available
-                                        using 5 payment systems - BTC, ETH, LTC, USDT, Perfect Money. Select the account
+                                        {{ ucwords(strtolower(config('app.name'))) }} from your prostack invest  account balance is available
+                                        using 3 payment systems - BTC, ETH, and USDT. Select the account
                                         then select the payment system to which you want to withdraw funds, enter the
                                         withdrawal amount and click the "Withdraw".</p>
 

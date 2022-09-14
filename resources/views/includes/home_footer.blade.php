@@ -9,7 +9,7 @@
             <div class="row clearfix">
                 <div class="col-12 col-md-6 col-lg-3 footer--widget widget-about">
                     <div class="widget-content">
-                        <img class="footer-logo" src={{ asset("assets/images/logo/ProStack_Logo.png") }} width="230px" height="60px" alt="logo">
+                        <img class="footer-logo" src={{ asset("assets/ProStack-01.png") }} width="150px" height="150px" alt="logo">
                         <p>Experienced In Cryptocurrency And Financial Investment!We don’t believe in the sales culture,
                             but instead we believe in the service culture. </p>
                         <div class="social-icons">
