@@ -15,7 +15,7 @@
                         <div class="social-icons">
                             <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
                             <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                            <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                            <a href="https://instagram.com/prostackinvest?igshid=YmMyMTA2M2Y=" class="instagram"><i class="fa fa-instagram"></i></a>
                             <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
                         </div>
                     </div>
@@ -80,7 +80,7 @@
         <div class="row">
             <div class="col-12 col-md-12 col-md-12 text--center footer--copyright">
                 <div class="copyright">
-                    <span>©2016-2022, ProStack invest</span> <a
+                    <span>©2016-2023, ProStack invest</span> <a
                         href="http://prostackinvest.com">prostackinvest.com</a>
                 </div>
             </div>

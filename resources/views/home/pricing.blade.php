@@ -46,7 +46,7 @@
                         <!-- count #1 -->
                         <div class="col-6 col-sm-6 col-md-6 col-lg-3">
                             <div class="count-box text-center">
-                                <div class="counting">156,538</div>
+                                <div class="counting">1,156,538</div>
                                 <div class="count-title">No of Investors and counting</div>
                             </div>
                         </div>

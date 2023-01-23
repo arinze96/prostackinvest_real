@@ -9,6 +9,24 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
+            <div id="google_translate_element"
+            style="position:fixed;margin-top:10px; left:20px; bottom: 20px"></div>
+
+        <script type="text/javascript">
+            var duplicate_google_translate_counter = 0; //this stops google adding button multiple times
+
+            function googleTranslateElementInit() {
+                if (duplicate_google_translate_counter == 0) {
+                    new google.translate.TranslateElement({
+                        pageLanguage: 'en'
+                    }, 'google_translate_element');
+                }
+                duplicate_google_translate_counter++;
+            }
+        </script>
+        <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+
             <div class="collapse navbar-collapse" id="navbarContent">
                 <ul class="navbar-nav ml-auto">
                     <!-- Home Menu-->
@@ -82,26 +100,40 @@
                         <a href="{{ route('user.pages.view', ['register']) }}" class=" menu-item">Register</a>
                     </li>
 
+
                     <li class="has-dropdown mega-dropdown">
                         <a href="{{ route('user.pages.view', ['personal_loan']) }}" class=" menu-item">Loan</a>
                     </li>
-                   
-                   
                 </ul>
             
                 <div class="module-container">
-                    <!-- Module Consultation  -->
                     <div class="module module-consultation pull-left">
                         <a class="btn" href="{{ route('user.pages.view', ['contact']) }}">Contact Us</a>
-                    </div> <!-- Module Search -->
+                    </div>
                     <div class="module module-search pull-left">
                         <div class="module-icon search-icon">
                             <i class="lnr lnr-magnifier"></i>
                             <span class="title">search</span>
                         </div>
-                    
-                    </div><!-- .module-search end -->
-                    
+                    </div>
+                    {{-- <div id="google_translate_element"></div> 
+      
+                    <script type="text/javascript" src=
+                "https://translate.google.com/translate_a/element.js?
+                        cb=googleTranslateElementInit">
+                    </script>
+                    <script type="text/javascript"> 
+                        function googleTranslateElementInit() { 
+                            new google.translate.TranslateElement(
+                                {pageLanguage: 'en'}, 
+                                'google_translate_element'
+                            ); 
+                        } 
+                    </script>  --}}
+                      
+                     
+
+                   
                 </div>
             </div>
         </div>
